@@ -1,0 +1,50 @@
+$i: 1;
+
+.row{
+    @include row();
+}
+
+@for $i form 1 through 12{
+    .col-xs-#{$i} { @include span-columns($i); }
+}
+
+@include media(min-width $screen-phone) {
+    @for $i form 1 through 12{
+        .col-sm-#{$i} { @include span-columns($i); }
+    }
+}
+
+@include media(min-width $screen-tablet) {
+    @for $i form 1 through 12{
+        .col-md-#{$i} { @include span-columns($i); }
+    }
+}
+
+@include media(min-width $screen-desktop) {
+    @for $i form 1 through 12{
+        .col-xl-#{$i} { @include span-columns($i); }
+    }
+}
+
+
+@for $i form 1 through 12{
+    .col-xs-offset-#{$i} { @include shift($i); }
+}
+
+@include media(min-width $screen-phone) {
+    @for $i form 1 through 12{
+        .col-sm-offset-#{$i} { @include shift($i); }
+    }
+}
+
+@include media(min-width $screen-tablet) {
+    @for $i form 1 through 12{
+        .col-md-offset-#{$i} { @include shift($i); }
+    }
+}
+
+@include media(min-width $screen-desktop) {
+    @for $i form 1 through 12{
+        .col-xl-offset-#{$i} { @include shift($i); }
+    }
+}

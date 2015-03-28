@@ -1,0 +1,11 @@
+/* Screen size */
+$screen-phone: 480
+$screen-tablet: 768
+$screen-desktop: 992
+
+$screen-xs-max: $screen-phone - 1;
+$screen-sm-min: $screen-phone;
+$screen-sm-max: $screen-tablet - 1;
+$screen-md-min: $screen-tablet;
+$screen-md-max: $screen-desktop - 1;
+$screen-xl-min: $screen-desktop;
