@@ -18,7 +18,8 @@ main{
 
         img{
             opacity: .65;
+            @include transition(opacity .3s ease-in-out);
+            overflow: hidden;
         }
     }
-
 }

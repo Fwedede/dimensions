@@ -17,11 +17,13 @@ form{
     button{
         background-image: url(../img/utilities/btn-valider.png);
         height: 39px;
-        border: .2rem solid $blue-dark;
-        border-radius: .3rem;
+        border: 1px solid $blue-dark;
         padding: 0 1.5rem;
         color: $white;
-
+        &:hover{
+            opacity: .65;
+            @include transition(opacity .3s ease-in-out);
+        }
         &:focus{ outline: 0; }
     }
 }
