@@ -1,0 +1,31 @@
+form{
+    input:focus, textarea:focus{
+        outline: 2px solid $blue-dark;
+    }
+    input, textarea{
+        min-width: 100%;
+        max-width: 100%;
+        color: $clr-text;
+        padding: .2rem .5rem;
+    }
+    label{
+        display: block;
+        font-weight: bold;
+
+        & + input, & + textarea{
+            margin-bottom: 1rem;
+        }
+    }
+    input{
+        height: 4rem;
+    }
+    button{
+        background-image: url(../img/utilities/btn-valider.png);
+        height: 39px;
+        border: .2rem solid $blue-dark;
+        border-radius: .3rem;
+        padding: 0 1.5rem;
+
+        &:focus{ outline: 0; }
+    }
+}

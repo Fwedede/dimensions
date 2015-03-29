@@ -1,3 +1,5 @@
+$i: 1;
+
 /* Screen size */
 $screen-phone: 480px;
 $screen-tablet: 768px;
@@ -9,3 +11,16 @@ $screen-sm-max: $screen-tablet - 1;
 $screen-md-min: $screen-tablet;
 $screen-md-max: $screen-desktop - 1;
 $screen-xl-min: $screen-desktop;
+
+
+/* Color */
+$gray: #999;
+$blue-dark:  #00294f;
+$bg-footer: #666;
+
+$bg-part1: #c03;
+$bg-part2: #0c9;
+$bg-part3: #fc0;
+$bg-part4: #069;
+
+$clr-text: #333;

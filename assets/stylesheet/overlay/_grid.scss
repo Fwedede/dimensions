@@ -1,4 +1,6 @@
-$i: 1;
+.container{
+    @include outer-container(70%);
+}
 
 .row{
     @include row();

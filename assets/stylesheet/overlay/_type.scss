@@ -1,0 +1,20 @@
+.list-unstyled{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list-inline li{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pull-left{ float: left; }
+.pull-right{ float: right; }
+
+.font-xs{ font-size: 80%; }
+.font-xl{ font-size: 120%; }
+
+.text-left{ text-align: left; }
+.text-right{ text-align: right; }
+.text-center{ text-align: center; }
+.text-justify{ text-align: justify; }

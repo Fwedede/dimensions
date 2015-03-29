@@ -1,5 +1,13 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+@import "overlay/normalize";
 @import "overlay/variables";
+@import "overlay/holding";
+@import "overlay/type";
 @import "overlay/grid";
+@import "overlay/form";
+
+@import "overlay/header";
+@import "overlay/main";
+@import "overlay/footer";
