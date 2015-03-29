@@ -11,10 +11,10 @@ body{
 main{
     color: #fff;
 
-    section:nth-child(1){ background-color: $bg-part1; }
-    section:nth-child(2){ background-color: $bg-part2; }
-    section:nth-child(3){ background-color: $bg-part3; }
-    section:nth-child(4){ background-color: $bg-part4; }
+    section:nth-child(1){ color: $bg-part1; }
+    section:nth-child(2){ color: $bg-part2; }
+    section:nth-child(3){ color: $bg-part3; }
+    section:nth-child(4){ color: $bg-part4; }
 }
 footer, main section{
     padding: 3rem 0;

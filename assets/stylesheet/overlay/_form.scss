@@ -1,20 +1,15 @@
 form{
     input:focus, textarea:focus{
-        outline: 2px solid $blue-dark;
+        outline: 2px solid $bg-part4;
     }
     input, textarea{
         min-width: 100%;
         max-width: 100%;
-        color: $clr-text;
+        color: $bg-part4;
         padding: .2rem .5rem;
-    }
-    label{
         display: block;
-        font-weight: bold;
-
-        & + input, & + textarea{
-            margin-bottom: 1rem;
-        }
+        margin: 2rem 0;
+        border: 1px solid $bg-part4;
     }
     input{
         height: 4rem;
@@ -25,6 +20,7 @@ form{
         border: .2rem solid $blue-dark;
         border-radius: .3rem;
         padding: 0 1.5rem;
+        color: $white;
 
         &:focus{ outline: 0; }
     }

@@ -1,10 +1,13 @@
 main{
     h2{
-        border-bottom: 3px solid #fff;
+        border-bottom: 3px solid;
         padding: 2rem;
     }
     a{
-        color: #fff;
+        text-decoration: none;
+        color: inherit;
+    }
+    a:hover{
         text-decoration: underline;
     }
     .address{

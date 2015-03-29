@@ -1,12 +1,12 @@
 header{
-    background-color: #fff;
-    box-shadow: 0 .3rem .5rem 0 $gray;
+    background-color: $gray;
+    box-shadow: 0 .3rem .5rem 0 $gray-dark;
 
     img{ max-height: 3.6rem; }
     a{
         display: inline-block;
         line-height: 5rem;
-        color: $clr-text;
+        color: $white;
         @extend .font-xl;
         @include transition(box-shadow .3s ease-in-out);
     }
