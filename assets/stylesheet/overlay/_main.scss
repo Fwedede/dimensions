@@ -4,22 +4,20 @@ main{
         padding: 2rem;
     }
     a{
-        text-decoration: none;
         color: inherit;
-    }
-    a:hover{
-        text-decoration: underline;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     .address{
         margin-bottom: 2rem;
     }
-    .social a:hover{
-        outline: 2px solid #fff;
+    .social a img{
+        @include transition(opacity .3s ease-in);
 
-        img{
+        &:hover{
             opacity: .65;
-            @include transition(opacity .3s ease-in-out);
-            overflow: hidden;
+            @include transition(opacity .3s ease-in);
         }
     }
 }

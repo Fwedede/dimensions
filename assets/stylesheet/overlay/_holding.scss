@@ -11,10 +11,10 @@ body{
 main{
     color: #fff;
 
-    section:nth-child(1){ color: $bg-part1; }
-    section:nth-child(2){ color: $bg-part2; }
-    section:nth-child(3){ color: $bg-part3; }
-    section:nth-child(4){ color: $bg-part4; }
+    section:nth-child(1){ color: $clr-part1; }
+    section:nth-child(2){ color: $clr-part2; }
+    section:nth-child(3){ color: $clr-part3; }
+    section:nth-child(4){ color: $clr-part4; }
 }
 footer, main section{
     padding: 3rem 0;
@@ -27,7 +27,7 @@ img{
     vertical-align: middle;
     max-width: 100%;
     word-break: break-all;
-    overflow: scroll;
+    overflow: hidden;
     display: inherit;
     text-align: center;
     margin-left: auto;
