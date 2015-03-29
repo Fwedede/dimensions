@@ -1,6 +1,11 @@
+/* Globales mixins, function and variables of Bourbon and Neat */
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+/* Personals mixins */
+@import "overlay/mixins";
+
+/* Core CSS */
 @import "overlay/normalize";
 @import "overlay/variables";
 @import "overlay/holding";
@@ -8,6 +13,7 @@
 @import "overlay/grid";
 @import "overlay/form";
 
+/* Overlay CSS */
 @import "overlay/header";
 @import "overlay/main";
 @import "overlay/footer";
