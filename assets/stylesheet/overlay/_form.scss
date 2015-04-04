@@ -16,14 +16,13 @@ form{
         height: 4rem;
     }
     button{
-        /*background-image: url(../img/utilities/btn-valider.png);*/
+        background-image: url(../img/utilities/btn-valider.png);
         height: 39px;
         border: 1px solid $blue-dark;
         padding: 0 1.5rem;
         color: $white;
         @include transition(opacity .3s ease-in-out);
-        @include button(shiny, $clr-part4);
-        font-weight: normal;
+        
         
         &:hover{
             opacity: .65;
