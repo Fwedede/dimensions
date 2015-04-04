@@ -1,8 +1,12 @@
 header{
     background-color: $bg-footer;
     box-shadow: 0 .3rem .5rem 0 $gray-dark;
-
-    img{ 
+    section {background-color:  $gray-dark}
+    h1{
+        border-bottom: 3px solid;
+        padding: 2rem;
+    }
+    nav img{ 
         max-height: 3.6rem;
         opacity: .15;
         @include transition(opacity .3s ease-in); 
