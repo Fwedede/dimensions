@@ -2,7 +2,15 @@ header{
     background-color: $bg-footer;
     box-shadow: 0 .3rem .5rem 0 $gray-dark;
 
-    img{ max-height: 3.6rem; }
+    img{ 
+        max-height: 3.6rem;
+        opacity: .15;
+        @include transition(opacity .3s ease-in); 
+        &:hover{ 
+            opacity: 1;           
+            @include transition(opacity .3s ease-in);
+        }
+    }
     a{
         display: inline-block;
         line-height: 5rem;

@@ -22,5 +22,6 @@ gem install neat
 ## Activation du projet
 Afin de transformer le SCSS en CSS ouvrir le terminal et lancer cette ligne de commande dans le dossier du stylesheet
 ```shell
+cd ../../wamp/www/dimensions_demo/assets/stylesheet
 sass --watch styles.scss:styles.css
 ```
