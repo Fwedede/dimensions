@@ -1,45 +1,41 @@
 header{
-    background-color: $bg-footer;
+    background: $gray-dark;
     box-shadow: 0 .3rem .5rem 0 $gray-dark;
-    section {background-color:  $gray-dark}
+    
+    section{
+        background-color:  $gray-darker;
+        }
     h1{
         border-bottom: 3px solid;
         padding: 2rem;
     }
-    nav img{ 
+    nav img{
         max-height: 3.6rem;
         opacity: .15;
-        @include transition(opacity .3s ease-in); 
-        &:hover{ 
-            opacity: 1;           
-            @include transition(opacity .3s ease-in);
-        }
+        @include transition(opacity .3s ease-in-out);
+        &:hover{ opacity: 1; }
     }
     a{
         display: inline-block;
         line-height: 5rem;
-        color: $white;
-        @extend .font-xl;
+        color: #fff;
+        font-size: 120%;
         @include transition(box-shadow .3s ease-in-out);
     }
     .pull-right a{
         padding: 0 2rem;
 
         &.active{
-            color: #fff;
-
-            &:nth-child(1){ background-color: $clr-part1; }
-            &:nth-child(2){ background-color: $clr-part2; }
-            &:nth-child(3){ background-color: $clr-part3; }
-            &:nth-child(4){ background-color: $clr-part4; }
+            &:nth-child(1){ background-color: $red; }
+            &:nth-child(2){ background-color: $green; }
+            &:nth-child(3){ background-color: $yellow; }
+            &:nth-child(4){ background-color: $blue; }
         }
         &:hover{
-            @include transition(all .3s ease-in-out);
-
-            &:nth-child(1){ box-shadow: 0 -.5rem 0 0 $clr-part1 inset; }
-            &:nth-child(2){ box-shadow: 0 -.5rem 0 0 $clr-part2 inset; }
-            &:nth-child(3){ box-shadow: 0 -.5rem 0 0 $clr-part3 inset; }
-            &:nth-child(4){ box-shadow: 0 -.5rem 0 0 $clr-part4 inset; }
+            &:nth-child(1){ box-shadow: 0 -.5rem 0 0 $red inset; }
+            &:nth-child(2){ box-shadow: 0 -.5rem 0 0 $green inset; }
+            &:nth-child(3){ box-shadow: 0 -.5rem 0 0 $yellow inset; }
+            &:nth-child(4){ box-shadow: 0 -.5rem 0 0 $blue inset; }
         }
     }
 }

@@ -1,6 +1,4 @@
-$i: 1;
-
-/* Screen size */
+/* Screen sizes */
 $screen-phone: 480px;
 $screen-tablet: 768px;
 $screen-desktop: 992px;
@@ -14,15 +12,17 @@ $screen-xl-min: $screen-desktop;
 
 
 /* Color */
-$white: #fff;
+$red: #c03;
+
+$green: #0c9;
+
+$blue: #069;
+$blue-dark: #00294f;
+
+$yellow: #fc0;
+
 $gray: #999;
-$gray-dark: #333;
-$blue-dark:  #00294f;
+$gray-dark: #666;
+$gray-darker: #333;
 
-$bg-footer: #666;
-
-$clr-part1: #c03;
-$clr-part2: #0c9;
-$clr-part3: #fc0;
-$clr-part4: #069;
-$clr-text: #333;
+$clr-text: $gray-darker;

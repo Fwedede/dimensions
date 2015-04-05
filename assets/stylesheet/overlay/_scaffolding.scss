@@ -6,27 +6,24 @@ html{
     font-size: 10px;
 }
 body{
-    font-size: 1.6rem * 1.2;
+    font-size: 2rem;
     color: #fff;
 }
 header{
     text-align: center;
-    section{ color: $white; }
 }
 main{
-    color: #fff;
-
-    section:nth-child(1){ color: $clr-part1; }
-    section:nth-child(2){ color: $clr-part2; }
-    section:nth-child(3){ color: $clr-part3; }
-    section:nth-child(4){ color: $clr-part4; }
-}
-footer, main section{
-    padding: 3rem 0;
+    section:nth-child(1){ color: $red; }
+    section:nth-child(2){ color: $green; }
+    section:nth-child(3){ color: $yellow; }
+    section:nth-child(4){ color: $blue; }
 }
 h1, h2, h3, h4, h5, h6{
     margin-top: 0;
-    @extend .text-center
+    text-align: center;
+}
+section{
+    @include pad(3rem default);
 }
 img{
     vertical-align: middle;
@@ -38,4 +35,6 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
-a{ text-decoration: none; }
+a{
+    text-decoration: none;
+}

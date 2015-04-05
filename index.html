@@ -33,78 +33,70 @@
     </header>
 
     <main>
-        <section>
-            <div class="container">
-                <h2>Qui suis-je ?</h2>
-            </div>
+        <section class="container">
+            <h2>Qui suis-je ?</h2>
         </section>
 
-        <section>
-            <div class="container">
-                <h2>Réalisations</h2>
-            </div>
+        <section class="container">
+            <h2>Réalisations</h2>
         </section>
 
-        <section>
-            <div class="container">
-                <h2>Services</h2>
-            </div>
+        <section class="container">
+            <h2>Services</h2>
         </section>
 
-        <section>
-            <div class="container">
-                <h2>Contactez-moi</h2>
-                <p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
-                <form class="col-md-7" action="index.html" method="post">
-                    <input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
-                    <input type="text" placeholder="E-mail" id="email" name="email" value="">
-                    <input type="text" placeholder="Objet" id="object" name="object" value="">
-                    <textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
-                    <button class="pull-right" type="submit">Valider</button>
-                </form>
-                <div class="col-md-5 text-right">
-                    <div class="address">
-                        Dimensions<br>
-                        <a href="tel:0642351092">06.42.35.10.92</a><br>
-                        <br>
-                        <a href="clementfj@gmail.com">clementfj@gmail.com</a>
-                    </div>
-                    <div class="social row">
-                        <a class="col-md-2 col-md-offset-4" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140"><img src="assets/img/socials/logo-facebook.png" alt="logo-facebook"></a>
-                        <a class="col-md-2 col-md-offset-1" href="https://www.linkedin.com/pub/frederique-clement/95/a06/434"><img src="assets/img/socials/logo-linkedin.png" alt="logo-linkedin"></a>
-                        <a class="col-md-2 col-md-offset-1" href="https://fr.pinterest.com/Fwedede/"><img src="assets/img/socials/logo-pinterest.png" alt="logo-pinterest"></a>
-                    </div>
+        <section class="container">
+            <h2>Contactez-moi</h2>
+            <p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
+            <form class="col-md-7" action="index.html" method="post">
+                <input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
+                <input type="text" placeholder="E-mail" id="email" name="email" value="">
+                <input type="text" placeholder="Objet" id="object" name="object" value="">
+                <textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
+                <button class="pull-right" type="submit">Valider</button>
+            </form>
+            <div class="col-md-5 text-right">
+                <div class="address">
+                    Dimensions<br>
+                    <a href="tel:0642351092">06.42.35.10.92</a><br>
+                    <br>
+                    <a href="clementfj@gmail.com">clementfj@gmail.com</a>
+                </div>
+                <div class="social row">
+                    <a class="col-md-2 col-md-offset-4" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140"><img src="assets/img/socials/logo-facebook.png" alt="logo-facebook"></a>
+                    <a class="col-md-2 col-md-offset-1" href="https://www.linkedin.com/pub/frederique-clement/95/a06/434"><img src="assets/img/socials/logo-linkedin.png" alt="logo-linkedin"></a>
+                    <a class="col-md-2 col-md-offset-1" href="https://fr.pinterest.com/Fwedede/"><img src="assets/img/socials/logo-pinterest.png" alt="logo-pinterest"></a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="text-center font-xs">
-        <div class="container">
+        <section class="container">
             <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
             <div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="segoe ui"></div>
             <div class="g-plusone inline-flex" data-href="https://plus.google.com/u/0/114364871015253242303"></div>
             <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
-        </div>
+        </section>
     </footer>
+
     <script>
-            (function(d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=110325512318605&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <script type="text/javascript">
-            window.___gcfg = {lang: 'fr'};
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        window.___gcfg = {lang: 'fr'};
 
-            (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/platform.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            })();
-        </script>
-
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
 </body>
 </html>

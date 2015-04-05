@@ -1,19 +1,29 @@
-/* Globales mixins, function and variables of Bourbon and Neat */
+/* Boubon
+ * A simple and lightweight mixin library for Sass.
+ */
 @import "bourbon/bourbon";
+
+
+/* Neat
+ * A lightweight semantic grid framework for Sass and Bourbon.
+ */
 @import "neat/neat";
 
-/* Personals mixins */
-@import "overlay/mixins";
 
-/* Core CSS */
+/* Core CSS
+ * Simples libraries for this project
+ */
 @import "overlay/normalize";
 @import "overlay/variables";
-@import "overlay/holding";
-@import "overlay/type";
 @import "overlay/grid";
+@import "overlay/scaffolding";
+@import "overlay/type";
 @import "overlay/form";
 
-/* Overlay CSS */
+
+/* Overlay CSS
+ * Specific modifications of the elements
+ */
 @import "overlay/header";
 @import "overlay/main";
 @import "overlay/footer";

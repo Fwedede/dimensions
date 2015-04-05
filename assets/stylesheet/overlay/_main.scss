@@ -13,11 +13,10 @@ main{
         margin-bottom: 2rem;
     }
     .social a img{
-        @include transition(opacity .3s ease-in);
+        @include transition(opacity .3s ease-in-out);
 
         &:hover{
             opacity: .65;
-            @include transition(opacity .3s ease-in);
         }
     }
 }
