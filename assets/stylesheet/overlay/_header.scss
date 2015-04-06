@@ -9,21 +9,24 @@ header{
         border-bottom: 3px solid;
         padding: 2rem;
     }
-    nav img{
-        max-height: 2.5rem;
-        opacity: .15;
-        @include transition(opacity .3s ease-in-out);
-        &:hover{ opacity: 1; }
+    nav{
+        background: $gray-dark;
+        @include pad(0 default);
+        
+        img{
+            max-height: 2.5rem;
+            opacity: .15;
+            @include transition(opacity .3s ease-in-out);
+
+            &:hover{ opacity: 1; }
+        }
     }
     a{
+        color: #fff;
         display: inline-block;
         line-height: 5rem;
-        color: #fff;
-        font-size: 120%;
+        padding: 0 1rem;
         @include transition(box-shadow .3s ease-in-out);
-    }
-    .pull-right a{
-        padding: 0 2rem;
 
         &.active{
             &:nth-child(1){ background-color: $red; }
@@ -31,11 +34,11 @@ header{
             &:nth-child(3){ background-color: $yellow; }
             &:nth-child(4){ background-color: $blue; }
         }
-        &:hover{
-            &:nth-child(1){ box-shadow: 0 -.5rem 0 0 $red inset; }
-            &:nth-child(2){ box-shadow: 0 -.5rem 0 0 $green inset; }
-            &:nth-child(3){ box-shadow: 0 -.5rem 0 0 $yellow inset; }
-            &:nth-child(4){ box-shadow: 0 -.5rem 0 0 $blue inset; }
-        }
+    }
+    li:hover{
+        &:nth-last-child(1) a{ box-shadow: 0 -.5rem 0 0 $blue inset; }
+        &:nth-last-child(2) a{ box-shadow: 0 -.5rem 0 0 $yellow inset; }
+        &:nth-last-child(3) a{ box-shadow: 0 -.5rem 0 0 $green inset; }
+        &:nth-last-child(4) a{ box-shadow: 0 -.5rem 0 0 $red inset; }
     }
 }
