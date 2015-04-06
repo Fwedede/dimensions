@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Dimensions - Local</title>
     <link rel="icon" type="image/png" href="assets/img/logos/favicon.png">
-    <link href="http://fonts.googleapis.com/css?family=Exo" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/stylesheet/styles.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -13,22 +13,18 @@
 <body>
 
     <header>
-        <section>
-            <div class="container">
-                <h1 class="title"><img src="assets/img/logos/logo-dimensions2.png" alt="Dimensions_logo"></h1>
-                <p>Donnez une autre dimension à votre image</p>
-            </div>
+        <section class="container">
+            <h1 class="title"><img src="assets/img/logos/logo-dimensions2.png" alt="Dimensions_logo"></h1>
+            <p>Donnez une autre dimension à votre image</p>
         </section>
-        <nav class="container">
-            <div class="pull-left">
-                <a href="#"><img src="assets/img/logos/logo-dimensions-menu_02.png" alt="logo-dimensions-petit"></a>
-            </div>
-            <div class="pull-right">
-                <a href="#">Qui sui-je ?</a>
-                <a href="#">Réalisations</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
+        <nav>
+            <ul class="container list-unstyled list-inline text-right font-xl">
+                <li class="pull-left"><a href="#"><img src="assets/img/logos/logo-dimensions-menu_02.png" alt="logo-dimensions-petit"></a></li>
+                <li><a href="#">Qui sui-je ?</a></li>
+                <li><a href="#">Réalisations</a></li>
+                <li><a href="#">Services</a></li>
+                <li class="last"><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -81,22 +77,22 @@
     </footer>
 
     <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=110325512318605&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=110325512318605&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
     </script>
     <script>
-        window.___gcfg = {lang: 'fr'};
+    window.___gcfg = {lang: 'fr'};
 
-        (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/platform.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
     </script>
 </body>
 </html>
