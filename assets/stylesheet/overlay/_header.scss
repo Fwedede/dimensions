@@ -1,6 +1,6 @@
 header{
     background: $gray-dark;
-    box-shadow: 0 .3rem .5rem 0 $gray-dark;
+    box-shadow: 0 .3rem .5rem 0 $gray-darker;
     
     section{
         background-color:  $gray-darker;
@@ -10,7 +10,7 @@ header{
         padding: 2rem;
     }
     nav img{
-        max-height: 3.6rem;
+        max-height: 2.5rem;
         opacity: .15;
         @include transition(opacity .3s ease-in-out);
         &:hover{ opacity: 1; }
