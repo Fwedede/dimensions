@@ -7,23 +7,17 @@ html{
 }
 body{
     font-size: 2rem;
-    color: #fff;
+    color: $gray-dark;
 }
 header{
     text-align: center;
-}
-main{
-    section:nth-child(1){ color: $red; }
-    section:nth-child(2){ color: $green; }
-    section:nth-child(3){ color: $yellow; }
-    section:nth-child(4){ color: $blue; }
 }
 h1, h2, h3, h4, h5, h6{
     margin-top: 0;
     text-align: center;
 }
 section{
-    @include pad(3rem default);
+    @include pad(3rem 20rem);
 }
 img{
     vertical-align: middle;

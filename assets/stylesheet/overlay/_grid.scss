@@ -1,5 +1,4 @@
 .container{
-    @include outer-container(70%);
     @include row();
 }
 .row{ @include row(); }
