@@ -1,16 +1,17 @@
-header{
-    background: $gray-dark;
-    box-shadow: 0 .3rem .5rem 0 $gray-darker;
+header{    
+    box-shadow: 0 .1rem .1rem 0 $gray-dark;
     
     section{
-        background-color:  $gray-darker;
+        background-color:  $gray-dark;
+        color: #fff;
         }
     h1{
         border-bottom: 3px solid;
         padding: 2rem;
+        img {width: 100%;}
     }
     nav{
-        background: $gray-dark;
+        background: $gray;
         @include pad(0 default);
         
         img{
@@ -22,23 +23,18 @@ header{
         }
     }
     a{
-        color: #fff;
+        color: $gray-dark;
         display: inline-block;
         line-height: 5rem;
         padding: 0 1rem;
         @include transition(box-shadow .3s ease-in-out);
 
-        &.active{
-            &:nth-child(1){ background-color: $red; }
-            &:nth-child(2){ background-color: $green; }
-            &:nth-child(3){ background-color: $yellow; }
-            &:nth-child(4){ background-color: $blue; }
-        }
+        &.active{ background-color: $pink; }
     }
     li:hover{
-        &:nth-last-child(1) a{ box-shadow: 0 -.5rem 0 0 $blue inset; }
-        &:nth-last-child(2) a{ box-shadow: 0 -.5rem 0 0 $yellow inset; }
-        &:nth-last-child(3) a{ box-shadow: 0 -.5rem 0 0 $green inset; }
-        &:nth-last-child(4) a{ box-shadow: 0 -.5rem 0 0 $red inset; }
+        &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+        &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+        &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+        &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
     }
 }
