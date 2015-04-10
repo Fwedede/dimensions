@@ -37,3 +37,15 @@
 div.inline-flex{
     display: inline-flex;
 }
+.hidden {
+    text-indent: -9999px;
+  visibility: hidden;
+  display: none;
+}
+a.icon-arrow-down2:before {
+    content: "\ea3e";
+    font-family: "icomoon";
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icomoon";
+  }

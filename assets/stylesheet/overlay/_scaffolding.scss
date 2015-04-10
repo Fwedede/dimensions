@@ -17,7 +17,8 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
 }
 section{
-    @include pad(3rem 20rem);
+    @include pad(5rem 20rem);
+    margin-bottom: 5rem;
 }
 img{
     vertical-align: middle;

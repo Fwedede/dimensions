@@ -7,16 +7,13 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
     <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheet/animate.css">
 </head>
 
-
+<div id="fb-root"></div>
 <body>
 
     <header>
-        <section class="container">
-            <h1 class="title"><img src="assets/img/logos/logo-dimensions2.png" alt="Dimensions_logo"></h1>
-            <p>Donnez une autre dimension à votre image</p>
-        </section>
         <nav>
             <ul class="container list-unstyled list-inline text-right font-xl">
                 <li class="pull-left"><a href="#"><img src="assets/img/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
@@ -26,6 +23,11 @@
                 <li class="last"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <section class="container">
+            <h1 class="title"><img src="assets/img/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
+            <p>Donnez une autre dimension à votre image</p>
+        </section> 
+        <a href="#qui" class="animated infinite bounce scroll-down icon-arrow-down2"></a>       
     </header>
 
     <main>
@@ -75,7 +77,8 @@
             <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
         </section>
     </footer>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/script/script.js"></script>
     <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -93,6 +96,8 @@
         po.src = 'https://apis.google.com/js/platform.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
     })();
+    </script>
+    <script type="text/javascript">
     </script>
 </body>
 </html>
