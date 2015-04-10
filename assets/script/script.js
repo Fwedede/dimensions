@@ -28,16 +28,18 @@ $(function() {
 			event.preventDefault();
 
 		// Récupère la position de la catégorie en fonction du menu choisi
-		if($(this).is($('header a').eq(1)))
-			sectionTop = $('main section:eq(0)').offset().top;
+		if($(this).is($('header a').eq(0)))
+			sectionTop = $('section:eq(0)').offset().top;
+		else if($(this).is($('header a').eq(1)))
+			sectionTop = $('section:eq(1)').offset().top;
 		else if($(this).is($('header a').eq(2)))
-			sectionTop = $('main section:eq(1)').offset().top;
+			sectionTop = $('section:eq(2)').offset().top;
 		else if($(this).is($('header a').eq(3)))
-			sectionTop = $('main section:eq(2)').offset().top;
+			sectionTop = $('section:eq(3)').offset().top;
 		else if($(this).is($('header a').eq(4)))
-			sectionTop = $('main section:eq(3)').offset().top;
+			sectionTop = $('section:eq(0)').offset().top;
 		else if($(this).is($('header a').eq(5)))
-			sectionTop = $('main section:eq(0)').offset().top;
+			sectionTop = $('section:eq(1)').offset().top;
 
 		// Scroll sur la bonne section
 		$('body').animate({scrollTop: sectionTop - $('nav ul').height()}, 800);
@@ -46,7 +48,10 @@ $(function() {
 	$(window).scroll(function() {
 		var i = $('main section').length;
 		var ok = false;
-		var that = $('.pull-left img');
+		var that = $('header a');
+		var color = '#474646';
+
+		$('header a').removeClass('actif').css('color', '#474646');
 
 		// Si la page n'est pas sur la "home"
 		if($(window).scrollTop() >= heightWindow){
@@ -62,7 +67,8 @@ $(function() {
 			if(i > 0) {
 				// Vérifie ou se trouve la page
 				if($(window).scrollTop() >= $('main section:nth-child('+i+')').offset().top){
-					that = $('nav :nth-child('+i+')');
+					that = $('header li a:nth-child('+i+')');
+					color = '#c0143c';
 					ok = i;
 				}
 			}
@@ -71,5 +77,8 @@ $(function() {
 
 			i--;
 		}
+		// Colorise le menu
+		that.addClass('actif').css('color', color);
+
 	});
 });

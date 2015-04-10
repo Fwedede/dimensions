@@ -30,7 +30,7 @@ header{
         padding: 0 1rem;
         @include transition(box-shadow .3s ease-in-out);
 
-        &.active{ background-color: $pink; }
+        /*&.actif{ box-shadow: 0 -.3rem 0 0 $pink inset;}*/
     }
     li:hover{
         &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
