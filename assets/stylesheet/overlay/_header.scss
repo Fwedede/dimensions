@@ -14,6 +14,7 @@ header{
         width: 100%;
         background: $gray;
         @include pad(0 default);
+        z-index: 100;
         
         img{
             max-height: 2.5rem;

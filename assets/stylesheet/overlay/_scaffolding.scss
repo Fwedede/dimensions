@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6{
 section{
     @include pad(5rem 20rem);
     margin-bottom: 5rem;
+    position: relative;
 }
 img{
     vertical-align: middle;
@@ -32,4 +33,12 @@ img{
 }
 a{
     text-decoration: none;
+}
+figure{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 100%;
 }
