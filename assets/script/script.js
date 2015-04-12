@@ -51,7 +51,7 @@ $(function() {
 		var that = $('header a');
 		var color = '#474646';
 
-		$('header a').removeClass('actif').css('color', '#474646');
+		$('header li a').removeClass('actif').css('color', '#474646');
 
 		// Si la page n'est pas sur la "home"
 		if($(window).scrollTop() >= heightWindow){
@@ -65,6 +65,18 @@ $(function() {
 		}
 		while(ok == false) {
 			if(i > 0) {
+				// Si on se trouve au niveau de la premiere section
+				if(i == 1) {
+					$('.chart').easyPieChart({
+						barColor: 'rgb(204,0,51)',
+						trackColor: 'rgb(204,204,204)',
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: 3,
+						size: 60,
+						animate: 5000
+					});
+				}
 				// Vérifie ou se trouve la page
 				if($(window).scrollTop() >= $('main section:nth-child('+i+')').offset().top){
 					that = $('header li a:nth-child('+i+')');

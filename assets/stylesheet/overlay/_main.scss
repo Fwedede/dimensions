@@ -25,4 +25,23 @@ main{
         &:nth-child(3){ background-color: #fff; }
         &:nth-child(4){ background-color: $pink-light; }
     }
+    #qui{
+        article{
+            margin-right: 16rem;
+        }
+        .chart{
+            border:none;height:60px;margin:0.1rem;padding:0;position:relative;width:60px;background:white;cursor:pointer;
+            canvas{left:0;position:absolute;top:0;}
+            img{left:0;position:absolute;top:0;width:60px;height:60px;}
+            &:hover{background:transparent;}
+        }
+        .performances{
+            @include outer-container;
+            >div{ 
+                @include span-columns(3);
+                text-align: center;
+            }
+        }
+    }
 }
+
