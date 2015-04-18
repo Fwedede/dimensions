@@ -5,9 +5,8 @@
     <title>Dimensions - Local</title>
     <link rel="icon" type="image/png" href="assets/img/logos/favicon.png">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
-    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/stylesheet/animate.css">
 </head>
 
 <div id="fb-root"></div>
@@ -16,22 +15,22 @@
     <header>
         <nav>
             <ul class="container list-unstyled list-inline text-right font-xl">
-                <li class="pull-left"><a href="#"><img src="assets/img/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
-                <li><a href="#qui">Qui sui-je ?</a></li>
-                <li><a href="#realisations">Réalisations</a></li>
-                <li><a href="#services">Services</a></li>
-                <li class="last"><a href="#contact">Contact</a></li>
+                <li class="pull-left"><a href="#home"><img src="assets/img/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
+                <li><a class="link" href="#qui">Qui sui-je ?</a></li>
+                <li><a class="link" href="#realisations">Réalisations</a></li>
+                <li><a class="link" href="#services">Services</a></li>
+                <li class="last"><a class="link" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <section class="container">
+        <section class="container main-body-wrap" id="home">
             <h1 class="title"><img src="assets/img/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
             <p>Donnez une autre dimension à votre image</p>
         </section> 
-        <a href="#qui" class="animated infinite bounce scroll-down icon-arrow-down2"></a>       
+        <a href="#qui" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
     </header>
 
     <main>
-        <section class="container" id="qui">
+        <section class="container main-body-wrap" id="qui">
             <h2>Qui suis-je ?</h2>
             <article>
                 <p>Passionnée de design, mon cursus professionnel en a l’empreinte quelqu’en&nbsp;soit le support ou la dimension.<br><br>En passant par le print, le web ou la décoration, l’image est primordiale, de la création d’un logo, d’un site web ou d’un agencement.</p><br>
@@ -70,26 +69,26 @@
                         <div class="tooltip">
                             <p>Adobe Dreamweaver CS5: éditeur de site web.</p>
                         </div>
-                    </button><!--
-                 --><button type="button" class="chart tooltip-item" data-percent="90">
+                    </button>
+                    <button type="button" class="chart tooltip-item" data-percent="90">
                         <img src="assets/img/competences/Html.png" alt="Logo_Html">
                         <div class="tooltip">
                             <p>HTML 5: langage pour représenter les pages web.</p>
                         </div>
-                    </button><!--
-                 --><button type="button" class="chart tooltip-item" data-percent="90">
+                    </button>
+                    <button type="button" class="chart tooltip-item" data-percent="90">
                         <img src="assets/img/competences/Css.png" alt="Logo_Css">
                         <div class="tooltip">
                             <p>CSS 3: langage qui décrit la présentation des documents HTML.</p>
                         </div>
-                    </button><!--
-                 --><button type="button" class="chart tooltip-item" data-percent="40">
+                    </button>
+                    <button type="button" class="chart tooltip-item" data-percent="40">
                         <img src="assets/img/competences/Js.png" alt="Logo_Javascript">
                         <div class="tooltip">
                             <p>HTML 5: langage pour représenter les pages web.</p>
                         </div>
                     </button>
-                </div>      
+                </div>
                 <div>
                     <h4>Décoration</h4>
                     <button type="button" class="chart tooltip-item" data-percent="80">
@@ -97,8 +96,8 @@
                         <div class="tooltip">
                             <p>AutoCad: logiciel de dessin assisté par ordinateur (DAO) pour la 2D et le 3D.</p>
                         </div>
-                    </button><!--
-                 --><button type="button" class="chart tooltip-item" data-toggle="tooltip" title="" data-placement="bottom" data-percent="65">
+                    </button>
+                    <button type="button" class="chart tooltip-item" data-toggle="tooltip" title="" data-placement="bottom" data-percent="65">
                         <img src="assets/img/competences/Sketchup.png" alt="Logo_Sketchup">
                         <div class="tooltip">
                             <p>Google Sketchup: logiciel de modélisation 3D, d'animation et de cartographie orienté vers l'architecture.</p>
@@ -108,15 +107,15 @@
             </div>
         </section>
 
-        <section class="container" id="realisations">
+        <section class="container main-body-wrap" id="realisations">
             <h2>Réalisations</h2>
         </section>
 
-        <section class="container" id="services">
+        <section class="container main-body-wrap" id="services">
             <h2>Services</h2>
         </section>
 
-        <section class="container" id="contact">
+        <section class="container main-body-wrap" id="contact">
             <h2>Contactez-moi</h2>
             <p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
             <form class="col-md-7" action="index.html" method="post">
@@ -143,36 +142,35 @@
     </main>
 
     <footer class="text-center font-xs">
-        <section class="container">
+        <section>
             <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
             <div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="segoe ui"></div>
             <div class="g-plusone inline-flex" data-href="https://plus.google.com/u/0/114364871015253242303"></div>
             <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
         </section>
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/script/jquery.min.js"></script>
     <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>
-    <script type="text/javascript" src="assets/script/script.js"></script>
+    <script src="assets/script/header.js"></script>
     <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=110325512318605&version=v2.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script>
-    window.___gcfg = {lang: 'fr'};
-
-    (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/platform.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=110325512318605&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+            }
+        (document, 'script', 'facebook-jssdk'));
     </script>
     <script type="text/javascript">
+        window.___gcfg = {lang: 'fr'};
+
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
     </script>
 </body>
 </html>

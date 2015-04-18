@@ -1,9 +1,16 @@
-header{    
+header{
     box-shadow: 0 .1rem .1rem 0 $gray-dark;
-    background-color:  $gray-dark;    
+    background: url("../img/logos/grand-d.png") no-repeat center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    background-position: 50% 50%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     section{
-        background-color:  $gray-dark;
         color: #fff;
+        
     }
     h1{
         border-bottom: 3px solid;
@@ -15,13 +22,17 @@ header{
         background: $gray;
         @include pad(0 default);
         z-index: 100;
-        
+        position: fixed;
         img{
             max-height: 2.5rem;
             opacity: .15;
             @include transition(opacity .3s ease-in-out);
 
             &:hover{ opacity: 1; }
+        }
+        &.sticky{
+            visibility: hidden;
+            display: none;
         }
     }
     a{
@@ -33,17 +44,23 @@ header{
 
         /*&.actif{ box-shadow: 0 -.3rem 0 0 $pink inset;}*/
     }
-    li:hover{
-        &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-        &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-        &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-        &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+    li{
+        &.active a.link {
+            color: $pink;
+            box-shadow: 0 -.3rem 0 0 $pink inset;
+        }
+        &:hover {
+            &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+            &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+            &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+            &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+        }
     }
     .scroll-down {
         display: block;
         position: absolute;
         z-index: 100;
-        bottom: 45px;
+        bottom: 70px;
         left: 50%;
         margin-left: -16px;
         width: 34px;
