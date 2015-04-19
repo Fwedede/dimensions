@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  h3{font-size: 15px;}
+  </style>
+  <script charset="utf-8" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+</head>
+<body>
+ 
+<div class="cell">
+  <div class="img_package">
+    </div>
+  
+  <div class="description">
+    <h3></h3>
+    <p></p>
+  </div>
+  
+</div>
+<!--script type="text/javascript">
+var textejson = '{"id": 1,"img_package": "img/Vignettes_pack0","titre": "Appart\'Expo","image": "pack2_appart-expo_01","infos": "Planche d\'inspiration","description": "C\'est un projet de décoration sur le thème de l\'appart\'expo écolo","package": 0,"id_projet": 1}';
+var courses = JSON.parse(textejson);
+console.log(courses);
+</script-->
+<script>
+  var url = 'assets/script/realisations2.json';
+  var courses = {};
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", url, true);
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+      courses = JSON.parse(xmlhttp.responseText);
+    }
+  };
+  console.log(courses)
+  xmlhttp.send(null);
+</script>
+ 
+</body>
+</html>

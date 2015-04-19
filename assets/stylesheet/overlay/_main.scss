@@ -43,5 +43,34 @@ main{
             }
         }
     }
+    #realisations{
+        .tab{
+            @include outer-container;
+            >div:nth-child(1){ 
+                @include span-columns(5);
+                text-align: center;
+                .img_package{background-size: auto 100%;}
+            }
+            >div:nth-child(2){ 
+                @include span-columns(7);
+                text-align: center;
+                .img_package{background-size: 100%;}
+            }
+            .img_package{
+                background-repeat: no-repeat;
+                
+            }
+            h3 {margin: 0;}
+            .description{
+                background:#fff;bottom:0;display:none;left:0;max-height:6rem;opacity:.85;padding:.2rem;position:absolute;width:100%;
+                
+                p{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;margin: 0;}
+            }
+            .cell{
+                position: relative;
+                &:hover .description{display: block;}
+            }
+        }
+    }
 }
 

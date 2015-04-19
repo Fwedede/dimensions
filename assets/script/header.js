@@ -51,8 +51,8 @@ $(function(){
 		if(target != '' && $target.length != 0) {
 			window.mainNavFlag = true;
 			var $mainWrapper = $('.main-body-wrap');
-			var $topScroll = $target.offset().top - $('nav').height();
-			$('html, body').stop(true).animate({'scrollTop' : $topScroll}, 800);	
+			var $topScroll = $target.offset().top - $('nav').height()+1;
+			$('html, body').animate({'scrollTop' : $topScroll}, 800);	
 		}
 	});
 
@@ -64,8 +64,8 @@ $(function(){
 			if(target != '' && $target.length != 0) {
 				window.mainNavFlag = true;
 				var $mainWrapper = $('.main-body-wrap');
-				var $topScroll = $target.offset().top - $('nav').height();
-				$('html, body').stop(true).animate({'scrollTop' : $topScroll}, 800);	
+				var $topScroll = $target.offset().top - $('nav').height()+1;
+				$('html, body').animate({'scrollTop' : $topScroll}, 800);	
 			}
 		}
 		chronos_sticky();
