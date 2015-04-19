@@ -14,6 +14,7 @@ main{
     }
     .social a img{
         @include transition(opacity .3s ease-in-out);
+        @media screen and (max-width: 480px){width:15%;}
 
         &:hover{
             opacity: .65;
@@ -28,6 +29,8 @@ main{
     #qui{
         article{
             margin-right: 16rem;
+            @media screen and (max-width: 1028px){margin-right:26rem;}
+            @media screen and (max-width: 480px){margin-right:0;}
         }
         .chart{
             border:none;height:60px;margin:0.1rem;padding:0;position:relative;width:60px;background:white;cursor:pointer;
@@ -38,7 +41,7 @@ main{
         .performances{
             @include outer-container;
             >div{ 
-                @include span-columns(3);
+                @include span-columns(4);
                 text-align: center;
             }
         }
@@ -47,14 +50,19 @@ main{
         .tab{
             @include outer-container;
             >div:nth-child(1){ 
-                @include span-columns(5);
-                text-align: center;
-                .img_package{background-size: auto 100%;}
-            }
-            >div:nth-child(2){ 
                 @include span-columns(7);
                 text-align: center;
                 .img_package{background-size: 100%;}
+                @media screen and (max-width: 480px){
+                    @include span-columns(12);
+                    .img_package{background-size: auto 100%;}
+                }
+            }
+            >div:nth-child(2){ 
+                @include span-columns(5);
+                text-align: center;
+                .img_package{background-size: auto 100%;}
+                @media screen and (max-width: 480px){@include span-columns(12);}
             }
             .img_package{
                 background-repeat: no-repeat;
@@ -71,6 +79,9 @@ main{
                 &:hover .description{display: block;}
             }
         }
+    }
+    #contact{
+        .col-md-5{margin-top: 7rem;}
     }
 }
 

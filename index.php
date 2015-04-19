@@ -6,7 +6,7 @@
     <link rel="canonical" href="http://localhost/dimensions_demo" />
     <link rel="icon" type="image/png" href="assets/img/logos/favicon.png">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
-    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -17,10 +17,15 @@
         <nav>
             <ul class="container list-unstyled list-inline text-right font-xl">
                 <li class="pull-left"><a href="#home"><img src="assets/img/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
-                <li><a class="link" href="#qui">Qui sui-je ?</a></li>
-                <li><a class="link" href="#realisations">Réalisations</a></li>
-                <li><a class="link" href="#services">Services</a></li>
-                <li class="last"><a class="link" href="#contact">Contact</a></li>
+                <li class="menu_query">
+                    <img src="assets/img/utilities/Base_03.png">
+                    <ul>
+                        <li><a class="link" href="#qui">Qui sui-je ?</a></li>
+                        <li><a class="link" href="#realisations">Réalisations</a></li>
+                        <li><a class="link" href="#services">Services</a></li>
+                        <li class="last"><a class="link" href="#contact">Contact</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <section class="container main-body-wrap" id="home">
@@ -40,7 +45,8 @@
             <figure>
                 <img src="assets/img/utilities/photo-moi.png" alt="Portrait-Frederique Clement">
             </figure>
-            <div class="performances">
+            <article>
+                <div class="performances">
                 <h3>Mes compétences</h3>
                 <div>
                     <h4>Print</h4>
@@ -105,6 +111,7 @@
                         </div>
                     </button>
                 </div>
+            </article>
             </div>
         </section>
 
@@ -166,8 +173,8 @@
     <footer class="text-center font-xs">
         <section>
             <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
-            <div class="fb-like" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-            <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+            <div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+            <div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div>
             <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
         </section>
     </footer>

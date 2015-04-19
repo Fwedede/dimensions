@@ -8,6 +8,7 @@ html{
 body{
     font-size: 2rem;
     color: $gray-dark;
+    @media screen and (max-width: 480px){font-size:1.5rem;}
 }
 header{
     text-align: center;
@@ -19,6 +20,8 @@ h1, h2, h3, h4, h5, h6{
 section{
     @include pad(5rem 20rem);
     position: relative;
+    @media screen and (max-width: 1028px){@include pad(5rem 10rem);}
+    @media screen and (max-width: 480px){@include pad(3rem);}
 }
 img{
     vertical-align: middle;
@@ -40,4 +43,6 @@ figure{
     margin: 0;
     overflow: hidden;
     max-height: 100%;
+    @media screen and (max-width: 480px){display:none;}
 }
+

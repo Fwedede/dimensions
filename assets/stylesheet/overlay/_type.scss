@@ -3,9 +3,11 @@
     padding: 0;
     list-style: none;
 }
-.list-inline li{
+.list-inline {
+  li{
     display: inline-block;
     vertical-align: top;
+  }
 }
 
 .pull-left{
@@ -17,9 +19,11 @@
 
 .font-xs{
     font-size: 80%;
+    @media screen and (max-width: 480px){font-size:64%;}
 }
 .font-xl{
     font-size: 120%;
+    @media screen and (max-width: 480px){font-size:64%;}
 }
 
 .text-left{
