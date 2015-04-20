@@ -137,7 +137,10 @@
                     }
                 ?>
                 </div>
-            </div>
+                <?php
+                $req->closeCursor();
+                ?>
+            <div class="popin-bg"></div>
         </section>
 
         <section class="container main-body-wrap" id="services">
@@ -178,10 +181,12 @@
             <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
         </section>
     </footer>
-    <script src="assets/script/jquery.min.js"></script>
+    <!--script src="assets/script/jquery.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
     <!--script src="assets/script/realisations.js"></script-->
     <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="assets/script/popin.js"></script>
     <script src="assets/script/header.js"></script>
     <div id="fb-root"></div>
     <script>

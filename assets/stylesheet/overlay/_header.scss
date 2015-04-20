@@ -23,11 +23,22 @@ header{
         @include pad(0 default);
         z-index: 100;
         position: fixed;
+        @media screen and (max-width: 480px){height:5rem;}
+        >ul {@media screen and (max-width: 480px){height:5rem;}}
         .pull-left img{
             max-height: 2.5rem;
             opacity: .15;
             @include transition(opacity .3s ease-in-out);
             &:hover{ opacity: 1; }
+        }
+        a{
+            color: $gray-dark;
+            display: inline-block;
+            line-height: 5rem;
+            padding: 0 1rem;
+            @include transition(box-shadow .3s ease-in-out);
+
+            /*&.actif{ box-shadow: 0 -.3rem 0 0 $pink inset;}*/
         }
         &.sticky{
             visibility: hidden;
@@ -36,49 +47,49 @@ header{
         li.menu_query {
             img{display: none;}
             @media screen and (max-width: 480px){
-                ul{display: none;padding: 0;}
+                ul{display: none;padding: 0;background: $gray;margin-top: 5rem;}
                 img{max-height: 2.5rem;position: absolute;top: 1rem;right: 2rem;cursor: pointer;display: block;}
                 &:hover ul{display: block;}
+                li{display: block;}
+            }
+            li{
+                &.active a.link {
+                    color: $pink;
+                    box-shadow: 0 -.3rem 0 0 $pink inset;
+                    @media screen and (max-width: 480px){box-shadow: .3rem 0 0 0 $pink inset;width: 100%;}
+                }
+                a{@media screen and (max-width: 480px){line-height:3rem;}}
+            }
+            li:hover {
+                &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+                &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+                &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+                &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+                @media screen and (max-width: 480px){
+                    &:nth-last-child(1) a{ box-shadow: .3rem 0 0 0 $pink inset; }
+                    &:nth-last-child(2) a{ box-shadow: .3rem 0 0 0 $pink inset; }
+                    &:nth-last-child(3) a{ box-shadow: .3rem 0 0 0 $pink inset; }
+                    &:nth-last-child(4) a{ box-shadow: .3rem 0 0 0 $pink inset; }
+                }
             }
         }
-    }
-    a{
-        color: $gray-dark;
-        display: inline-block;
-        line-height: 5rem;
-        padding: 0 1rem;
-        @include transition(box-shadow .3s ease-in-out);
-
-        /*&.actif{ box-shadow: 0 -.3rem 0 0 $pink inset;}*/
-    }
-    li{
-        &.active a.link {
-            color: $pink;
-            box-shadow: 0 -.3rem 0 0 $pink inset;
+        .scroll-down {
+            display: block;
+            position: absolute;
+            z-index: 100;
+            bottom: 70px;
+            left: 50%;
+            margin-left: -16px;
+            width: 34px;
+            height: 34px;
+            font-size: 34px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
         }
-        &:hover {
-            &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-            &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-            &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-            &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
+        p{
+            font-size:5rem;
+            @media screen and (max-width: 480px){font-size:2rem;}
         }
-    }
-    .scroll-down {
-        display: block;
-        position: absolute;
-        z-index: 100;
-        bottom: 70px;
-        left: 50%;
-        margin-left: -16px;
-        width: 34px;
-        height: 34px;
-        font-size: 34px;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-    }
-    p{
-        font-size:5rem;
-        @media screen and (max-width: 480px){font-size:2rem;}
     }
 }

@@ -112,4 +112,7 @@ $(function(){
 			});
 		}
 	}
+	$(function() {
+		$('.cell').popin();
+	});
 });
