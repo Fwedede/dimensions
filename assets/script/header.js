@@ -5,22 +5,6 @@ $(function(){
 	var widthWindow = window.innerWidth;
 	var heightHome = $('header section').height();
 
-	// Delais d'affichage des info-bulles dans "qui-suis-je"
-	$('.chart').tooltip({
-		delay: {show: 500, hide: 100}
-	});
-	function chart(){
-		$('.chart').easyPieChart({
-			barColor: 'rgb(204,0,51)',
-			trackColor: 'rgb(204,204,204)',
-			scaleColor: false,
-			lineCap: 'butt',
-			lineWidth: 3,
-			size: 60,
-			animate: 5000
-		});
-	}
-
 	// Ajustement de la "home"
 	$('header').css('height', heightWindow);
 	$('header section').css('top', ((heightWindow - heightHome) / 3));
@@ -99,14 +83,12 @@ $(function(){
 					if($(this).attr('href').indexOf('#') >= 0){
 						var $offsetElement = $($(this).attr('href').substr($(this).attr('href').indexOf('#')));
 						var $offsetTop = $offsetElement.offset().top;
-						if(($offsetTop >= $windScr && $offsetTop <= $windScr + 1/2 * $windowHeight) || ($offsetTop+$offsetElement.height() >= $windScr + 1/2 * $windowHeight && $offsetTop+$offsetElement.height() <= $windScr + $windowHeight)){
+						if(($offsetTop >= $windScr && $offsetTop <= $windScr + 1/8 * $windowHeight) || 
+							($offsetTop+$offsetElement.height() >= $windScr + 1/8 * $windowHeight && $offsetTop+$offsetElement.height() <= $windScr + $windowHeight)){
 							$('.list-inline li').removeClass('active');
 							$(this).parent().addClass('active');
 						}
 						
-					}
-					if($(this).attr('href') == '#qui'){
-						chart();
 					}
 				}
 			});
