@@ -228,6 +228,8 @@
 		"bgcolor" : 'white',
 		'txtcolor' : 'black'
 	};
+	var widthWindow = window.innerWidth;
+	var leftWindow = $('body').offset().left;
 
 	$.fn.popin=function(options) {
 
@@ -245,17 +247,26 @@
 
 					// Récupération du numero de l'élément
 					var projet = $(this).attr('popin-projet');
+					var height = $(this).height();
+					
 
 					if(projet != undefined && projet != '') {
-
 						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
 
 							$('.popin-bg').html(res);
 							$('.popin-bg').fadeIn(param.show);
+							$('.bg').fadeIn(param.show);
+							//var popinTop = $(this).offset().top;
+							//$('.popin-bg') = $(this).offset().top;
+							//$('.popin').css('left', 0);
+							$('.popin-bg').css('width', (widthWindow - '1rem'));
+							$('.popin-bg').css('left', leftWindow);
+							//$('.popin').css('top', height + 80);
 							var imgMaxHeight = ($('.popin').height() - parseInt($('.popin').css('padding-top')) - $('.popin .title').height() - parseInt($('.popin .title').css('padding-bottom')) - parseInt($('.popin .title').css('margin-top')) - parseInt($('.popin .title').css('margin-bottom')));
 							$('.carousel .img').css('max-height', imgMaxHeight);
 							$('.popin').find('.close').click(function() {
 								$('.popin-bg').fadeOut(param.hide);
+								$('.bg').fadeOut(param.hide);
 							});
 						});
 					}

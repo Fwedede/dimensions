@@ -73,23 +73,23 @@ header{
                 }
             }
         }
-        .scroll-down {
-            display: block;
-            position: absolute;
-            z-index: 100;
-            bottom: 70px;
-            left: 50%;
-            margin-left: -16px;
-            width: 34px;
-            height: 34px;
-            font-size: 34px;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-        }
-        p{
-            font-size:5rem;
-            @media screen and (max-width: 480px){font-size:2rem;}
-        }
+    }
+    .scroll-down {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        bottom: 70px;
+        left: 50%;
+        margin-left: -16px;
+        width: 34px;
+        height: 34px;
+        font-size: 34px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+    }
+    p{
+        font-size:5rem;
+        @media screen and (max-width: 480px){font-size:2rem;}
     }
 }
