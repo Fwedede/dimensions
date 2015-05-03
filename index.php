@@ -31,7 +31,7 @@
         <section class="container main-body-wrap" id="home">
             <h1 class="title"><img src="assets/img/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
             <p>Donnez une autre dimension à votre image</p>
-        </section> 
+        </section>
         <a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
     </header>
 
@@ -43,7 +43,7 @@
                     <p>Aujourd'hui plus que jamais, l'image est quelque chose de très importante. Le visuel est la première chose que l'on remarque  et qui nous donne notre première impression.<br>Le projet de l'agence se base sur cette constatation.</p>
                     <p>Dimensions est une agence de communication visuelle, digitale et décorative. Elle accompagne principalement les nouvelles entreprises (les TPE et les PME plus particulièrement) qui désirent définir l'image de leur entreprise, de leur produit ou de leur événement.</p>
                     <p>L'agence désire aller beaucoup plus loin qu'une communication visuelle, en allant jusqu'à la décoration, ce qui permettra une cohérence globale et unique de son image.</p>
-                </article>                   
+                </article>
                 </div>
             </div>
         </section>
@@ -63,7 +63,7 @@
                             $req = $bdd->query("SELECT * FROM realisations WHERE id=1 ORDER BY id ASC ");
                     ?>
                     <div class="tab">
-                    <?php 
+                    <?php
                         if($req->rowCount() > 0) {
                             while($res = $req->fetch()) {
                                 require('assets/view/realisations.html');
@@ -135,7 +135,7 @@
             </div>
         </section>
     </main>
-    
+
     <footer class="text-center font-xs">
         <section>
             <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
@@ -148,7 +148,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
     <!--script src="assets/script/realisations.js"></script-->
     <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>    
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>
     <script src="assets/script/header.js"></script>
     <script type="text/javascript" src="assets/script/popin.js"></script>
     <div id="fb-root"></div>
@@ -168,6 +168,6 @@
                 po.src = 'https://apis.google.com/js/plusone.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
         })();
-</script>  
+</script>
 </body>
 </html>

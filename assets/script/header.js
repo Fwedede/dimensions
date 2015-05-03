@@ -1,5 +1,5 @@
 $(function(){
-	
+
 	// Déclaration de differentes dimensions
 	var heightWindow = window.innerHeight;
 	var widthWindow = window.innerWidth;
@@ -16,14 +16,14 @@ $(function(){
 		//$headerGutter = $('nav').height()-1;
 		$('.list-inline').each(function(){
 			var $this = $(this);
-			$this.find('a').each(function(){					
+			$this.find('a').each(function(){
 				var $parent = $(this);
 				while(!$parent.hasClass('list-inline')){
-					if($parent.get(0).tagName == 'ul'){							
+					if($parent.get(0).tagName == 'ul'){
 					}
 					$parent=$parent.parent();
-				}					
-			});				
+				}
+			});
 		});
 		chronos_sticky();
 	});
@@ -36,7 +36,7 @@ $(function(){
 			window.mainNavFlag = true;
 			var $mainWrapper = $('.main-body-wrap');
 			var $topScroll = $target.offset().top - $('nav').height()+1;
-			$('html, body').animate({'scrollTop' : $topScroll}, 800);	
+			$('html, body').animate({'scrollTop' : $topScroll}, 800);
 		}
 	});
 
@@ -49,7 +49,7 @@ $(function(){
 				window.mainNavFlag = true;
 				var $mainWrapper = $('.main-body-wrap');
 				var $topScroll = $target.offset().top - $('nav').height()+1;
-				$('html, body').animate({'scrollTop' : $topScroll}, 800);	
+				$('html, body').animate({'scrollTop' : $topScroll}, 800);
 			}
 		}
 		chronos_sticky();
@@ -78,17 +78,17 @@ $(function(){
 		var $windScr = $(window).scrollTop();
 		var $windowHeight = $(window).height();
 		if($('.main-body-wrap').length > 0){
-			$('.list-inline a').each(function(){			
+			$('.list-inline a').each(function(){
 				if (window.mainNavFlag == true) {
 					if($(this).attr('href').indexOf('#') >= 0){
 						var $offsetElement = $($(this).attr('href').substr($(this).attr('href').indexOf('#')));
 						var $offsetTop = $offsetElement.offset().top;
-						if(($offsetTop >= $windScr && $offsetTop <= $windScr + 1/8 * $windowHeight) || 
+						if(($offsetTop >= $windScr && $offsetTop <= $windScr + 1/8 * $windowHeight) ||
 							($offsetTop+$offsetElement.height() >= $windScr + 1/8 * $windowHeight && $offsetTop+$offsetElement.height() <= $windScr + $windowHeight)){
 							$('.list-inline li').removeClass('active');
 							$(this).parent().addClass('active');
 						}
-						
+
 					}
 				}
 			});
