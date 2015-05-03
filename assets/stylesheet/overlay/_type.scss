@@ -19,11 +19,11 @@
 
 .font-xs{
     font-size: 80%;
-    @media screen and (max-width: 480px){font-size:64%;}
+    @include media(max-width 480px) {font-size:64%;}
 }
 .font-xl{
     font-size: 120%;
-    @media screen and (max-width: 480px){font-size:90%;}
+    @include media(max-width 480px) {font-size:90%;}
 }
 
 .text-left{
@@ -54,10 +54,10 @@ a.icon-arrow-down2:before {
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "icomoon";
 }
-.tooltip-item {  
+.tooltip-item {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
-  $base-line-height: 1.5em !default; 
+  $base-line-height: 1.5em !default;
   $tooltip-background: white;;
   $tooltip-max-width: 36rem;
   $tooltip-arrow-width: 8px;

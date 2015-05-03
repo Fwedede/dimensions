@@ -14,7 +14,7 @@ main{
     }
     .social a img{
         @include transition(opacity .3s ease-in-out);
-        @media screen and (max-width: 480px){width:15%;}
+        @include media(max-width 480px) {width:15%;}
 
         &:hover{
             opacity: .65;
@@ -30,8 +30,8 @@ main{
     #qui{
         article{
             margin-right: 16rem;
-            @media screen and (max-width: 1028px){margin-right:26rem;}
-            @media screen and (max-width: 480px){margin-right:0;}
+            @include media(max-width 1028px) {margin-right:26rem;}
+            @include media(max-width 480px) {margin-right:0;}
         }
         .chart{
             border:none;height:60px;margin:0.1rem;padding:0;position:relative;width:60px;background:white;cursor:pointer;
@@ -41,7 +41,7 @@ main{
         }
         .performances{
             @include outer-container;
-            >div{ 
+            >div{
                 @include span-columns(4);
                 text-align: center;
             }
@@ -50,29 +50,29 @@ main{
     #realisations{
         .tab{
             @include outer-container;
-            >div:nth-child(1){ 
+            >div:nth-child(1){
                 @include span-columns(7);
                 text-align: center;
                 .img_package{background-size: 100%;}
-                @media screen and (max-width: 480px){
+                @include media(max-width 480px) {
                     @include span-columns(12);
                     .img_package{background-size: auto 100%;}
                 }
             }
-            >div:nth-child(2){ 
+            >div:nth-child(2){
                 @include span-columns(5);
                 text-align: center;
                 .img_package{background-size: auto 100%;}
-                @media screen and (max-width: 480px){@include span-columns(12);}
+                @include media(max-width 480px) { @include span-columns(12);}
             }
             .img_package{
                 background-repeat: no-repeat;
-                
+
             }
             h3 {margin: 0;}
             .description{
                 background:rgba(255,255,255,0.60);bottom:0;display:none;left:0;max-height:6rem;padding:.2rem;position:absolute;width:100%;
-                
+
                 p{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;margin: 0;}
             }
             .cell{
@@ -97,7 +97,7 @@ main{
         ;width: 100%;}
     .popin{background:white;bottom:0;position:relative;width: 100%;padding: 2rem;box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;}
     .popin .close{position:absolute;right:1.5rem;top:1.5rem;cursor: pointer;
-        @media screen and (max-width: 480px){width:14px;}
+        @include media(max-width 480px) {width:14px;}
     }
     .popin .close .img{margin-left:.2rem;vertical-align:bottom;}
     .popin>.desc, .popin .carousel{display:inline-block;vertical-align:top;width:100%;}
@@ -105,12 +105,12 @@ main{
     .popin>.carousel{
         text-align:center;width:70%;
         .img{margin:auto;width:auto;height:330px;
-            @media screen and (max-width: 480px){width:180px;height: auto;}
+            @include media(max-width 480px) {width:180px;height: auto;}
         }
         .carousel-indicators{bottom:0px;margin-bottom:0;}
         .carousel-control{background:0;}
         .carousel-caption{bottom:0px;left:0;padding-bottom:20px;right:0;text-shadow:none;display:none;position: absolute;
-            @media screen and (max-width: 480px){padding-bottom:2px;}
+            @include media(max-width 480px) {padding-bottom:2px;}
         }
     }
     .popin .carousel:hover .carousel-caption{background:rgba(255,255,255,.50);display:block;}
@@ -144,4 +144,3 @@ main{
         }
     }
 }
-
