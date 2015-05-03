@@ -141,7 +141,7 @@
       <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
       <div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
       <!--div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div-->
-      <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
+      <p>© Copyright 2015</p>
    </section>
 </footer>
    <!--script src="assets/script/jquery.min.js"></script-->

@@ -45,3 +45,6 @@ figure{
     max-height: 100%;
     @include media(max-width 480px) {display:none;}
 }
+footer{
+    @include pad(.5rem);
+}
