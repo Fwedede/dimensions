@@ -140,15 +140,15 @@
         <section>
             <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
             <div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-            <div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div>
+            <!--div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div-->
             <p>© Copyright 2015 - Site développé par Steeve "TokaLazy" Clément.</p>
         </section>
     </footer>
     <!--script src="assets/script/jquery.min.js"></script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-    <!--script src="assets/script/realisations.js"></script-->
+    <!--script src="assets/script/realisations.js"></script>
     <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script>    
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script-->    
     <script src="assets/script/header.js"></script>
     <script type="text/javascript" src="assets/script/popin.js"></script>
     <div id="fb-root"></div>
@@ -162,12 +162,12 @@
             }
         (document, 'script', 'facebook-jssdk'));
     </script>
-    <script type="text/javascript">
+    <!--script type="text/javascript">
         (function() {
             var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
                 po.src = 'https://apis.google.com/js/plusone.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
         })();
-</script>  
+</script-->  
 </body>
 </html>
