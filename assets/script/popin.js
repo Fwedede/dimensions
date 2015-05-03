@@ -239,7 +239,7 @@
 		// Pour chaque élément qui appelle le plugin
 		return this.each(function() {
 
-			// Lorsqu'on clique sur l'élément 
+			// Lorsqu'on clique sur l'élément
 			$(this).click(function() {
 
 				// Si l'élément a bien l'attribut nécessaire au plugin
@@ -248,7 +248,7 @@
 					// Récupération du numero de l'élément
 					var projet = $(this).attr('popin-projet');
 					var height = $(this).height();
-					
+
 
 					if(projet != undefined && projet != '') {
 						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
@@ -274,5 +274,7 @@
 			});
 		});
 	};
+
+	$('.cell').popin();
 
 }).call(this);
