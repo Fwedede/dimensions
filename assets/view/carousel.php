@@ -11,7 +11,7 @@ catch(Exception $e) {
 $bdd->exec("SET CHARACTER SET utf8");
 $req = $bdd->query("SELECT * FROM realisations WHERE projet_id = '".intval($_POST['projet'])."'");
 
-if($res = $req->fetch())	
+if($res = $req->fetch())
 
 ?>
 <div class="popin">
@@ -35,11 +35,11 @@ $bdd->exec("SET CHARACTER SET utf8");
 $req3 = $bdd->query("SELECT * FROM realisations WHERE projet_id = ".intval($_POST['projet'])." ORDER BY id");
 
 while($res3 = $req3->fetch()) {
-	$active = '';	
+	$active = '';
 
 	if($i == 0)
-		$active = 'active';		
-		
+		$active = 'active';
+
 	?>
 	<div class="preview <?php echo $active;?>">
 	<!--div class="item <?php echo $active;?>"-->
