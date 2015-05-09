@@ -14,7 +14,7 @@ main{
     }
     .social a img{
         @include transition(opacity .3s ease-in-out);
-        @include media(max-width 480px) {width:15%;}
+        @include media($screen-phone) {width:15%;}
 
         &:hover{
             opacity: .65;
@@ -31,7 +31,7 @@ main{
         article{
             margin-right: 16rem;
             @include media(max-width 1028px) {margin-right:26rem;}
-            @include media(max-width 480px) {margin-right:0;}
+            @include media($screen-phone) {margin-right:0;}
         }
         .chart{
             border:none;height:60px;margin:0.1rem;padding:0;position:relative;width:60px;background:white;cursor:pointer;
@@ -51,22 +51,20 @@ main{
         .tab{
             @include outer-container;
             >div:nth-child(1){
-                @include span-columns(7);
-                text-align: center;
-                .img_package{background-size: 100%;}
-                @include media(max-width 480px) {
-                    @include span-columns(12);
-                    .img_package{background-size: auto 100%;}
-                }
-            }
-            >div:nth-child(2){
                 @include span-columns(5);
                 text-align: center;
-                .img_package{background-size: auto 100%;}
-                @include media(max-width 480px) { @include span-columns(12);}
+                .img_package{background-size:cover;}
+                @include media($screen-phone) {@include span-columns(12);}
+            }
+            >div:nth-child(2){
+                @include span-columns(7);
+                text-align: center;
+                .img_package{background-size: cover;}
+                @include media($screen-phone) {@include span-columns(12);}
             }
             .img_package{
                 background-repeat: no-repeat;
+                img {max-width:inherit;}
 
             }
             h3 {margin: 0;}
@@ -108,7 +106,7 @@ main{
         width: 100%;}
         .popin{background:white;bottom:0;position:relative;width: 100%;padding: 2rem;box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;}
         .popin .close{position:absolute;right:1.5rem;top:1.5rem;cursor: pointer;
-            @include media(max-width 480px) {width:14px;}
+            @include media($screen-phone) {width:14px;}
         }
         .popin .close .img{margin-left:.2rem;vertical-align:bottom;}
         .popin>.desc, .popin .carousel{display:inline-block;vertical-align:top;width:100%;}
@@ -116,12 +114,12 @@ main{
         .popin>.carousel{
             text-align:center;width:70%;
             .img{margin:auto;width:auto;height:330px;
-                @include media(max-width 480px) {width:180px;height: auto;}
+                @include media($screen-phone) {width:180px;height: auto;}
             }
             .carousel-indicators{bottom:0px;margin-bottom:0;}
             .carousel-control{background:0;}
             .carousel-caption{bottom:0px;left:0;padding-bottom:20px;right:0;text-shadow:none;display:none;position: absolute;
-                @include media(max-width 480px) {padding-bottom:2px;}
+                @include media($screen-phone) {padding-bottom:2px;}
             }
         }
         .popin .carousel:hover .carousel-caption{background:rgba(255,255,255,.50);display:block;}
