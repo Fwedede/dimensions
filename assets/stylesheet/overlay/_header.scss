@@ -23,7 +23,7 @@ header{
         @include pad(0 default);
         z-index: 100;
         position: fixed;
-        @include media(max-width 480px) {
+        @include media($screen-phone) {
            height: 5rem;
 
            > ul{
@@ -53,7 +53,7 @@ header{
         }
         li.menu_query {
             img{display: none;}
-            @include media(max-width 480px) {
+            @include media($screen-phone) {
                 ul{display: none;padding: 0;background: $gray;margin-top: 5rem;}
                 img{max-height: 2.5rem;position: absolute;top: 1rem;right: 2rem;cursor: pointer;display: block;}
                 &:hover ul{display: block;}
@@ -63,12 +63,12 @@ header{
                 &.active a.link {
                     color: $pink;
                     box-shadow: 0 -.3rem 0 0 $pink inset;
-                    @include media(max-width 480px) {
+                    @include media($screen-phone) {
                        box-shadow: .3rem 0 0 0 $pink inset;width: 100%;
                     }
                 }
                 a{
-                   @include media(max-width 480px) {
+                   @include media($screen-phone) {
                       line-height:3rem;
                    }
                 }
@@ -78,7 +78,7 @@ header{
                 &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
                 &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
                 &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-                @include media(max-width 480px) {
+                @include media($screen-phone) {
                     &:nth-last-child(1) a{ box-shadow: .3rem 0 0 0 $pink inset; }
                     &:nth-last-child(2) a{ box-shadow: .3rem 0 0 0 $pink inset; }
                     &:nth-last-child(3) a{ box-shadow: .3rem 0 0 0 $pink inset; }
@@ -103,7 +103,7 @@ header{
     }
     p{
         font-size:5rem;
-        @include media(max-width 480px) {
+        @include media($screen-phone) {
            font-size:2rem;
         }
     }

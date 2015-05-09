@@ -1,7 +1,7 @@
 /* Screen sizes */
-$screen-phone: 480px;
-$screen-tablet: 768px;
-$screen-desktop: 992px;
+$screen-phone: max-width 480px;
+$screen-tablet: max-width 768px;
+$screen-desktop: max-width 992px;
 
 $screen-xs-max: $screen-phone - 1;
 $screen-sm-min: $screen-phone;
