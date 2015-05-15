@@ -14,7 +14,7 @@
    <div id="fb-root"></div>
 
    <header>
-      <nav>
+      <nav class="sticky">
          <ul class="container list-unstyled list-inline text-right font-xl">
             <li class="pull-left"><a href="#home"><img src="assets/img/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
             <li class="menu_query">
