@@ -80,31 +80,31 @@
 	<section class="main-body-wrap" id="services">
 		<div class="container">
 			<h2>Services</h2>
-			<div>
+			<div class="col-md-4">
 				<div class="icon-analyser"></div>
 				<h4>Analyser</h4>
 			</div>
-			<div>
+			<div class="col-md-4">
 				<div class="icon-proposer"></div>
 				<h4>Proposer</h4>
 			</div>
-			<div>
+			<div class="col-md-4 last">
 				<div class="icon-concevoir"></div>
 				<h4>Concevoir</h4>
 			</div>
-			<div>
+			<div class="col-md-4">
 				<div class="icon-developper"></div>
 				<h4>Développer</h4>
 			</div>
-			<div>
+			<div class="col-md-4">
 				<div class="icon-agencer"></div>
 				<h4>Agencer</h4>
 			</div>
-			<div>
+			<div class="col-md-4 last">
 				<div class="icon-cooperer"></div>
 				<h4>Coopérer</h4>
 			</div>
-			<div>
+			<div class="col-md-4">
 				<div class="icon-veiller"></div>
 				<h4>Veiller</h4>
 			</div>
