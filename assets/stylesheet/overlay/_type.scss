@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
 }
-.list-inline {
+.list-inline{
   li{
     display: inline-block;
     vertical-align: top;
@@ -19,11 +19,15 @@
 
 .font-xs{
     font-size: 80%;
-    @include media($screen-phone) {font-size:64%;}
+    @include media($screen-phone) {
+      font-size: 64%;
+      }
 }
 .font-xl{
     font-size: 120%;
-    @include media($screen-phone) {font-size:90%;}
+    @include media($screen-phone) {
+      font-size: 90%;
+      }
 }
 
 .text-left{
@@ -41,20 +45,20 @@
 div.inline-flex{
     display: inline-flex;
 }
-.hidden {
+.hidden{
     text-indent: -9999px;
   visibility: hidden;
   display: none;
 }
-a.icon-arrow-down2:before {
+a.icon-arrow-down2: before{
     content: "\ea3e";
     font-family: "icomoon";
     color: white;
 }
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]: before, [class*=" icon-"]: before{
   font-family: "icomoon";
 }
-.tooltip-item {
+.tooltip-item{
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -73,13 +77,13 @@ a.icon-arrow-down2:before {
   position: relative;
   text-align: center;
 
-  &:focus,
-  &:hover .tooltip {
+  &: focus,
+  &: hover .tooltip{
     opacity: 1;
     visibility: visible;
   }
 
-  .tooltip {
+  .tooltip{
     @include position(absolute, null 0 $tooltip-distance-from-item -5rem);
     @include transition (all 0.2s ease-in-out);
     background-color: $tooltip-background;
@@ -97,80 +101,80 @@ a.icon-arrow-down2:before {
     z-index: 10;
     width: 18rem;
 
-    p {
+    p{
       line-height: $base-line-height;
       margin: 0;
     }
   }
 }
-.animated {
+.animated{
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.animated.infinite {
+.animated.infinite{
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-@-webkit-keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
+@-webkit-keyframes bounce{
+  0%, 20%, 53%, 80%, 100%{
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
 
-  40%, 43% {
+  40%, 43%{
     -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
 
-  70% {
+  70%{
     -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     -webkit-transform: translate3d(0, -6px, 0);
     transform: translate3d(0, -6px, 0);
   }
 
-  90% {
+  90%{
     -webkit-transform: translate3d(0,-2px,0);
     transform: translate3d(0,-2px,0);
   }
 }
 
-@keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
+@keyframes bounce{
+  0%, 20%, 53%, 80%, 100%{
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
 
-  40%, 43% {
+  40%, 43%{
     -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
 
-  70% {
+  70%{
     -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     -webkit-transform: translate3d(0, -6px, 0);
     transform: translate3d(0, -6px, 0);
   }
 
-  90% {
+  90%{
     -webkit-transform: translate3d(0,-2px,0);
     transform: translate3d(0,-2px,0);
   }
 }
 
-.bounce {
+.bounce{
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-transform-origin: center bottom;

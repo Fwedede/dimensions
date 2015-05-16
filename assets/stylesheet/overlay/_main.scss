@@ -1,155 +1,282 @@
 main{
-    h2{
-        border-bottom: 3px solid;
-        padding: 2rem;
-    }
-    a{
-        color: inherit;
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-    .address{
-        margin-bottom: 2rem;
-    }
-    .social a img{
-        @include transition(opacity .3s ease-in-out);
-        @include media($screen-phone) {width:15%;}
+   h2{
+      border-bottom: 3px solid;
+      padding: 2rem;
+   }
+   a{
+      color: inherit;
 
-        &:hover{
-            opacity: .65;
-        }
-    }
-    section {
-        position: relative;
-        &:nth-child(1){ background-color: #fff; }
-        &:nth-child(2){ background-color: $pink-light; }
-        &:nth-child(3){ background-color: #fff; }
-        &:nth-child(4){ background-color: $pink-light; }
-    }
-    #qui{
-        article{
-            margin-right: 16rem;
-            @include media(max-width 1028px) {margin-right:26rem;}
-            @include media($screen-phone) {margin-right:0;}
-        }
-        .chart{
-            border:none;height:60px;margin:0.1rem;padding:0;position:relative;width:60px;background:white;cursor:pointer;
-            canvas{left:0;position:absolute;top:0;}
-            img{left:0;position:absolute;top:0;width:60px;height:60px;}
-            &:hover{background:transparent;}
-        }
-        .performances{
-            @include outer-container;
-            >div{
-                @include span-columns(4);
-                text-align: center;
-            }
-        }
-    }
-    #realisations{
-        .tab{
-            @include outer-container;
-            >div:nth-child(1){
-                @include span-columns(5);
-                text-align: center;
-                .img_package{background-size:cover;}
-                @include media($screen-phone) {@include span-columns(12);}
-            }
-            >div:nth-child(2){
-                @include span-columns(7);
-                text-align: center;
-                .img_package{background-size: cover;}
-                @include media($screen-phone) {@include span-columns(12);}
-            }
+      &: hover{
+         text-decoration: underline;
+      }
+   }
+   .address{
+      margin-bottom: 2rem;
+   }
+   .social a img{
+      @include transition(opacity .3s ease-in-out);
+      @include media($screen-phone) {
+         width: 15%;
+      }
+
+      &: hover{
+         opacity: .65;
+      }
+   }
+   section{
+      position: relative;
+
+      &: nth-child(1){
+         background-color: #fff;
+      }
+      &: nth-child(2){
+         background-color: $pink-light;
+      }
+      &: nth-child(3){
+         background-color: #fff;
+      }
+      &: nth-child(4){
+         background-color: $pink-light;
+      }
+   }
+   #qui{
+      article{
+         margin-right: 16rem;
+         @include media(max-width 1028px) {
+            margin-right: 26rem;
+         }
+         @include media($screen-phone) {
+            margin-right: 0;
+         }
+      }
+      .chart{
+         border: none;
+         height: 60px;
+         margin: 0.1rem;
+         padding: 0;
+         position: relative;
+         width: 60px;
+         background: white;
+         cursor: pointer;
+
+         canvas{
+            left: 0;
+            position: absolute;
+            top: 0;
+         }
+         img{
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 60px;
+            height: 60px;
+         }
+         &: hover{
+            background: transparent;
+         }
+      }
+      .performances{
+         @include outer-container;
+
+         > div{
+            @include span-columns(4);
+            text-align: center;
+         }
+      }
+   }
+   #realisations{
+      .tab{
+         @include outer-container;
+         > div: nth-child(1){
+            @include span-columns(5);
+            text-align: center;
+
             .img_package{
-                background-repeat: no-repeat;
-                img {max-width:inherit;}
+               background-size: cover;
+            }
+            @include media($screen-phone) {
+               @include span-columns(12);
+            }
+         }
+         > div: nth-child(2){
+            @include span-columns(7);
+            text-align: center;
 
+            .img_package{
+               background-size: cover;
             }
-            h3 {margin: 0;}
-            .description{
-                background:rgba(255,255,255,0.60);bottom:0;left:0;max-height:6rem;padding:.2rem;position:absolute;width:100%;opacity: 0;
+            @include media($screen-phone) {
+               @include span-columns(12);
+            }
+         }
+         .img_package{
+            background-repeat: no-repeat;
 
-                @include transition(opacity .3s ease-in-out);
-                p{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;margin: 0;}
+            img{
+               max-width: inherit;
             }
-            .cell{
-                position: relative;
-                z-index: 5;
-                box-shadow: 0 0.2rem 0.3rem $gray-dark;
-                cursor: pointer;                
-                @include transition(all .2s ease-in-out);
-                &:hover{
-                    z-index: 10;
-                    @include transform(scale(1.05));
+         }
+         h3{
+            margin: 0;
+         }
+         .description{
+            background: rgba(255,255,255,0.60);
+            bottom: 0;
+            left: 0;
+            max-height: 6rem;
+            padding: .2rem;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            @include transition(opacity .3s ease-in-out);
 
-                    .description{
-                        opacity: 1;
-                    }
-                }
-                &.active{@include transform(scale(1.1));z-index: 10;position: relative;cursor: pointer;}
+            p{
+               text-overflow: ellipsis;
+               overflow: hidden;
+               white-space: nowrap;
+               margin: 0;
             }
-        }
-        .bg{background:rgba(255,255,255,.5);z-index:10000;position:absolute;display: none;width: 100%;height: 100%;top: 0;left: 0;}
-    }
+         }
+         .cell{
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 0.2rem 0.3rem $gray-dark;
+            cursor: pointer;
+            @include transition(all .2s ease-in-out);
 
-    .popin-bg{
-        bottom:0;
-        color:#333;
-        display:none;
-        left:0;
-        right:0;
-        top: 0;
-        position: relative;
-        z-index: 11000;
-        width: 100%;}
-        .popin{background:white;bottom:0;position:relative;width: 100%;padding: 2rem;box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;}
-        .popin .close{position:absolute;right:1.5rem;top:1.5rem;cursor: pointer;
-            @include media($screen-phone) {width:14px;}
-        }
-        .popin .close .img{margin-left:.2rem;vertical-align:bottom;}
-        .popin>.desc, .popin .carousel{display:inline-block;vertical-align:top;width:100%;}
-        .popin>.desc{width:30%;padding:10px 10px 10px 0;}
-        .popin>.carousel{
-            text-align:center;width:70%;
-            .img{margin:auto;width:auto;height:330px;
-                @include media($screen-phone) {width:180px;height: auto;}
-            }
-            .carousel-indicators{bottom:0px;margin-bottom:0;}
-            .carousel-control{background:0;}
-            .carousel-caption{bottom:0px;left:0;padding-bottom:20px;right:0;text-shadow:none;display:none;position: absolute;
-                @include media($screen-phone) {padding-bottom:2px;}
-            }
-        }
-        .popin .carousel:hover .carousel-caption{background:rgba(255,255,255,.50);display:block;}
+            &: hover{
+               z-index: 10;
+               @include transform(scale(1.05));
 
-        #contact{
-            .col-md-5{margin-top: 7rem;}
-        }
-        #services{
-            .cards {
-                @include display(flex);
-                @include flex-wrap(wrap);
-                @include justify-content(space-between);
-                .card{
-                    @include flex-basis(9em);
-                    @include flex-grow(1);
-                    @include transition (all 0.2s ease-in-out);
-                    background-color: $gray;
-                    margin: 0 1rem;
-                    /*border: 1px solid $gray-dark;*/
-                    .card-image {
-                        overflow: hidden;
-                        max-height: 290px;
-                        img {
-                          @include transition (all 0.2s ease-in-out);width: 100%;
-                      }
-                  }
-                  .card-header {
-                    @include transition (all 0.2s ease-in-out);
-                }
+               .description{
+                  opacity: 1;
+               }
             }
-        }
-    }
+            &.active{
+               @include transform(scale(1.1));
+               z-index: 10;
+               position: relative;
+               cursor: pointer;
+            }
+         }
+      }
+      .bg{
+         background: rgba(255,255,255,.5);
+         z-index: 10000;
+         position: absolute;
+         display: none;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+      }
+   }
+   .popin-bg{
+      bottom: 0;
+      color: #333;
+      display: none;
+      left: 0;
+      right: 0;
+      top: 0;
+      position: relative;
+      z-index: 11000;
+      width: 100%;
+   }
+   .popin{
+      background: white;
+      bottom: 0;
+      position: relative;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
+   }
+   .popin .close{
+      position: absolute;
+      right: 1.5rem;
+      top: 1.5rem;
+      cursor: pointer;
+      @include media($screen-phone) {
+         width: 14px;
+      }
+   }
+   .popin .close .img{
+      margin-left: .2rem;
+      vertical-align: bottom;
+   }
+   .popin > .desc, .popin .carousel{
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+   }
+   .popin > .desc{
+      width: 30%;
+      padding: 10px 10px 10px 0;
+   }
+   .popin > .carousel{
+      text-align: center;
+      width: 70%;
+
+      .img{
+         margin: auto;
+         width: auto;
+         height: 330px;
+         @include media($screen-phone) {
+            width: 180px;
+            height: auto;
+         }
+      }
+      .carousel-indicators{
+         bottom: 0px;
+         margin-bottom: 0;
+      }
+      .carousel-control{
+         background: 0;
+      }
+      .carousel-caption{
+         bottom: 0px;
+         left: 0;
+         padding-bottom: 20px;
+         right: 0;
+         text-shadow: none;
+         display: none;
+         position: absolute;
+         @include media($screen-phone) {
+            padding-bottom: 2px;
+         }
+      }
+   }
+   .popin .carousel: hover .carousel-caption{
+      background: rgba(255,255,255,.50);
+      display: block;
+   }
+   #contact{
+      .col-md-5{
+         margin-top: 7rem;
+      }
+   }
+   #services{
+      .cards{
+         @include display(flex);
+         @include flex-wrap(wrap);
+         @include justify-content(space-between);
+         .card{
+            @include flex-basis(9em);
+            @include flex-grow(1);
+            @include transition (all 0.2s ease-in-out);
+            background-color: $gray;
+            margin: 0 1rem;
+            .card-image{
+               overflow: hidden;
+               max-height: 290px;
+               img{
+                  @include transition (all 0.2s ease-in-out);
+                  width: 100%;
+               }
+            }
+            .card-header{
+               @include transition (all 0.2s ease-in-out);
+            }
+         }
+      }
+   }
 }

@@ -1,110 +1,144 @@
 header{
-    box-shadow: 0 .1rem .1rem 0 $gray-dark;
-    background: url("../img/logos/grand-d.png") no-repeat center fixed;
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
-    background-position: 50% 50%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    section{
-        color: #fff;
+   box-shadow: 0 .1rem .1rem 0 $gray-dark;
+   background: url("../img/logos/grand-d.png") no-repeat center fixed;
+   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+   background-size: cover; /* version standardisée */
+   background-position: 50% 50%;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
 
-    }
-    h1{
-        border-bottom: 3px solid;
-        padding: 2rem;
-        img {width: 100%;}
-    }
-    nav{
-        width: 100%;
-        background: $gray;
-        @include pad(0 default);
-        z-index: 100;
-        position: fixed;
-        @include media($screen-phone) {
-           height: 5rem;
+   section{
+      color: #fff;
+   }
+   h1{
+      border-bottom: 3px solid;
+      padding: 2rem;
+      img{
+         width: 100%;
+      }
+   }
+   nav{
+      width: 100%;
+      background: $gray;
+      @include pad(0 default);
+      z-index: 100;
+      position: fixed;
+      @include media($screen-phone) {
+         height: 5rem;
 
-           > ul{
-                height:5rem;
-             }
-        }
-
-
-
-        .pull-left img{
-            max-height: 2.5rem;
-            opacity: .15;
-            @include transition(opacity .3s ease-in-out);
-            &:hover{ opacity: 1; }
-        }
-        a{
-            color: $gray-dark;
-            display: inline-block;
-            line-height: 5rem;
-            padding: 0 1rem;
-            @include transition(box-shadow .3s ease-in-out);
-
-        }
-        &.sticky{
-            visibility: hidden;
+         > ul{
+            height: 5rem;
+         }
+      }
+      .pull-left img{
+         max-height: 2.5rem;
+         opacity: .15;
+         @include transition(opacity .3s ease-in-out);
+         &: hover{
+            opacity: 1;
+         }
+      }
+      a{
+         color: $gray-dark;
+         display: inline-block;
+         line-height: 5rem;
+         padding: 0 1rem;
+         @include transition(box-shadow .3s ease-in-out);
+      }
+      &.sticky{
+         visibility: hidden;
+         display: none;
+      }
+      li.menu_query{
+         img{
             display: none;
-        }
-        li.menu_query {
-            img{display: none;}
-            @include media($screen-phone) {
-                ul{display: none;padding: 0;background: $gray;margin-top: 5rem;}
-                img{max-height: 2.5rem;position: absolute;top: 1rem;right: 2rem;cursor: pointer;display: block;}
-                &:hover ul{display: block;}
-                li{display: block;}
+         }
+         @include media($screen-phone) {
+            ul{
+               display: none;
+               padding: 0;
+               background: $gray;
+               margin-top: 5rem;
+            }
+            img{
+               max-height: 2.5rem;
+               position: absolute;
+               top: 1rem;
+               right: 2rem;
+               cursor: pointer;
+               display: block;
+            }
+            &: hover ul{
+               display: block;
             }
             li{
-                &.active a.link {
-                    color: $pink;
-                    box-shadow: 0 -.3rem 0 0 $pink inset;
-                    @include media($screen-phone) {
-                       box-shadow: .3rem 0 0 0 $pink inset;width: 100%;
-                    }
-                }
-                a{
-                   @include media($screen-phone) {
-                      line-height:3rem;
-                   }
-                }
+               display: block;
             }
-            li:hover {
-                &:nth-last-child(1) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-                &:nth-last-child(2) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-                &:nth-last-child(3) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-                &:nth-last-child(4) a{ box-shadow: 0 -.3rem 0 0 $pink inset; }
-                @include media($screen-phone) {
-                    &:nth-last-child(1) a{ box-shadow: .3rem 0 0 0 $pink inset; }
-                    &:nth-last-child(2) a{ box-shadow: .3rem 0 0 0 $pink inset; }
-                    &:nth-last-child(3) a{ box-shadow: .3rem 0 0 0 $pink inset; }
-                    &:nth-last-child(4) a{ box-shadow: .3rem 0 0 0 $pink inset; }
-                }
+         }
+         li{
+            &.active a.link{
+               color: $pink;
+               box-shadow: 0 -.3rem 0 0 $pink inset;
+               @include media($screen-phone) {
+                  box-shadow: .3rem 0 0 0 $pink inset;width: 100%;
+               }
             }
-        }
-    }
-    .scroll-down {
-        display: block;
-        position: absolute;
-        z-index: 100;
-        bottom: 70px;
-        left: 50%;
-        margin-left: -16px;
-        width: 34px;
-        height: 34px;
-        font-size: 34px;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-    }
-    p{
-        font-size:5rem;
-        @include media($screen-phone) {
-           font-size:2rem;
-        }
-    }
+            a{
+               @include media($screen-phone) {
+                  line-height: 3rem;
+               }
+            }
+         }
+         li: hover{
+            &: nth-last-child(1) a{
+               box-shadow: 0 -.3rem 0 0 $pink inset;
+            }
+            &: nth-last-child(2) a{
+               box-shadow: 0 -.3rem 0 0 $pink inset;
+            }
+            &: nth-last-child(3) a{
+               box-shadow: 0 -.3rem 0 0 $pink inset;
+            }
+            &: nth-last-child(4) a{
+               box-shadow: 0 -.3rem 0 0 $pink inset;
+            }
+            @include media($screen-phone) {
+               &: nth-last-child(1) a{
+                  box-shadow: .3rem 0 0 0 $pink inset;
+               }
+               &: nth-last-child(2) a{
+                  box-shadow: .3rem 0 0 0 $pink inset;
+               }
+               &: nth-last-child(3) a{
+                  box-shadow: .3rem 0 0 0 $pink inset;
+               }
+               &: nth-last-child(4) a{
+                  box-shadow: .3rem 0 0 0 $pink inset;
+               }
+            }
+         }
+      }
+   }
+   .scroll-down{
+      display: block;
+      position: absolute;
+      z-index: 100;
+      bottom: 70px;
+      left: 50%;
+      margin-left: -16px;
+      width: 34px;
+      height: 34px;
+      font-size: 34px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+   }
+   p{
+      font-size: 5rem;
+      @include media($screen-phone) {
+         font-size: 2rem;
+      }
+   }
 }

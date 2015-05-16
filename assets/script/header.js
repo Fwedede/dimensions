@@ -15,9 +15,9 @@ $(function() {
 		for(var i = 0; i < anchors.length; i++) {
 			if($(anchors[i]).offset().top - endIndex <= windowOffset) {
 				if(i === 0)
-					$('a[href^="#"]').parent().removeClass('active');
+				$('a[href^="#"]').parent().removeClass('active');
 				else
-					$('a[href="#'+$(anchors[i]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
+				$('a[href="#'+$(anchors[i]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
 			}
 		}
 	}

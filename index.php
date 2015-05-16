@@ -52,26 +52,25 @@
       <div class="container">
          <h2>Réalisations</h2>
          <div class="tab">
-         <?php
-         try {
-            $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-            $bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
-         }
-         catch(Exception $e) {
-            die('Erreur : '.$e->getMessage());
-         }
-
-         $bdd->exec("SET CHARACTER SET utf8");
-         $req = $bdd->query("SELECT * FROM projet");
-
-         if($req->rowCount() > 0) {
-            while($res = $req->fetch()) {
-               require('assets/view/realisations.html');
+            <?php
+            try {
+               $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+               $bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
             }
-         }
+            catch(Exception $e) {
+               die('Erreur : '.$e->getMessage());
+            }
 
-         $req->closeCursor();
-         ?>
+            $bdd->exec("SET CHARACTER SET utf8");
+            $req = $bdd->query("SELECT * FROM projet");
+
+            if($req->rowCount() > 0) {
+               while($res = $req->fetch()) {
+                  require('assets/view/realisations.html');
+               }
+            }
+            $req->closeCursor();
+            ?>
          </div>
       </div>
       <div class="bg"></div>
@@ -143,29 +142,30 @@
       <p>© Copyright 2015</p>
    </section>
 </footer>
-   <!--script src="assets/script/jquery.min.js"></script-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-   <!--script src="assets/script/realisations.js"></script>
-   <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script-->
-   <script src="assets/script/header.js"></script>
-   <script src="assets/script/popin.js"></script>
-   <script>
-      (function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=130169510352357";
-         fjs.parentNode.insertBefore(js, fjs);
-      }
-      (document, 'script', 'facebook-jssdk'));
-   </script>
-   <!--script type="text/javascript">
+
+<!--script src="assets/script/jquery.min.js"></script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+<!--script src="assets/script/realisations.js"></script>
+<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script-->
+<script src="assets/script/header.js"></script>
+<script src="assets/script/popin.js"></script>
+<script>
+   (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=130169510352357";
+      fjs.parentNode.insertBefore(js, fjs);
+   }
+   (document, 'script', 'facebook-jssdk'));
+</script>
+<!--script type="text/javascript">
    (function() {
    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
    po.src = 'https://apis.google.com/js/plusone.js';
    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
    })();
-   </script-->
+</script-->
 </body>
 </html>
