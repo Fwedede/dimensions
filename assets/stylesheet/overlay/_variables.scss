@@ -13,19 +13,20 @@ $screen-xl-min: $screen-desktop; // 992px
 
 /* Color */
 $pink: #c0143c;
+
 $pink-light: #fbe9ed;
+
 $yellow: #fc0;
+
 $gray: #ecebeb;
 $gray-dark: #474646;
 
+
 $clr-text: $gray-dark;
 
-/* Font */
-@font-face{
-	font-family: "icomoon";
-	src: url("../fonts/icomoon.ttf");
-}
+
+/* Fonts */
 @font-face {
-	font-family: "icoservices";
-	src: url("../fonts/Stroke-Gap-Icons.ttf");
+	font-family: "icomoon";
+	src: url(../fonts/icomoon.ttf);
 }
