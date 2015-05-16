@@ -75,6 +75,40 @@ main{
 		.tab{
 			@include outer-container;
 
+			.cell{
+				position: relative;
+				text-align: center;
+				z-index: 5;
+				box-shadow: 0 0.2rem 0.3rem $gray-dark;
+				cursor: pointer;
+				margin-bottom: 2.4%;
+				@include transition(all .2s ease-in-out);
+
+				&:hover{
+					z-index: 10;
+					@include transform(scale(1.05));
+
+					p{
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+						margin: 0;
+					}
+					.last{
+						margin-right: 0;
+					}
+				}
+				.bg{
+					background: rgba(255,255,255,.5);
+					z-index: 10000;
+					position: absolute;
+					display: none;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+				}
+			}
 			.smallCell{
 				@include span-columns(5);
 				@include media($screen-phone) {
@@ -106,116 +140,78 @@ main{
 					@include span-columns(12);
 				}
 			}
-			.img_package{
-				background-repeat: no-repeat;
+		}
+		.popin-bg{
+			bottom: 0;
+			color: #333;
+			display: none;
+			left: 0;
+			right: 0;
+			top: 0;
+			position: relative;
+			z-index: 11000;
+			width: 100%;
 
-				img{
-					max-width: inherit;
-				}
-				.cell{
-					position: relative;
-					text-align: center;
-					z-index: 5;
-					box-shadow: 0 0.2rem 0.3rem $gray-dark;
-					cursor: pointer;
-					margin-bottom: 2.4%;
-					@include transition(all .2s ease-in-out);
-
-					&:hover{
-						z-index: 10;
-						@include transform(scale(1.05));
-
-						p{
-							text-overflow: ellipsis;
-							overflow: hidden;
-							white-space: nowrap;
-							margin: 0;
-						}
-						.last{
-							margin-right: 0;
-						}
-					}
-					.bg{
-						background: rgba(255,255,255,.5);
-						z-index: 10000;
-						position: absolute;
-						display: none;
-						width: 100%;
-						height: 100%;
-						top: 0;
-						left: 0;
-					}
-				}
-				.popin-bg{
-					bottom: 0;
-					color: #333;
-					display: none;
-					left: 0;
-					right: 0;
-					top: 0;
-					position: relative;
-					z-index: 11000;
-					width: 100%;
-
-					.popin{
-						background: white;
-						bottom: 0;
-						position: relative;
-						width: 100%;
-						padding: 2rem;
-						box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
-					}
-					.popin .close{
-						position: absolute;
-						right: 1.5rem;
-						top: 1.5rem;
-						cursor: pointer;
-						@include media($screen-phone) {
-							width: 14px;
-						}
-					}
-					.popin .close .img{
-						margin-left: .2rem;
-						vertical-align: bottom;
-					}
-					.popin > .desc, .popin .carousel{
-						display: inline-block;
-						vertical-align: top;
-						width: 100%;
-					}
-					.popin > .desc{
-						width: 30%;
-						padding: 10px 10px 10px 0;
-					}
-					.popin > .carousel{
-						text-align: center;
-						width: 70%;
-
-						.img{
-							margin: auto;
-							width: auto;
-							height: 330px;
-							@include media($screen-phone) {
-								width: 180px;
-								height: auto;
-							}
-						}
-						&.active{
-							@include transform(scale(1.1));
-							z-index: 10;
-							position: relative;
-							cursor: pointer;
-						}
-					}
-					.popin .carousel:hover .carousel-caption{
-						background: rgba(255,255,255,.50);
-						display: block;
-					}
-				}
-				#services{
-					.icon-analyser {
-						content: "\e6a4";
-						font-family: "icoservices";
-					}        
+			.popin{
+				background: white;
+				bottom: 0;
+				position: relative;
+				width: 100%;
+				padding: 2rem;
+				box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
+			}
+			.popin .close{
+				position: absolute;
+				right: 1.5rem;
+				top: 1.5rem;
+				cursor: pointer;
+				@include media($screen-phone) {
+					width: 14px;
 				}
 			}
+			.popin .close .img{
+				margin-left: .2rem;
+				vertical-align: bottom;
+			}
+			.popin > .desc, .popin .carousel{
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+			}
+			.popin > .desc{
+				width: 30%;
+				padding: 10px 10px 10px 0;
+			}
+			.popin > .carousel{
+				text-align: center;
+				width: 70%;
+
+				.img{
+					margin: auto;
+					width: auto;
+					height: 330px;
+					@include media($screen-phone) {
+						width: 180px;
+						height: auto;
+					}
+				}
+				&.active{
+					@include transform(scale(1.1));
+					z-index: 10;
+					position: relative;
+					cursor: pointer;
+				}
+			}
+			.popin .carousel:hover .carousel-caption{
+				background: rgba(255,255,255,.50);
+				display: block;
+			}
+		}
+	}
+	#services{
+		.icon-analyser {
+			content: "\e6a4";
+			font-family: "icoservices";
+		}        
+	}
+}
