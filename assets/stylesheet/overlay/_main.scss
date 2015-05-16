@@ -28,17 +28,10 @@ main{
 	section{
 		position: relative;
 
-		// @TODO
-		&:nth-child(1){
+		&:nth-child(odd){
 			background-color: #fff;
 		}
-		&:nth-child(2){
-			background-color: $pink-light;
-		}
-		&:nth-child(3){
-			background-color: #fff;
-		}
-		&:nth-child(4){
+		&:nth-child(even){
 			background-color: $pink-light;
 		}
 	}

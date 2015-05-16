@@ -99,32 +99,13 @@ header{
 					}
 				}
 			}
-			// @TODO
 			li:hover{
-				&:nth-last-child(1) a{
-					box-shadow: 0 -.3rem 0 0 $pink inset;
-				}
-				&:nth-last-child(2) a{
-					box-shadow: 0 -.3rem 0 0 $pink inset;
-				}
-				&:nth-last-child(3) a{
-					box-shadow: 0 -.3rem 0 0 $pink inset;
-				}
-				&:nth-last-child(4) a{
+				a{
 					box-shadow: 0 -.3rem 0 0 $pink inset;
 				}
 
 				@include media(max-width $screen-phone) {
-					&:nth-last-child(1) a{
-						box-shadow: .3rem 0 0 0 $pink inset;
-					}
-					&:nth-last-child(2) a{
-						box-shadow: .3rem 0 0 0 $pink inset;
-					}
-					&:nth-last-child(3) a{
-						box-shadow: .3rem 0 0 0 $pink inset;
-					}
-					&:nth-last-child(4) a{
+					a{
 						box-shadow: .3rem 0 0 0 $pink inset;
 					}
 				}

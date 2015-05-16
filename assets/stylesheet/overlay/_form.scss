@@ -18,8 +18,7 @@ form{
    input{
       height: 4rem;
    }
-   // @TODO
-   input:nth-child(1){
+   input:first-child{
       margin-top: 0;
    }
    button{
