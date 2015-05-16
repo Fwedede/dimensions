@@ -12,20 +12,13 @@ $(function() {
 
 		var anchors = $('section[id]');
 
-		if($(anchors[4]).offset().top - endIndex <= windowOffset) {
-			$('a[href="#'+$(anchors[4]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
-		}
-		else if($(anchors[3]).offset().top - endIndex <= windowOffset) {
-			$('a[href="#'+$(anchors[3]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
-		}
-		else if($(anchors[2]).offset().top - endIndex <= windowOffset) {
-			$('a[href="#'+$(anchors[2]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
-		}
-		else if($(anchors[1]).offset().top - endIndex <= windowOffset) {
-			$('a[href="#'+$(anchors[1]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
-		}
-		else if($(anchors[0]).offset().top - endIndex <= windowOffset) {
-			$('a[href^="#"]').parent().removeClass('active');
+		for(var i = 0; i < anchors.length; i++) {
+			if($(anchors[i]).offset().top - endIndex <= windowOffset) {
+				if(i === 0)
+				$('a[href^="#"]').parent().removeClass('active');
+				else
+				$('a[href="#'+$(anchors[i]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
+			}
 		}
 	}
 

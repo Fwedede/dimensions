@@ -51,29 +51,27 @@
    <section class="main-body-wrap" id="realisations">
       <div class="container">
          <h2>Réalisations</h2>
-         <?php
-         try{
-            $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-            $bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
-         }
-         catch(Exception $e)
-         {die('Erreur : '.$e->getMessage());}
-
-         $bdd->exec("SET CHARACTER SET utf8");
-         $req = $bdd->query("SELECT * FROM realisations WHERE id=1 ORDER BY id");
-         ?>
          <div class="tab">
             <?php
+            try {
+               $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+               $bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
+            }
+            catch(Exception $e) {
+               die('Erreur : '.$e->getMessage());
+            }
+
+            $bdd->exec("SET CHARACTER SET utf8");
+            $req = $bdd->query("SELECT * FROM projet");
+
             if($req->rowCount() > 0) {
                while($res = $req->fetch()) {
                   require('assets/view/realisations.html');
                }
             }
+            $req->closeCursor();
             ?>
          </div>
-         <?php
-         $req->closeCursor();
-         ?>
       </div>
       <div class="bg"></div>
       <div class="popin-bg"></div>
@@ -143,36 +141,37 @@
       <p>© Copyright 2015 - Agence Dimensions</p>
    </section>
 </footer>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-      <script src="assets/script/header.js"></script>
-      <script src="assets/script/popin.js"></script>
-      <script type="text/javascript">
-      $(window).load(function() {
-         $('.cell').each(function(){
-            var nbprojet = $(this).attr('popin-projet');
-            var small = [2,3,6,7,10,11];
-            var big = [1,4,5,8,9,12];
-            if (nbprojet == 2 || nbprojet == 3 || nbprojet == 6 || nbprojet == 7 || nbprojet == 10 || nbprojet == 11) {
-               $(this).addClass('smallCell');
-            }
-            if (nbprojet == 1 || nbprojet == 4 || nbprojet == 5 || nbprojet == 8 || nbprojet == 9 || nbprojet == 12) {
-               $(this).addClass('bigCell');
-            }
-            $('.cell:odd').addClass('last');
-         });
+<script src="assets/script/header.js"></script>
+<script src="assets/script/popin.js"></script>
+<script type="text/javascript">
+   $(window).load(function() {
+      $('.cell').each(function(){
+         var nbprojet = $(this).attr('popin-projet');
+         var small = [2,3,6,7,10,11];
+         var big = [1,4,5,8,9,12];
+         if (nbprojet == 2 || nbprojet == 3 || nbprojet == 6 || nbprojet == 7 || nbprojet == 10 || nbprojet == 11) {
+            $(this).addClass('smallCell');
+         }
+         if (nbprojet == 1 || nbprojet == 4 || nbprojet == 5 || nbprojet == 8 || nbprojet == 9 || nbprojet == 12) {
+            $(this).addClass('bigCell');
+         }
+         $('.cell:odd').addClass('last');
       });
-      </script>
-      <script>
-      (function(d, s, id) {
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=130169510352357";
-         fjs.parentNode.insertBefore(js, fjs);
-      }
-      (document, 'script', 'facebook-jssdk'));
-      </script>
-   <!--script type="text/javascript">
+   });
+</script>
+<script>
+   (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=130169510352357";
+      fjs.parentNode.insertBefore(js, fjs);
+   }
+   (document, 'script', 'facebook-jssdk'));
+</script>
+<!--script type="text/javascript">
    (function() {
    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
    po.src = 'https://apis.google.com/js/plusone.js';

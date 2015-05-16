@@ -1,37 +1,39 @@
 form{
-    input, textarea{
-        border: 1px solid $pink;
-        color: $gray-dark;
-        display: block;
-        margin: 2rem 0;
-        max-width: 100%;
-        min-width: 100%;
-        padding: .2rem .5rem;
-        @include placeholder {
-            color: $pink;
-        }
+   input, textarea{
+      border: 1px solid $pink;
+      color: $gray-dark;
+      display: block;
+      margin: 2rem 0;
+      max-width: 100%;
+      min-width: 100%;
+      padding: .2rem .5rem;
+      @include placeholder {
+         color: $pink;
+      }
 
-        &:focus{
-            outline: 2px solid $pink;
-        }
-    }
-    input{
-        height: 4rem;
-    }
-    input:nth-child(1) {margin-top:0;}
-    button{
-        background-image: url(../img/utilities/btn_valider.png);
-        border: 1px solid $pink;
-        color: #fff;
-        height: 39px;
-        padding: 0 1.5rem;
-        @include transition(opacity .3s ease-in-out);
+      &:focus{
+         outline: 2px solid $pink;
+      }
+   }
+   input{
+      height: 4rem;
+   }
+   input:nth-child(1){
+      margin-top: 0;
+   }
+   button{
+      background-image: url(../img/utilities/btn_valider.png);
+      border: 1px solid $pink;
+      color: #fff;
+      height: 39px;
+      padding: 0 1.5rem;
+      @include transition(opacity .3s ease-in-out);
 
-        &:hover{
-            opacity: .65;
-        }
-        &:focus{
-            outline: 0;
-        }
-    }
+      &:hover{
+         opacity: .65;
+      }
+      &:focus{
+         outline: 0;
+      }
+   }
 }

@@ -1,14 +1,14 @@
 /* Screen sizes */
-$screen-phone: max-width 480px;
-$screen-tablet: max-width 768px;
-$screen-desktop: max-width 992px;
+$screen-phone: 480px;
+$screen-tablet: 768px;
+$screen-desktop: 992px;
 
-$screen-xs-max: 479px;
-$screen-sm-min: 480px;
-$screen-sm-max: 767px;
-$screen-md-min: 768px;
-$screen-md-max: 991px;
-$screen-xl-min: 992px;
+$screen-xs-max: $screen-phone - 1; // 479px
+$screen-sm-min: $screen-phone; // 480px
+$screen-sm-max: $screen-tablet - 1; // 767px
+$screen-md-min: $screen-tablet; // 768px
+$screen-md-max: $screen-desktop - 1; // 991px
+$screen-xl-min: $screen-desktop; // 992px
 
 
 /* Color */
@@ -20,7 +20,8 @@ $gray-dark: #474646;
 
 $clr-text: $gray-dark;
 
-@font-face {
+/* Font */
+@font-face{
 	font-family: "icomoon";
 	src: url("../fonts/icomoon.ttf");
 }
