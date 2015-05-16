@@ -144,11 +144,7 @@
       <p>© Copyright 2015 - Agence Dimensions</p>
    </section>
 </footer>
-<!--script src="assets/script/jquery.min.js"></script-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-   <!--script src="assets/script/realisations.js"></script>
-   <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script-->
       <script src="assets/script/header.js"></script>
       <script src="assets/script/popin.js"></script>
       <script type="text/javascript">
@@ -163,15 +159,7 @@
             if (nbprojet == 1 || nbprojet == 4 || nbprojet == 5 || nbprojet == 8 || nbprojet == 9 || nbprojet == 12) {
                $(this).addClass('bigCell');
             }
-               $('.cell:odd').addClass('last');
-            /*if ($('.cell').prev('.cell').hasClass('bigCell')){
-               $('.cell').next('.cell:eq(0)').addClass('smallCell');
-               $('.cell').next('.cell:eq(1)').addClass('smallCell');
-            }
-            if ($('.cell:eq(1)').hasClass('smallCell')) {
-               $('.cell').next('.cell:eq(2)').addClass('bigCell');
-               $('.cell').next('.cell:eq(3)').addClass('bigCell');
-            }*/
+            $('.cell:odd').addClass('last');
          });
       });
       </script>
