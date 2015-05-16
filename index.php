@@ -51,29 +51,28 @@
    <section class="main-body-wrap" id="realisations">
       <div class="container">
          <h2>Réalisations</h2>
+         <div class="tab">
          <?php
-         try{
+         try {
             $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
             $bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
          }
-         catch(Exception $e)
-         {die('Erreur : '.$e->getMessage());}
+         catch(Exception $e) {
+            die('Erreur : '.$e->getMessage());
+         }
 
          $bdd->exec("SET CHARACTER SET utf8");
-         $req = $bdd->query("SELECT * FROM realisations WHERE id=1 ORDER BY id");
-         ?>
-         <div class="tab">
-            <?php
-            if($req->rowCount() > 0) {
-               while($res = $req->fetch()) {
-                  require('assets/view/realisations.html');
-               }
+         $req = $bdd->query("SELECT * FROM projet");
+
+         if($req->rowCount() > 0) {
+            while($res = $req->fetch()) {
+               require('assets/view/realisations.html');
             }
-            ?>
-         </div>
-         <?php
+         }
+
          $req->closeCursor();
          ?>
+         </div>
       </div>
       <div class="bg"></div>
       <div class="popin-bg"></div>

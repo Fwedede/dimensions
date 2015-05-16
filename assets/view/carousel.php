@@ -9,7 +9,8 @@ catch(Exception $e) {
 }
 
 $bdd->exec("SET CHARACTER SET utf8");
-$req = $bdd->query("SELECT * FROM realisations WHERE projet_id = '".intval($_POST['projet'])."'");
+// $req = $bdd->query("SELECT * FROM realisations WHERE id_projet = '".intval($_POST['projet'])."'");
+$req = $bdd->query("SELECT * FROM realisations INNER JOIN projet ON realisations.id_projet = projet.id WHERE id_projet = '".intval($_POST['projet'])."'");
 
 if($res = $req->fetch())
 
@@ -22,17 +23,10 @@ if($res = $req->fetch())
     	<div class="previews">
 				<?php
 
-try {
-	$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-	$bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
-}
-catch(Exception $e) {
-	die('Erreur : '.$e->getMessage());
-}
-
 $i = 0;
 $bdd->exec("SET CHARACTER SET utf8");
-$req3 = $bdd->query("SELECT * FROM realisations WHERE projet_id = ".intval($_POST['projet'])." ORDER BY id");
+// $req3 = $bdd->query("SELECT * FROM realisations WHERE id_projet = ".intval($_POST['projet'])." ORDER BY id");
+$req3 = $bdd->query("SELECT * FROM realisations INNER JOIN projet ON realisations.id_projet = projet.id WHERE id_projet = '".intval($_POST['projet'])."' ORDER BY id_projet");
 
 while($res3 = $req3->fetch()) {
 	$active = '';

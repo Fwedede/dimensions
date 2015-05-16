@@ -1,7 +1,7 @@
-<div class="cell" popin-projet="<?php echo $res['projet_id'];?>">
-	<div class="img_package" style="background-image:url(assets/img/projets/<?php echo $res['image'];?>.png)">
-		<img src="assets/img/packs/<?php echo $res['img_package'];?>.png" alt="<?php echo $res['description'];?>"></div>
-	
+<div class="cell" popin-projet="<?php echo $res['id'];?>">
+	<div class="img_package" style="background-image:url(assets/img/projets/<?php echo $res['image_projet'];?>.png)">
+		<img src="assets/img/packs/vignettes-pack<?php echo $res['nbr_package'];?>.png" alt="<?php echo $res['infos'];?>"></div>
+
 	<div class="description">
 		<h3><?php echo ucfirst($res['titre']);?></h3>
 		<p class="font-xs"><?php echo $res['infos'];?></p>
