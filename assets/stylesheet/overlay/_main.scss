@@ -66,7 +66,7 @@ main{
 					background-size: cover;
 				}
 
-				@include media(max-width $screen-phone) {
+				@include media(max-width $screen-phone){
 					@include span-columns(12);
 				}
 			}
@@ -75,6 +75,10 @@ main{
 
 				img{
 					max-width: inherit;
+					opacity: .7;
+					@include media(max-width $screen-phone) {
+						max-width: 100%;
+					}
 				}
 			}
 			h3{
@@ -214,36 +218,46 @@ main{
 		display: block;
 	}
 	#contact{
-		.col-md-5{
-			margin-top: 7rem;
+		.col-md-4{
+			@include media(max-width $screen-phone) {
+				margin-top: 7rem;
+			}
 		}
 	}
 	#services{
-		.cards{
-			@include display(flex);
-			@include flex-wrap(wrap);
-			@include justify-content(space-between);
-
-			.card{
-				background-color: $gray;
-				margin: 0 1rem;
-				@include flex-basis(9em);
-				@include flex-grow(1);
-				@include transition (all 0.2s ease-in-out);
-
-				.card-image{
-					overflow: hidden;
-					max-height: 290px;
-
-					img{
-						width: 100%;
-						@include transition (all 0.2s ease-in-out);
-					}
-				}
-				.card-header{
-					@include transition (all 0.2s ease-in-out);
-				}
-			}
+		div{
+			text-align: center;
+		}
+		[class^="icon-"]::before, [class*=" icon-"]::before{
+			font-size: 5rem;
+		}
+		.icon-analyser::before{
+			content: "\e604";
+			font-family: "icomoon";
+		}
+		.icon-proposer::before{
+			content: "\e605";
+			font-family: "icomoon";
+		}
+		.icon-concevoir::before{
+			content: "\e603";
+			font-family: "icomoon";
+		}
+		.icon-developper::before{
+			content: "\e602";
+			font-family: "icomoon";
+		}
+		.icon-agencer::before{
+			content: "\e601";
+			font-family: "icomoon";
+		}
+		.icon-cooperer::before{
+			content: "\e600";
+			font-family: "icomoon";
+		}
+		.icon-veiller::before{
+			content: "\e606";
+			font-family: "icomoon";
 		}
 	}
 }
