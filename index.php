@@ -41,8 +41,8 @@
             <h2>Agence</h2>
             <article>
                <p>Aujourd'hui plus que jamais, l'image est quelque chose de très importante. Le visuel est la première chose que l'on remarque  et qui nous donne notre première impression.<br>Le projet de l'agence se base sur cette constatation.</p>
-               <p>Dimensions est une agence de communication visuelle, digitale et décorative. Elle accompagne principalement les nouvelles entreprises (les TPE et les PME plus particulièrement) qui désirent définir l'image de leur entreprise, de leur produit ou de leur événement.</p>
-               <p>L'agence désire aller beaucoup plus loin qu'une communication visuelle, en allant jusqu'à la décoration, ce qui permettra une cohérence globale et unique de son image.</p>
+               <p>Dimensions est une agence spécialisée dans l'identité visuelle, graphique, digitale et agencée avec une décmarche d'éco-conception. Elle accompagne principalement les nouvelles entreprises (les TPE et les PME plus particulièrement) qui désirent définir l'image de leur entreprise, de leur produit ou de leur événement.</p>
+               <p>L'agence désire aller beaucoup plus loin qu'une communication visuelle, en allant jusqu'à la décoration, ce qui permettra une cohérence globale et unique.</p>
             </article>
          </div>
       </div>
@@ -82,28 +82,27 @@
    <section class="main-body-wrap" id="services">
       <div class="container">
          <h2>Services</h2>
-         <div class="cards">
-            <div class="card">
-               <div class="card-image">
-                  <img src="assets/img/packs/vignettes-pack1.png">
-               </div>
-               <div class="card-header"></div>
-               <div class="card-copy"></div>
-            </div>
-            <div class="card">
-               <div class="card-image">
-                  <img src="assets/img/packs/vignettes-pack2.png">
-               </div>
-               <div class="card-header"></div>
-               <div class="card-copy"></div>
-            </div>
-            <div class="card">
-               <div class="card-image">
-                  <img src="assets/img/packs/vignettes-pack3.png">
-               </div>
-               <div class="card-header"></div>
-               <div class="card-copy"></div>
-            </div>
+         <div>
+            <div class="icon-analyser"></div>
+            <h4>Analyser</h4>
+         </div>
+         <div>
+            <h4>Proposer</h4>
+         </div>
+         <div>
+            <h4>Concevoir</h4>
+         </div>
+         <div>
+            <h4>Développer</h4>
+         </div>
+         <div>
+            <h4>Agencer</h4>
+         </div>
+         <div>
+            <h4>Coopérer</h4>
+         </div>
+         <div>
+            <h4>Veiller</h4>
          </div>
       </div>
    </section>
