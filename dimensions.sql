@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Sam 16 Mai 2015 à 13:30
+-- Généré le: Sam 16 Mai 2015 à 18:32
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -76,20 +76,18 @@ INSERT INTO `realisations` (`id`, `id_projet`, `image`, `description`) VALUES
 (12, 1, 'pack2-appart-expo-11', 'Plan d''agencement'),
 (13, 1, 'pack2-appart-expo-12', 'Plan d''éclairage'),
 (14, 1, 'pack2-appart-expo-13', 'Elevation de la salle de bain'),
-(15, 2, 'pack1-appart-expo-01', 'Logo du projet "Laine Moi"'),
-(16, 2, 'pack1-appart-expo-02', 'Kit print'),
-(17, 2, 'pack1-appart-expo-03', 'Wireframe du site internet'),
-(18, 2, 'pack1-appart-expo-04', 'Maquette du site internet - Home'),
-(19, 2, 'pack1-appart-expo-05', 'Maquette du site internet - Boutique'),
-(20, 2, 'pack1-appart-expo-06', 'Maquette du site mobile - Home'),
-(21, 2, 'pack1-appart-expo-07', 'Maquette du site mobile - Connexion'),
-(22, 2, 'pack1-appart-expo-08', 'Maquette du site mobile - Profil'),
-(23, 2, 'pack1-appart-expo-09', 'Maquette du site mobile - Paramètres'),
-(24, 2, 'pack1-appart-expo-10', 'Maquette du site mobile - Boutique'),
-(25, 2, 'pack1-appart-expo-11', 'Maquette du site mobile - Ajout panier'),
-(26, 2, 'pack1-appart-expo-12', 'Maquette du site mobile - Panier'),
-(27, 0, 'Vignettes-pack0', 'C''est un projet de décoration sur le thème de l''appart''expo écolo'),
-(28, 1, 'Vignettes-pack1', '"Laine Moi" est spécialisé dans le Do It Yourself (DIY), plus précisément le tricot et le crochet, qui propose ses créations à la vente, ainsi que des cours. Ce projet est réalisé sur 2 supports : le print et le web.');
+(15, 2, 'pack1-lainemoi-01', 'Logo du projet "Laine Moi"'),
+(16, 2, 'pack1-lainemoi-02', 'Kit print'),
+(17, 2, 'pack1-lainemoi-03', 'Wireframe du site internet'),
+(18, 2, 'pack1-lainemoi-04', 'Maquette du site internet - Home'),
+(19, 2, 'pack1-lainemoi-05', 'Maquette du site internet - Boutique'),
+(20, 2, 'pack1-lainemoi-06', 'Maquette du site mobile - Home'),
+(21, 2, 'pack1-lainemoi-07', 'Maquette du site mobile - Connexion'),
+(22, 2, 'pack1-lainemoi-08', 'Maquette du site mobile - Profil'),
+(23, 2, 'pack1-lainemoi-09', 'Maquette du site mobile - Paramètres'),
+(24, 2, 'pack1-lainemoi-10', 'Maquette du site mobile - Boutique'),
+(25, 2, 'pack1-lainemoi-11', 'Maquette du site mobile - Ajout panier'),
+(26, 2, 'pack1-lainemoi-12', 'Maquette du site mobile - Panier');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
