@@ -209,9 +209,26 @@ main{
 		}
 	}
 	#services{
-		.icon-analyser {
-			content: "\e6a4";
-			font-family: "icoservices";
-		}        
+		.icon-analyser:before {
+			content: "\e604";
+		}
+		.icon-proposer:before {
+			content: "\e605";
+		}
+		.icon-concevoir:before {
+			content: "\e603";
+		}
+		.icon-developper:before {
+			content: "\e602";
+		}
+		.icon-agencer:before {
+			content: "\e601";
+		}
+		.icon-cooperer:before {
+			content: "\e600";
+		}
+		.icon-veiller:before {
+			content: "\e606";
+		}
 	}
 }

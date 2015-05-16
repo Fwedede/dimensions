@@ -19,13 +19,13 @@
 
 .font-xs{
 	font-size: 80%;
-	@include media($screen-phone) {
+	@include media(max-width $screen-phone) {
 		font-size: 64%;
 	}
 }
 .font-xl{
 	font-size: 120%;
-	@include media($screen-phone) {
+	@include media(max-width $screen-phone) {
 		font-size: 90%;
 	}
 }
