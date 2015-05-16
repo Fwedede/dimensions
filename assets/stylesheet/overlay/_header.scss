@@ -36,7 +36,7 @@ header{
          max-height: 2.5rem;
          opacity: .15;
          @include transition(opacity .3s ease-in-out);
-         &: hover{
+         &:hover{
             opacity: 1;
          }
       }
@@ -70,7 +70,7 @@ header{
                cursor: pointer;
                display: block;
             }
-            &: hover ul{
+            &:hover ul{
                display: block;
             }
             li{
@@ -91,30 +91,30 @@ header{
                }
             }
          }
-         li: hover{
-            &: nth-last-child(1) a{
+         li:hover{
+            &:nth-last-child(1) a{
                box-shadow: 0 -.3rem 0 0 $pink inset;
             }
-            &: nth-last-child(2) a{
+            &:nth-last-child(2) a{
                box-shadow: 0 -.3rem 0 0 $pink inset;
             }
-            &: nth-last-child(3) a{
+            &:nth-last-child(3) a{
                box-shadow: 0 -.3rem 0 0 $pink inset;
             }
-            &: nth-last-child(4) a{
+            &:nth-last-child(4) a{
                box-shadow: 0 -.3rem 0 0 $pink inset;
             }
             @include media($screen-phone) {
-               &: nth-last-child(1) a{
+               &:nth-last-child(1) a{
                   box-shadow: .3rem 0 0 0 $pink inset;
                }
-               &: nth-last-child(2) a{
+               &:nth-last-child(2) a{
                   box-shadow: .3rem 0 0 0 $pink inset;
                }
-               &: nth-last-child(3) a{
+               &:nth-last-child(3) a{
                   box-shadow: .3rem 0 0 0 $pink inset;
                }
-               &: nth-last-child(4) a{
+               &:nth-last-child(4) a{
                   box-shadow: .3rem 0 0 0 $pink inset;
                }
             }

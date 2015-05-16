@@ -104,7 +104,7 @@
    transition: all 0.4s ease-in-out;
    background: rgba(0, 0, 0, 0.4);
 }
-.carousel .controls .pages .page: hover{
+.carousel .controls .pages .page:hover{
    background: rgba(0, 0, 0, 0.6);
 }
 .carousel .controls .pages .page.active{
@@ -134,7 +134,7 @@
       line-height: 17px;
    }
 }
-.carousel .controls .prev: hover, .carousel .controls .next: hover{
+.carousel .controls .prev:hover, .carousel .controls .next:hover{
    color: white;
    background: rgba(0, 0, 0, 0.6);
 }
@@ -161,12 +161,12 @@
    opacity: 0;
    filter: alpha(opacity=0);
 }
-.carousel: hover .controls .pages{
+.carousel:hover .controls .pages{
    bottom: 0;
    opacity: 1;
    filter: alpha(opacity=100);
 }
-.carousel: hover .controls .prev{
+.carousel:hover .controls .prev{
    left: 20px;
    opacity: 1;
    filter: alpha(opacity=100);
@@ -174,7 +174,7 @@
       left: 5px;
    }
 }
-.carousel: hover .controls .next{
+.carousel:hover .controls .next{
    right: 20px;
    opacity: 1;
    filter: alpha(opacity=100);

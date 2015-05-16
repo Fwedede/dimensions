@@ -50,12 +50,12 @@ div.inline-flex{
   visibility: hidden;
   display: none;
 }
-a.icon-arrow-down2: before{
+a.icon-arrow-down2:before{
     content: "\ea3e";
     font-family: "icomoon";
     color: white;
 }
-[class^="icon-"]: before, [class*=" icon-"]: before{
+[class^="icon-"]:before, [class*=" icon-"]:before{
   font-family: "icomoon";
 }
 .tooltip-item{
@@ -77,8 +77,8 @@ a.icon-arrow-down2: before{
   position: relative;
   text-align: center;
 
-  &: focus,
-  &: hover .tooltip{
+  &:focus,
+  &:hover .tooltip{
     opacity: 1;
     visibility: visible;
   }

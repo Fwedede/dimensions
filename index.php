@@ -110,14 +110,14 @@
       <div class="container">
          <h2>Contactez-moi</h2>
          <p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
-         <form class="col-md-7" action="index.html" method="post">
+         <form class="col-md-8" action="index.html" method="post">
             <input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
             <input type="text" placeholder="E-mail" id="email" name="email" value="">
             <input type="text" placeholder="Objet" id="object" name="object" value="">
             <textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
             <button class="pull-right" type="submit">Valider</button>
          </form>
-         <div class="col-md-5 text-right">
+         <div class="col-md-4 text-right">
             <div class="address">
                Agence Dimensions<br>
                <a href="tel:0642351092">06.42.35.10.92</a><br>
@@ -139,17 +139,29 @@
       <p>Agence Dimensions - Créatrice d'une dimension visuelle, agencée ou événementielle pour votre image.</p>
       <div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
       <!--div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div-->
-      <p>© Copyright 2015</p>
+      <p>© Copyright 2015 - Agence Dimensions</p>
    </section>
 </footer>
 
-<!--script src="assets/script/jquery.min.js"></script-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-<!--script src="assets/script/realisations.js"></script>
-<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.4/jquery.easypiechart.min.js"></script-->
 <script src="assets/script/header.js"></script>
 <script src="assets/script/popin.js"></script>
+<script type="text/javascript">
+   $(window).load(function() {
+      $('.cell').each(function(){
+         var nbprojet = $(this).attr('popin-projet');
+         var small = [2,3,6,7,10,11];
+         var big = [1,4,5,8,9,12];
+         if (nbprojet == 2 || nbprojet == 3 || nbprojet == 6 || nbprojet == 7 || nbprojet == 10 || nbprojet == 11) {
+            $(this).addClass('smallCell');
+         }
+         if (nbprojet == 1 || nbprojet == 4 || nbprojet == 5 || nbprojet == 8 || nbprojet == 9 || nbprojet == 12) {
+            $(this).addClass('bigCell');
+         }
+         $('.cell:odd').addClass('last');
+      });
+   });
+</script>
 <script>
    (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];

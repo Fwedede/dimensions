@@ -11,14 +11,14 @@ form{
          color: $pink;
       }
 
-      &: focus{
+      &:focus{
          outline: 2px solid $pink;
       }
    }
    input{
       height: 4rem;
    }
-   input: nth-child(1){
+   input:nth-child(1){
       margin-top: 0;
    }
    button{
@@ -29,10 +29,10 @@ form{
       padding: 0 1.5rem;
       @include transition(opacity .3s ease-in-out);
 
-      &: hover{
+      &:hover{
          opacity: .65;
       }
-      &: focus{
+      &:focus{
          outline: 0;
       }
    }
