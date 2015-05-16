@@ -131,28 +131,9 @@ main{
     }
 
     #services{
-        .cards {
-            @include display(flex);
-            @include flex-wrap(wrap);
-            @include justify-content(space-between);
-            .card{
-                @include flex-basis(9em);
-                @include flex-grow(1);
-                @include transition (all 0.2s ease-in-out);
-                background-color: $gray;
-                margin: 0 1rem;
-                /*border: 1px solid $gray-dark;*/
-                .card-image {
-                    overflow: hidden;
-                    max-height: 290px;
-                    img {
-                        @include transition (all 0.2s ease-in-out);width: 100%;
-                    }
-                }
-                .card-header {
-                    @include transition (all 0.2s ease-in-out);
-                }
-            }
+        .icon-analyser {
+            content: "\e6a4";
+            font-family: "icoservices";
         }
     }
 }
