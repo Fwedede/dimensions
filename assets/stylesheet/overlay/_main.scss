@@ -105,6 +105,9 @@ main{
 				box-shadow: 0 0.2rem 0.3rem $gray-dark;
 				cursor: pointer;
 				@include transition(all .2s ease-in-out);
+				@include media(max-width $screen-phone) {
+					margin-top: 2rem;
+				}
 
 				&:hover{
 					z-index: 10;
