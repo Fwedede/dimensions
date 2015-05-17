@@ -63,7 +63,7 @@ main{
 					background-size: cover;
 				}
 
-				@include media(max-width $screen-phone){
+				@include media(max-width $screen-phone) {
 					@include span-columns(12);
 				}
 			}
@@ -143,8 +143,8 @@ main{
 		left: 0;
 		right: 0;
 		top: 0;
-		position: relative;
 		z-index: 50;
+		position: relative;
 		width: 100%;
 	}
 	.popin{
