@@ -16,15 +16,17 @@ main{
 	.address{
 		margin-bottom: 2rem;
 	}
-	.social a img{
+	.social a {
 		@include transition(opacity .3s ease-in-out);
 
-		@include media(max-width $screen-phone) {
-			width: 15%;
-		}
-
-		&:hover{
+		&:hover {
 			opacity: .65;
+			border-bottom: none;
+		}
+		img{
+			@include media(max-width $screen-phone) {
+				width: 15%;
+			}
 		}
 	}
 	section{
