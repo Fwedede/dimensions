@@ -15,7 +15,7 @@ if($res = $req->fetch())
 
 ?>
 <div class="popin">
-	<div class="close"><img class="img" src="assets/img/utilities/close.png"></div>
+	<div class="close"></div>
 	<h1 class="font-xl"><?php echo $res['titre'];?></h1>
 	<div class="desc font-xs"><?php echo $res['infos'];?></div><!--
 --><div class="carousel">
