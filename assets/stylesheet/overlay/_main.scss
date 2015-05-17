@@ -154,20 +154,23 @@ main{
 		width: 100%;
 		padding: 2rem;
 		box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
-	}
-	.popin .close{
-		position: absolute;
-		right: 1.5rem;
-		top: 1.5rem;
-		cursor: pointer;
+		.close{
+			position: absolute;
+			right: 1.5rem;
+			top: 1.5rem;
+			cursor: pointer;
 
-		@include media(max-width $screen-phone) {
-			width: 14px;
+			@include media(max-width $screen-phone) {
+				width: 14px;
+			}
+			.img{
+				margin-left: .2rem;
+				vertical-align: bottom;
+			}
 		}
-	}
-	.popin .close .img{
-		margin-left: .2rem;
-		vertical-align: bottom;
+		h1{
+			text-align: left;
+		}
 	}
 	.popin > .desc, .popin .carousel{
 		display: inline-block;
