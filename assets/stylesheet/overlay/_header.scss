@@ -51,6 +51,10 @@ header{
 			line-height: 5rem;
 			padding: 0 1rem;
 			@include transition(box-shadow .3s ease-in-out);
+
+			&:focus{
+				outline: 1px solid lightgrey;
+			}
 		}
 		&.sticky{
 			visibility: hidden;
@@ -124,6 +128,7 @@ header{
 		text-align: center;
 		text-decoration: none;
 		color: white;
+		outline: none;
 	}
 	p{
 		font-size: 5rem;
