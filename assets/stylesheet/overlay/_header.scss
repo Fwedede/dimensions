@@ -11,8 +11,6 @@ header{
 	min-height: 550px;
 	color: #fff;
 
-	section{
-	}
 	h1{
 		border-bottom: 3px solid;
 		padding: 2rem;
@@ -26,6 +24,7 @@ header{
 		background: $gray;
 		z-index: 100;
 		position: fixed;
+		box-shadow: 1px 1px .2rem $gray-dark;
 		@include pad(0 default);
 
 		@include media(max-width $screen-phone) {
