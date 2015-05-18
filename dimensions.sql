@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Sam 16 Mai 2015 à 18:32
+-- Généré le: Lun 18 Mai 2015 à 17:05
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titre` varchar(64) NOT NULL,
   `image_projet` varchar(128) NOT NULL,
-  `infos` varchar(256) NOT NULL,
+  `infos` varchar(2048) NOT NULL,
   `nbr_package` int(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `titre` (`titre`)
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
 --
 
 INSERT INTO `projet` (`id`, `titre`, `image_projet`, `infos`, `nbr_package`) VALUES
-(1, 'Appart''Expo', 'pack2-appart-expo-01', 'C''est un projet de décoration sur le thème de l''appart''expo écolo', 0),
+(1, 'Appart''Expo', 'pack2-appart-expo-01', 'L''appart''Expo est un projet d''agencement et de décoration pour un appartement.<br>\nLes clients sont un jeune couple d''une trentaine d''années, la femme est artiste et l''homme est pompier. Ils aiment les matériaux durables, les couleurs vives et sont assez sensibles au respect de l''environnement.<br>\nLe projet proposé est une exposition des œuvres de madame comme une galerie d''art dans leur propre appartement avec des allusions aux milieux professionnels (des spots, des fiches signalétiques, une salle de bain ressemblant aux toilettes publique).<br>\nTout ça avec des couleurs comme ils le désiraient et des matériaux durables et écologiques (des sols en liège et en linoleum, des peintures écologiques et des mobiliers principalement en bois).', 0),
 (2, 'Laine Moi', 'pack1-lainemoi-01', '"Laine Moi" est spécialisé dans le Do It Yourself (DIY), plus précisément le tricot et le crochet, qui propose ses créations à la vente, ainsi que des cours. Ce projet est réalisé sur 2 supports : le print et le web.', 1);
 
 -- --------------------------------------------------------
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `realisations` (
   `image` varchar(128) NOT NULL,
   `description` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- Contenu de la table `realisations`
