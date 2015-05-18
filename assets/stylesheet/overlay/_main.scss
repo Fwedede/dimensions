@@ -72,7 +72,7 @@ main{
 
 				img{
 					max-width: inherit;
-					opacity: .7;
+					opacity: .45;
 					@include media(max-width $screen-phone) {
 						max-width: 100%;
 					}
@@ -97,6 +97,7 @@ main{
 					overflow: hidden;
 					white-space: nowrap;
 					margin: 0;
+					max-height: 2rem;
 				}
 			}
 			.cell{
@@ -144,7 +145,7 @@ main{
 		right: 0;
 		top: 0;
 		z-index: 50;
-		position: relative;
+		position: absolute;
 		width: 100%;
 	}
 	.popin{
@@ -183,7 +184,23 @@ main{
 	}
 	.popin > .desc{
 		width: 30%;
-		padding: 10px 10px 10px 0;
+		padding: 0 10px 0 0;
+		
+		&.scrollbar{
+			max-height: 330px;
+			overflow-y: scroll;
+		}
+		&::-webkit-scrollbar-track{
+			box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			background-color: #F5F5F5;
+		}
+		&::-webkit-scrollbar{
+			width: 6px;
+			background-color: #F5F5F5;
+		}		
+		&::-webkit-scrollbar-thumb{
+			background-color: $gray-dark;
+		}
 	}
 	.popin > .carousel{
 		text-align: center;
@@ -221,7 +238,7 @@ main{
 		}
 	}
 	.popin .carousel:hover .carousel-caption{
-		background: rgba(255,255,255,.50);
+		background: rgba(255,255,255,.6);
 		display: block;
 	}
 	#contact{
