@@ -17,7 +17,9 @@ if($res = $req->fetch())
 <div class="popin">
 	<div class="close"></div>
 	<h1 class="font-xl"><?php echo $res['titre'];?></h1>
-	<div class="desc font-xs"><?php echo $res['infos'];?></div><!--
+	<div class="desc font-xs scrollbar"><?php echo $res['infos'];?>
+      	<div class="force-overflow"></div>
+	</div><!--
 --><div class="carousel">
 		<div class="previews">
 			<?php
