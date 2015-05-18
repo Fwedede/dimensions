@@ -252,21 +252,21 @@
 
 					if(projet !== undefined && projet !== '') {
 						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
-
+							var heightWindow = window.innerHeight;
+							var heightPopinBg = $('.popin-bg').height();
+		
 							$('.popin-bg').html(res);
+							$('.popin-bg').css('padding-top', ((heightWindow - heightPopinBg) / 1.8));
 							$('.popin-bg').fadeIn(param.show);
 							$('.bg').fadeIn(param.show);
-							//var popinTop = $(this).offset().top;
-							//$('.popin-bg') = $(this).offset().top;
-							//$('.popin').css('left', 0);
-							$('.popin-bg').css('width', (widthWindow - '1rem'));
-							$('.popin-bg').css('left', leftWindow);
-							//$('.popin').css('top', height + 80);
+							$('body').css('overflow', 'hidden');
+							
 							var imgMaxHeight = ($('.popin').height() - parseInt($('.popin').css('padding-top')) - $('.popin .title').height() - parseInt($('.popin .title').css('padding-bottom')) - parseInt($('.popin .title').css('margin-top')) - parseInt($('.popin .title').css('margin-bottom')));
 							$('.carousel .img').css('max-height', imgMaxHeight);
 							$('.popin').find('.close').click(function() {
 								$('.popin-bg').fadeOut(param.hide);
 								$('.bg').fadeOut(param.hide);
+								$('body').css('overflow', 'auto');
 							});
 						});
 					}
