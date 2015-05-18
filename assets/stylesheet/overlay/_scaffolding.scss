@@ -22,12 +22,9 @@ h1, h2, h3, h4, h5, h6{
 }
 .container{
 	position: relative;
-	padding: 1rem 20rem 5rem;
+	padding: 1rem 15% 5rem;
 
-	// @TODO
-	@include media(max-width 1028px) {
-		padding: 5rem 10rem;
-	}
+	// @TODOs
 	@include media(max-width $screen-phone) {
 		padding: 3rem;
 	}
