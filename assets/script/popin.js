@@ -39,7 +39,7 @@
 			_ref = this.transitions;
 			for (type in _ref) {
 				result = _ref[type];
-				if (el.style[type] !== null) {
+				if (el.style[type] != null) {
 					return result;
 				}
 			}
@@ -48,7 +48,7 @@
 		Animation.execute = function($el, callback) {
 			var transition;
 			transition = this.transition($el);
-			if (transition !== null) {
+			if (transition != null) {
 				return $el.one(transition, callback);
 			} else {
 				return callback();
@@ -65,7 +65,7 @@
 		};
 
 		function Carousel($el, settings) {
-			if (settings === null) {
+			if (settings == null) {
 				settings = {};
 			}
 			this.$el = $el;
@@ -74,7 +74,7 @@
 				this.$pages().first().toggleClass(this.settings.active);
 				this.$previews().first().toggleClass(this.settings.active);
 			}
-			if (settings.cycle !== null) {
+			if (settings.cycle != null) {
 				this.cycle();
 				this.$el.on('mouseenter', $.proxy(this.pause, this));
 				this.$el.on('mouseleave', $.proxy(this.cycle, this));
@@ -115,7 +115,7 @@
 		};
 
 		Carousel.prototype.cycle = function() {
-			return this.timer !== null ? this.timer : this.timer = Timer.every(this.settings.cycle, $.proxy(this.next || this.prev, this));
+			return this.timer != null ? this.timer : this.timer = Timer.every(this.settings.cycle, $.proxy(this.next || this.prev, this));
 		};
 
 		Carousel.prototype.pause = function() {
@@ -127,7 +127,7 @@
 
 		Carousel.prototype.swap = function($active, $pending, direction, activated) {
 			var $pages, animating, callback, cycling, index;
-			if (activated === null) {
+			if (activated == null) {
 				activated = this.settings.active;
 			}
 			cycling = this.interval;
@@ -183,7 +183,7 @@
 
 	$.fn.extend({
 		carousel: function(option) {
-			if (option === null) {
+			if (option == null) {
 				option = {};
 			}
 			return this.each(function() {
@@ -195,13 +195,13 @@
 				if (typeof options !== "string") {
 					page = option.page;
 				}
-				if (data === null) {
+				if (data == null) {
 					$this.data("carousel", data = new Carousel($this, options));
 				}
-				if (action !== null) {
+				if (action != null) {
 					data[action]();
 				}
-				if (page !== null) {
+				if (page != null) {
 					return data.page(options.page);
 				}
 			});
