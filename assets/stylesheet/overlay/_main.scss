@@ -258,11 +258,19 @@ main{
 		}
 	}
 	#services{
-		div{
+		div.col-md-4{
 			text-align: center;
+			min-height: 25rem;
+			@include media(max-width $screen-phone) {
+				min-height: 10rem;
+			}
+			&:hover{
+				color: $pink;
+			}
 		}
 		[class^="icon-"]::before, [class*=" icon-"]::before{
 			font-size: 5rem;
+
 		}
 		.icon-analyser::before{
 			content: "\e604";
