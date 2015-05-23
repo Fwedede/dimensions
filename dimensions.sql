@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 18 Mai 2015 à 17:05
+-- Généré le: Sam 23 Mai 2015 à 14:45
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
   `nbr_package` int(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `titre` (`titre`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `projet`
@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS `projet` (
 
 INSERT INTO `projet` (`id`, `titre`, `image_projet`, `infos`, `nbr_package`) VALUES
 (1, 'Appart''Expo', 'pack2-appart-expo-01', 'L''appart''Expo est un projet d''agencement et de décoration pour un appartement.<br>\nLes clients sont un jeune couple d''une trentaine d''années, la femme est artiste et l''homme est pompier. Ils aiment les matériaux durables, les couleurs vives et sont assez sensibles au respect de l''environnement.<br>\nLe projet proposé est une exposition des œuvres de madame comme une galerie d''art dans leur propre appartement avec des allusions aux milieux professionnels (des spots, des fiches signalétiques, une salle de bain ressemblant aux toilettes publique).<br>\nTout ça avec des couleurs comme ils le désiraient et des matériaux durables et écologiques (des sols en liège et en linoleum, des peintures écologiques et des mobiliers principalement en bois).', 0),
-(2, 'Laine Moi', 'pack1-lainemoi-01', '"Laine Moi" est spécialisé dans le Do It Yourself (DIY), plus précisément le tricot et le crochet, qui propose ses créations à la vente, ainsi que des cours. Ce projet est réalisé sur 2 supports : le print et le web.', 1);
+(2, 'Laine Moi', 'pack1-lainemoi-01', 'Laine Moi est spécialisé dans le Do It Yourself (DIY), plus précisément le tricot et le crochet, qui propose ses créations à la vente, ainsi que des cours. Ce projet est réalisé sur 2 supports : le print et le web.', 1),
+(3, 'P''tits pois carottes', 'pack2-ppc-01', '', 2);
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `realisations` (
   `image` varchar(128) NOT NULL,
   `description` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
 --
 -- Contenu de la table `realisations`
@@ -87,7 +88,14 @@ INSERT INTO `realisations` (`id`, `id_projet`, `image`, `description`) VALUES
 (23, 2, 'pack1-lainemoi-09', 'Maquette du site mobile - Paramètres'),
 (24, 2, 'pack1-lainemoi-10', 'Maquette du site mobile - Boutique'),
 (25, 2, 'pack1-lainemoi-11', 'Maquette du site mobile - Ajout panier'),
-(26, 2, 'pack1-lainemoi-12', 'Maquette du site mobile - Panier');
+(26, 2, 'pack1-lainemoi-12', 'Maquette du site mobile - Panier'),
+(27, 3, 'pack2-ppc-01', 'Logo "P''tits pois carottes"'),
+(28, 3, 'pack2-ppc-02', 'Logo "P''tits pois carottes"'),
+(29, 3, 'pack2-ppc-03', 'Logo "P''tits pois carottes"'),
+(30, 3, 'pack2-ppc-04', 'Kit print'),
+(31, 3, 'pack2-ppc-05', 'Enseigne'),
+(32, 3, 'pack2-ppc-06', 'Sac'),
+(33, 3, 'pack2-ppc-07', 'Typographie, couleurs et logo');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
