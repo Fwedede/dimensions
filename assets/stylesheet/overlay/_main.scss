@@ -244,9 +244,10 @@ main{
 		}
 	}
 	#services{
-		div.col-md-4{
+		[class^="col-"], [class*="col-"]{
 			text-align: center;
 			min-height: 25rem;
+			margin-right: .2rem;
 			@include media(max-width $screen-phone) {
 				min-height: 10rem;
 			}
