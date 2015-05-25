@@ -42,72 +42,33 @@ main{
 	#realisations{
 		.tab{
 			@include outer-container;
-
-			> div:nth-child(1){
-				text-align: center;
-				@include span-columns(5);
-
-				.img_package{
-					background-size: cover;
-				}
-
-				@include media(max-width $screen-phone) {
-					@include span-columns(12);
-				}
-			}
-			> div:nth-child(2){
-				text-align: center;
-				@include span-columns(7);
-
-				.img_package{
-					background-size: cover;
-				}
-
-				@include media(max-width $screen-phone) {
-					@include span-columns(12);
-				}
-			}
-			.img_package{
-				background-repeat: no-repeat;
-
-				img{
-					max-width: inherit;
-					opacity: .45;
-					@include media(max-width $screen-phone) {
-						max-width: 100%;
-					}
-				}
-			}
-			h3{
-				margin: 0;
-			}
-			.description{
-				background: rgba(255,255,255,0.60);
-				bottom: 0;
-				left: 0;
-				max-height: 6rem;
-				padding: .2rem;
-				position: absolute;
-				width: 100%;
-				opacity: 0;
-				@include transition(opacity .3s ease-in-out);
-
-				p{
-					text-overflow: ellipsis;
-					overflow: hidden;
-					white-space: nowrap;
-					margin: 0;
-					max-height: 2rem;
-				}
-			}
 			.cell{
 				position: relative;
 				z-index: 5;
 				box-shadow: 0 0.2rem 0.3rem $gray-dark;
 				cursor: pointer;
+				margin-top: 2rem;
+				height: 355px;
+				background-color: #ffffff;
 				@include transition(all .2s ease-in-out);
-				@include media(max-width $screen-phone) {
-					margin-top: 2rem;
+				&.smallCell{
+					text-align: center;
+					@include span-columns(5);
+					@include media(max-width $screen-phone) {
+						@include span-columns(12);
+						height: auto;
+					}			
+				}
+				&.bigCell{
+					text-align: center;
+					@include span-columns(7);
+					@include media(max-width $screen-phone) {
+						@include span-columns(12);
+						height: auto;
+					}
+				}
+				&.last{
+					margin-right: 0;
 				}
 
 				&:hover{
@@ -123,6 +84,41 @@ main{
 					position: relative;
 					cursor: pointer;
 					@include transform(scale(1.1));
+				}
+				.img_package{
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center center;
+					overflow: hidden;
+					img{
+						/*max-width: inherit;*/
+						opacity: .45;
+						@include media(max-width $screen-phone) {
+							max-width: 100%;
+						}
+					}
+				}
+				
+				.description{
+					background: rgba(255,255,255,0.60);
+					bottom: 0;
+					left: 0;
+					max-height: 6rem;
+					padding: .2rem;
+					position: absolute;
+					width: 100%;
+					opacity: 0;
+					@include transition(opacity .3s ease-in-out);
+					h3{
+						margin: 0;
+					}
+					p{
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+						margin: 0;
+						max-height: 2rem;
+					}
 				}
 			}
 		}
