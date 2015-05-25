@@ -51,22 +51,7 @@ main{
 				height: 355px;
 				background-color: #ffffff;
 				@include transition(all .2s ease-in-out);
-				&.smallCell{
-					text-align: center;
-					@include span-columns(5);
-					@include media(max-width $screen-phone) {
-						@include span-columns(12);
-						height: auto;
-					}			
-				}
-				&.bigCell{
-					text-align: center;
-					@include span-columns(7);
-					@include media(max-width $screen-phone) {
-						@include span-columns(12);
-						height: auto;
-					}
-				}
+				
 				&.last{
 					margin-right: 0;
 				}
