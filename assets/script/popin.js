@@ -225,11 +225,9 @@
 	var defaut = {
 		"show" : 200,
 		"hide" : 200,
-		"bgcolor" : 'white',
-		'txtcolor' : 'black'
+		"bgcolor" : 'white'
 	};
-	var widthWindow = window.innerWidth;
-	var leftWindow = $('body').offset().left;
+	
 
 	$.fn.popin=function(options) {
 
@@ -247,19 +245,17 @@
 
 					// Récupération du numero de l'élément
 					var projet = $(this).attr('popin-projet');
-					var height = $(this).height();
-
 
 					if(projet !== undefined && projet !== '') {
 						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
 							var heightWindow = window.innerHeight;
-							var heightPopinBg = $('.popin-bg').height();
+							var heightPopin = $('.popin').height();
 		
 							$('.popin-bg').html(res);
-							$('.popin-bg').css('padding-top', ((heightWindow - heightPopinBg) / 1.8));
+							$('.popin-bg').css('top', ((heightWindow - heightPopin) / 4 + $(window).scrollTop()));
 							$('.popin-bg').fadeIn(param.show);
 							$('.bg').fadeIn(param.show);
-							$('body').css('overflow', 'hidden');
+							//$('body').css('overflow', 'hidden');
 							
 							var imgMaxHeight = ($('.popin').height() - parseInt($('.popin').css('padding-top')) - $('.popin .title').height() - parseInt($('.popin .title').css('padding-bottom')) - parseInt($('.popin .title').css('margin-top')) - parseInt($('.popin .title').css('margin-bottom')));
 							$('.carousel .img').css('max-height', imgMaxHeight);

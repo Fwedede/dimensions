@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Dimensions - Local - Donnez une autre dimension à votre image</title>
+	<title>Agence Dimensions - Local - Donnez une autre dimension à votre image</title>
 	<link rel="canonical" href="http://localhost/dimensions_demo" />
 	<link rel="icon" type="image/png" href="assets/img/logos/favicon.png">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
@@ -72,10 +72,10 @@
 				$req->closeCursor();
 				?>
 			</div>
-		</div>
-		<div class="bg"></div>
-		<div class="popin-bg"></div>
+		</div>		
 	</section>
+	<div class="bg"></div>
+	<div class="popin-bg"></div>
 
 	<section class="main-body-wrap" id="services">
 		<div class="container">
@@ -93,7 +93,7 @@
 			<div class="col-md-4 last">
 				<div class="icon-concevoir"></div>
 				<h4>Concevoir</h4>
-				<p>Mettre en place les différentes visuels qui déterminent le fil rouge de votre image.</p>
+				<p>Mettre en place les différents visuels qui déterminent le fil rouge de votre image.</p>
 			</div>
 			<div class="col-md-4">
 				<div class="icon-developper"></div>
