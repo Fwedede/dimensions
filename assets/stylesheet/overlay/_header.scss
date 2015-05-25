@@ -64,7 +64,7 @@ header{
 				display: none;
 			}
 
-			@include media(max-width $screen-phone) {
+			@include media(max-width $screen-tablet) {
 				ul{
 					display: none;
 					padding: 0;
