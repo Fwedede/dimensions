@@ -221,18 +221,14 @@
 		return $target.carousel(options);
 	});
 
-	// Déclaration des propriétées par défauts
-	var defaut = {
-		"show" : 200,
-		"hide" : 200,
-		"bgcolor" : 'white'
-	};
-	
-
 	$.fn.popin=function(options) {
 
 		// Fusion entre les propriétées par défauts et les options mises par le développeur
-		var param = $.extend(defaut, options);
+		var param = $.extend({
+			"show" : 400,
+			"hide" : 400,
+			"bgcolor" : 'white'
+		}, options);
 
 		// Pour chaque élément qui appelle le plugin
 		return this.each(function() {
@@ -250,13 +246,13 @@
 						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
 							var heightWindow = window.innerHeight;
 							var heightPopin = $('.popin').height();
-		
+
 							$('.popin-bg').html(res);
 							$('.popin-bg').css('top', ((heightWindow - heightPopin) / 4 + $(window).scrollTop()));
 							$('.popin-bg').fadeIn(param.show);
 							$('.bg').fadeIn(param.show);
 							//$('body').css('overflow', 'hidden');
-							
+
 							var imgMaxHeight = ($('.popin').height() - parseInt($('.popin').css('padding-top')) - $('.popin .title').height() - parseInt($('.popin .title').css('padding-bottom')) - parseInt($('.popin .title').css('margin-top')) - parseInt($('.popin .title').css('margin-bottom')));
 							$('.carousel .img').css('max-height', imgMaxHeight);
 							$('.popin').find('.close').click(function() {
