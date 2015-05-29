@@ -51,9 +51,6 @@ main{
 				height: 355px;
 				background-color: #ffffff;
 				@include transition(all .2s ease-in-out);
-				
-				&.last{
-					margin-right: 0;
 				}
 
 				&:hover{
@@ -229,12 +226,15 @@ main{
 		}
 	}
 	#services{
-		[class^="col-"], [class*="col-"]{
+		[class^="col-"], [class*="col-"] {
 			text-align: center;
-			min-height: 25rem;
-			margin-right: .2rem;
+			@include omega(3n);
+
+			@include media(max-width $screen-tablet) {
+				@include omega(odd);
+			}
 			@include media(max-width $screen-phone) {
-				min-height: 10rem;
+				@include omega();
 			}
 			&:hover{
 				color: $pink;
