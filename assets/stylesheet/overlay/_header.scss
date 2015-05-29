@@ -36,14 +36,15 @@ header{
 			}
 
 		}
-		.pull-left img{
-			max-height: 2.5rem;
+		.pull-left{
 			opacity: .15;
 			@include transition(opacity .3s ease-in-out);
-
 			&:hover{
 				opacity: 1;
 			}
+			img{
+				max-height: 2.5rem;				
+			}		
 		}
 		a{
 			color: $gray-dark;
