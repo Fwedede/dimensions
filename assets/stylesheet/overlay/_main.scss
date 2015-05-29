@@ -218,7 +218,7 @@ main{
 		display: block;
 	}
 	#contact{
-		.col-md-4{
+		.col-xl-4{
 			@include media(max-width $screen-phone) {
 				margin-top: 7rem;
 			}
