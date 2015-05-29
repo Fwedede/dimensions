@@ -23,6 +23,7 @@ header{
 		width: 100%;
 		background: $gray;
 		z-index: 100;
+		display: none;
 		position: fixed;
 		box-shadow: 1px 1px .2rem $gray-dark;
 		@include pad(0 default);
@@ -54,10 +55,6 @@ header{
 			&:focus{
 				outline: 1px solid lightgrey;
 			}
-		}
-		&.sticky{
-			visibility: hidden;
-			display: none;
 		}
 		li.menu_query{
 			img{

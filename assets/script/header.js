@@ -3,9 +3,9 @@ function animationScroll() {
 	var endIndex = $('nav').outerHeight();
 
 	if(windowOffset > endIndex)
-	$('nav').removeClass('sticky');
+	$('nav').fadeIn(400);
 	else
-	$('nav').addClass('sticky');
+	$('nav').fadeOut(400);
 
 	var anchors = $('section[id]');
 
