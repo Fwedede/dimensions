@@ -65,14 +65,25 @@
 				$req = $bdd->query("SELECT * FROM projet");
 
 				if($req->rowCount() > 0) {
+					$i = 0;
+					$petit = array(false, true, true, false, false, true, true, false, false, true, true, false);
 					while($res = $req->fetch()) {
+						if($petit[$i] === true)
+							$little = 'col-xl-5';
+						else
+							$little = 'col-xl-7';
+
+						if($i % 2 != 0)
+							$little .= ' last';
+
 						require('assets/view/realisations.html');
+						$i++;
 					}
 				}
 				$req->closeCursor();
 				?>
 			</div>
-		</div>		
+		</div>
 	</section>
 	<div class="bg"></div>
 	<div class="popin-bg"></div>
@@ -156,22 +167,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 <script src="assets/script/header.js"></script>
 <script src="assets/script/popin.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-	$('.cell').each(function(){
-		var nbprojet = $(this).attr('popin-projet');
-		var small = [2,3,6,7,10,11];
-		var big = [1,4,5,8,9,12];
-		if (nbprojet == 2 || nbprojet == 3 || nbprojet == 6 || nbprojet == 7 || nbprojet == 10 || nbprojet == 11) {
-			$(this).addClass('col-xl-5 col-sm-12');
-		}
-		if (nbprojet == 1 || nbprojet == 4 || nbprojet == 5 || nbprojet == 8 || nbprojet == 9 || nbprojet == 12) {
-			$(this).addClass('col-xl-7 col-sm-12');
-		}
-		$('.cell:odd').addClass('last');
-	});
-});
-</script>
 <script>
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
