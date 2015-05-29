@@ -3,9 +3,9 @@ function animationScroll() {
 	var endIndex = $('nav').outerHeight();
 
 	if(windowOffset > endIndex)
-	$('nav').fadeIn(400);
+	$('nav').fadeIn(500);
 	else
-	$('nav').fadeOut(400);
+	$('nav').fadeOut(800);
 
 	var anchors = $('section[id]');
 
