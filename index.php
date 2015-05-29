@@ -31,8 +31,9 @@
 		<section class="container main-body-wrap" id="home">
 			<h1 class="title"><img src="assets/img/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
 			<p>Donnez une autre dimension à votre image</p>
-			<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
+			
 		</section>
+		<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
 	</header>
 
 	<main>
