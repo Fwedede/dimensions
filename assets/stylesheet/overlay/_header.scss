@@ -28,7 +28,7 @@ header{
 		box-shadow: 1px 1px .2rem $gray-dark;
 		@include pad(0 default);
 
-		@include media(max-width $screen-phone) {
+		@include media(max-width $screen-tablet) {
 			height: 5rem;
 
 			> ul{
