@@ -225,18 +225,19 @@ main{
 		}
 	}
 	#services{
-		[class^="col-"], [class*="col-"] {
-			text-align: center;
-			@include omega(3n);
-
-			@include media(max-width $screen-tablet) {
-				@include omega(odd);
-			}
-			@include media(max-width $screen-phone) {
-				@include omega();
-			}
-			&:hover{
-				color: $pink;
+		.cellule {
+			[class^="col-"], [class*="col-"] {
+				text-align: center;
+				/*min-height: 30rem;*/
+				@include media($screen-tablet) {
+					@include omega(3n);
+				}
+				@include media($screen-phone) {
+					@include omega(even);
+				}
+				&:hover{
+					color: $pink;
+				}
 			}
 		}
 		[class^="icon-"]::before, [class*=" icon-"]::before{
