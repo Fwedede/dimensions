@@ -138,6 +138,7 @@
 				<p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
 				<form class="col-xl-8 col-sm-12" action="index.html" method="post">
 					<input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
+					<div class="tooltip font-xs">Il faut un minimum de 8 caractères</div>
 					<input type="text" placeholder="E-mail" id="email" name="email" value="">
 					<input type="text" placeholder="Objet" id="object" name="object" value="">
 					<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
