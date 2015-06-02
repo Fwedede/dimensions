@@ -124,7 +124,7 @@ module.exports = function(grunt) {
 
    grunt.registerTask('css', ['sass', 'csso']);
    grunt.registerTask('js', ['includereplace', 'uglify']);
-   grunt.registerTask('view', 'copy:view');
+   grunt.registerTask('view', 'copy:index');
 
    grunt.registerTask('build', ['checkDependencies', 'clean', 'copy', 'css', 'js']);
    grunt.registerTask('serve', ['build', 'watch']);
