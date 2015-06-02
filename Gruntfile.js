@@ -11,28 +11,25 @@ module.exports = function(grunt) {
          this : {}
       },
 
-      // Settings at development folder
       dev : {
-         php : '_development/controllers',
-         html : '_development/views',
-         style : '_development/assets/stylesheets/overlay',
-         script : '_development/assets/javascripts',
-         img : '_development/assets/images'
+         img : 'assets/img',
+         font : 'assets/fons',
+         js : 'assets/script',
+         css : 'assets/stylesheet',
+         view : 'assets/view'
       },
 
-      // Settings at production folder
-      build : {
-         php : 'controllers',
-         html : 'views',
-         style : 'assets/stylesheets',
-         script : 'assets/javascripts',
-         img : 'assets/images'
+      prod : {
+         img : 'prod/assets/img',
+         font : 'prod/assets/fonts',
+         js : 'prod/assets/script',
+         css : 'prod/assets/stylesheet',
+         view : 'prod/assets/view'
       },
 
       // Clean files and folders
       clean : {
-         target : ['<%= build.php %>', '<%= build.html %>', 'assets/'],
-         w3c : ['validation-report.json', 'validation-status.json']
+         target : 'prod/*'
       },
 
       // Copy files and folders
@@ -41,27 +38,19 @@ module.exports = function(grunt) {
             expand : true,
             cwd : '<%= dev.img %>/',
             src : '**/*',
-            dest : '<%= build.img %>/'
+            dest : '<%= prod.img %>/'
          },
-         php : {
+         view : {
             expand : true,
-            cwd : '<%= dev.php %>/',
-            src : '*.php',
-            dest : '<%= build.php %>/'
+            cwd : '<%= dev.view %>/',
+            src : '*',
+            dest : '<%= prod.view %>/'
          },
-         js : {
+         font : {
             expand : true,
-            cwd : '<%= dev.script %>/external',
+            cwd : '<%= dev.font %>/',
             src : '*.js',
-            dest : '<%= build.script %>/'
-         }
-      },
-
-      // Concatenate files
-      concat : {
-         dist : {
-            src : ['assets/stylesheets/geeko.css', 'assets/stylesheets/style.css'],
-            dest : 'assets/stylesheets/styles.css'
+            dest : '<%= prod.font %>/'
          }
       },
 
@@ -72,8 +61,18 @@ module.exports = function(grunt) {
                sourcemap : 'none'
             },
             files : {
-               '<%= build.style %>/geeko.css' : '<%= dev.style %>/overlay.scss'
+               '<%= prod.css %>/styles.css' : '<%= dev.css %>/styles.scss'
             }
+         }
+      },
+
+      // Compile JS to JS
+      includereplace : {
+         js : {
+            expand : true,
+            cwd : '<%= dev.js %>/',
+            src : 'script.js',
+            dest : '<%= prod.js %>/'
          }
       },
 
@@ -81,58 +80,28 @@ module.exports = function(grunt) {
       csso : {
          target : {
             files : {
-               '<%= build.style %>/geeko.min.css' : '<%= build.style %>/geeko.css'
+               '<%= prod.css %>/styles.min.css' : '<%= prod.css %>/styles.css'
             }
          }
       },
 
-      // Grunt task to include files and replace variables. Allows for parameterised includes
-      includereplace : {
-         html : {
-            expand : true,
-            cwd : '<%= dev.html %>/',
-            src : '*.html',
-            dest : '<%= build.html %>/'
-         },
-         script : {
-            expand : true,
-            cwd : '<%= dev.script %>/',
-            src : 'geeko.js',
-            dest : '<%= build.script %>/'
-         }
-      },
-
-      // Minify files with UglifyJS
+      // Minify files with UglifyJS @TODO
       uglify : {
          js : {
             files : {
-               '<%= build.script %>/geeko.min.js' : ['<%= build.script %>/geeko.js']
-            }
-         },
-         parsley : {
-            files : {
-               '<%= dev.script %>/external/parsley-2.0.7.js' : ['<%= dev.script %>/external/parsley-2.0.7/*.js', '<%= dev.script %>/external/parsley-2.0.7/i18n/fr.js', '<%= dev.script %>/external/parsley-2.0.7/i18n/fr.extra.js']
-            }
-         },
-         selectboxit : {
-            files : {
-               '<%= dev.script %>/external/selectboxit-3.8.1.js' : '<%= dev.script %>/external/selectboxit-3.8.1/*.js'
+               '<%= prod.js %>/script.min.js' : '<%= prod.js %>/script.js'
             }
          }
       },
 
       // Run predefined tasks whenever watched file patterns are added, changed or deleted
-      watch : {
-         php : {
-            files : '<%= dev.php %>/**/*',
-            tasks : 'copy:php'
-         },
-         html : {
-            files : '<%= dev.html %>/**/*',
-            tasks : 'html'
+      watch : {        
+         view : {
+            files : ['<%= dev.view %>/**/*', 'index.php'],
+            tasks : 'view'
          },
          css : {
-            files : '<%= dev.style %>/**/*',
+            files : '<%= dev.css %>/**/*',
             tasks : 'css'
          },
          img : {
@@ -140,32 +109,19 @@ module.exports = function(grunt) {
             tasks : 'copy:img'
          },
          js : {
-            files : '<%= dev.script %>/**/*',
+            files : '<%= dev.js %>/**/*',
             tasks : 'js'
          }
-      },
-
-      // W3C html validation grunt plugin
-      validation : {
-         options : {
-            reset : true,
-            stoponerror : false,
-         },
-         files : {
-            src : '<%= build.html %>/*.html'
-         }
       }
-
    });
 
-   grunt.registerTask('html', ['includereplace:html']);
-   grunt.registerTask('css', ['sass', 'csso']);
-   grunt.registerTask('js', ['includereplace:script', 'uglify:js']);
 
-   grunt.registerTask('build', ['checkDependencies', 'clean', 'copy', 'css', 'html', 'js']);
+   grunt.registerTask('css', ['sass', 'csso']);
+   grunt.registerTask('js', ['includereplace', 'uglify']);
+   grunt.registerTask('view', 'copy:view');
+
+   grunt.registerTask('build', ['checkDependencies', 'clean', 'copy', 'css', 'js']);
    grunt.registerTask('serve', ['build', 'watch']);
 
-   grunt.registerTask('script', ['uglify:parsley', 'uglify:selectboxit']);
-   grunt.registerTask('w3c', ['validation', 'clean:w3c']);
 
 };
