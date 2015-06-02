@@ -168,8 +168,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-<script src="assets/script/header.js"></script>
-<script src="assets/script/popin.js"></script>
+<script src="assets/script/script.js"></script>
 <script>
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
