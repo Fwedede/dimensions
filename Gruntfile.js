@@ -11,25 +11,25 @@ module.exports = function(grunt) {
          this : {}
       },
 
-      dev : {
+      prod : {
          img : 'assets/img',
-         font : 'assets/fons',
+         font : 'assets/fonts',
          js : 'assets/script',
          css : 'assets/stylesheet',
          view : 'assets/view'
       },
 
-      prod : {
-         img : 'prod/assets/img',
-         font : 'prod/assets/fonts',
-         js : 'prod/assets/script',
-         css : 'prod/assets/stylesheet',
-         view : 'prod/assets/view'
+      dev : {
+         img : 'dev/assets/img',
+         font : 'dev/assets/fonts',
+         js : 'dev/assets/script',
+         css : 'dev/assets/stylesheet',
+         view : 'dev/assets/view'
       },
 
       // Clean files and folders
       clean : {
-         target : 'prod/*'
+         target : ['./assets' , 'index.php']
       },
 
       // Copy files and folders
@@ -49,8 +49,14 @@ module.exports = function(grunt) {
          font : {
             expand : true,
             cwd : '<%= dev.font %>/',
-            src : '*.js',
+            src : '*',
             dest : '<%= prod.font %>/'
+         },
+         index : {
+            expand : true,
+            cwd : 'dev/',
+            src : 'index.php',
+            dest : './'
          }
       },
 
