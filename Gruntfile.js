@@ -101,9 +101,9 @@ module.exports = function(grunt) {
       },
 
       // Run predefined tasks whenever watched file patterns are added, changed or deleted
-      watch : {        
+      watch : {
          view : {
-            files : ['<%= dev.view %>/**/*', 'index.php'],
+            files : ['<%= dev.view %>/**/*', 'dev/index.php'],
             tasks : 'view'
          },
          css : {
