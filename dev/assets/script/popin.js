@@ -237,10 +237,10 @@
 			$(this).click(function() {
 
 				// Si l'élément a bien l'attribut nécessaire au plugin
-				if(/\d+/.test($(this).attr('popin-projet'))) {
+				if(/\d+/.test($(this).attr('data-popin-projet'))) {
 
 					// Récupération du numero de l'élément
-					var projet = $(this).attr('popin-projet');
+					var projet = $(this).attr('data-popin-projet');
 
 					if(projet !== undefined && projet !== '') {
 						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
