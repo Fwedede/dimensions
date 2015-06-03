@@ -9,6 +9,11 @@ else
 	$passage_ligne = "\n";
 }
 //=====Déclaration des messages au format texte et au format HTML.
+
+$_POST['message'] = stripslashes($_POST['message']); // On enlève les slash qui se seraient ajoutés automatiquement
+$_POST['message'] = htmlspecialchars($_POST['message']); // On rend inoffensives les balises HTML que le visiteur a pu rentrer
+$_POST['message'] = nl2br($_POST['message']); // On crée des <br /> pour conserver les retours à la ligne
+
 $message_txt = $_POST['message'];
 $message_html = "<html><head></head><body>".$_POST['message']."</body></html>";
 //==========
@@ -22,8 +27,8 @@ $sujet = $_POST['object'];
 //=========
 
 //=====Création du header de l'e-mail.
-$header = "From: \"WeaponsB\"<".$_POST['email'].">".$passage_ligne;
-$header.= "Reply-to: \"WeaponsB\" <".$_POST['email'].">".$passage_ligne;
+$header = "From: \"".$_POST['name']."\"<".$_POST['email'].">".$passage_ligne;
+$header.= "Reply-to: \"".$_POST['name']."\" <".$_POST['email'].">".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 //==========
