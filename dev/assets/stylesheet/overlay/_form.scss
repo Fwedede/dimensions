@@ -42,10 +42,11 @@ form{
       border-radius: 4px;
       padding: 1rem;
       position: absolute;
+      display: table;
       top: 0;
-      left: 60%;
+      @include calc(left, "100% + 12px");
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-      
+
       &::before {
          content: "";
          height: 12px;
