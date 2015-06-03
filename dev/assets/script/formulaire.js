@@ -14,14 +14,13 @@ $(function() {
          $('form').find('#name').next('.tooltip').text(message).removeClass('hidden');
       }
    }
-   // @TODO Faire la vérification de l-email
    function checkMail() {
-      if($.trim($('form').find('#email').val()).length >= 8) {
+		if(/^[\w-\._%\+]+@[\w-\._%\+]+\.[a-z]{2,6}$/g.test($.trim($('form').find('#email').val()))) {
          if(!$('form').find('#email').next('.tooltip').hasClass('hidden'))
             $('form').find('#email').next('.tooltip').addClass('hidden');
       }
       else {
-         var message = "Chaîne trop courte. Il faut un minimum de 8 caractères.";
+         var message = "Cette valeur n'est pas une adresse email valide.";
          if($.trim($('form').find('#email').val()).length < 1) {
             message = "Ce champ est requis.";
          }
