@@ -85,6 +85,13 @@ $(function() {
 
       if(isFinish !== false) {
          $('.tooltip-submit').removeClass('hidden');
+
+         $.post('assets/view/email.php', $(this).serialize(), function(data, textStatus, xhr) {
+         });
+
+         $(this).find('input').val('');
+         $(this).find('textarea').val('');
+
          setTimeout(function() {
             $('.tooltip-submit').fadeOut(400, function() {
                $('.tooltip-submit').addClass('hidden');
