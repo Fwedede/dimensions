@@ -31,7 +31,7 @@
 		<section class="container main-body-wrap" id="home">
 			<h1 class="title"><img src="assets/img/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
 			<p>Donnez une autre dimension à votre image</p>
-			
+
 		</section>
 		<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
 	</header>
@@ -137,11 +137,22 @@
 				<h2>Contactez-moi</h2>
 				<p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
 				<form class="col-xl-8 col-sm-12" action="index.html" method="post">
-					<input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
-					<div class="tooltip font-xs">Il faut un minimum de 8 caractères</div>
-					<input type="text" placeholder="E-mail" id="email" name="email" value="">
-					<input type="text" placeholder="Objet" id="object" name="object" value="">
-					<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
+					<div class="row" style="position:relative;">
+						<input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
+						<div class="tooltip hidden font-xs">Il faut un minimum de 3 caractères</div>
+					</div>
+					<div class="row" style="position:relative;">
+						<input type="text" placeholder="E-mail" id="email" name="email" value="">
+						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+					</div>
+					<div class="row" style="position:relative;">
+						<input type="text" placeholder="Objet" id="object" name="object" value="">
+						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+					</div>
+					<div class="row" style="position:relative;">
+						<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
+						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+					</div>
 					<button class="pull-right" type="submit">Valider</button>
 				</form>
 				<div class="col-xl-4 col-sm-12 text-right">
