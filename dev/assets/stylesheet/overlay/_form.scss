@@ -43,7 +43,6 @@ form{
       top: -3.7rem;
       position: absolute;
       color: white;
-      /*@include calc(left, "50%");*/
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 
       &::before {
@@ -58,5 +57,14 @@ form{
          background: $pink;
          line-height: 0;
       }
+   }
+   .tooltip-submit{
+      background: $pink;
+      padding: 2rem;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      color: white;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
    }
 }

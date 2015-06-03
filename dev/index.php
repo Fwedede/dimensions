@@ -154,6 +154,7 @@
 						<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
 					</div>
 					<button class="pull-right" type="submit">Valider</button>
+					<div class="tooltip-submit font-xs">Votre prise de contact a bien été envoyée.</div>
 				</form>
 				<div class="col-xl-4 col-sm-12 text-right">
 					<div class="address">
