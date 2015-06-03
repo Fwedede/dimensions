@@ -38,13 +38,13 @@ form{
       }
    }
    .tooltip{
-      background: white;
+      background: $pink;
       border-radius: 4px;
-      padding: 1rem;
+      padding: .6rem;
+      top: -3.7rem;
       position: absolute;
-      display: table;
-      top: 0;
-      @include calc(left, "100% + 12px");
+      color: white;
+      /*@include calc(left, "50%");*/
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 
       &::before {
@@ -52,10 +52,11 @@ form{
          height: 12px;
          width: 12px;
          position: absolute;
-         left: -6px;
-         @include calc(top, "(100% - 12px)/2");
+         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+         @include calc(top, "100% - 6px");
+         @include calc(left, "(100% - 12px)/2");
          @include transform(rotate(45deg));
-         background: white;
+         background: $pink;
          line-height: 0;
       }
    }

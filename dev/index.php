@@ -138,20 +138,20 @@
 				<p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
 				<form class="col-xl-8 col-sm-12" action="index.html" method="post">
 					<div class="row" style="position:relative;">
-						<input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
 						<div class="tooltip hidden font-xs">Il faut un minimum de 3 caractères</div>
+						<input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
 					</div>
 					<div class="row" style="position:relative;">
+						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
 						<input type="text" placeholder="E-mail" id="email" name="email" value="">
-						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
 					</div>
 					<div class="row" style="position:relative;">
+						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
 						<input type="text" placeholder="Objet" id="object" name="object" value="">
-						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
 					</div>
 					<div class="row" style="position:relative;">
-						<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
 						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+						<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
 					</div>
 					<button class="pull-right" type="submit">Valider</button>
 				</form>
