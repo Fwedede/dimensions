@@ -222,9 +222,10 @@ main{
 	}
 	#contact{
 		.col-xl-4{
-			@include media(max-width $screen-tablet) {
-				margin-top: 5rem;
-			}
+				margin-top: 1.5rem;
+				@include media (max-width $screen-phone) {
+					margin-top: 7rem;
+				}
 		}
 	}
 	#services{
