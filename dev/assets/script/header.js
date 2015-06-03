@@ -3,9 +3,9 @@ function animationScroll() {
 	var endIndex = $('nav').outerHeight();
 
 	if(windowOffset > endIndex)
-	$('nav').fadeIn(500);
+	$('nav').fadeIn(300);
 	else
-	$('nav').fadeOut(800);
+	$('nav').fadeOut(500);
 
 	var anchors = $('section[id]');
 
@@ -24,7 +24,7 @@ function resizeHome() {
 	var heightHome = $('header section').outerHeight();
 
 	$('header').outerHeight(heightWindow);
-	$('header section').css('padding-top', ((heightWindow - heightHome) / 2));
+	$('header section').css('padding-top', ((heightWindow - heightHome) / 2.5));
 }
 
 $(function() {
