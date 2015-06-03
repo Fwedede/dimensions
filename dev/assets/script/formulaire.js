@@ -57,6 +57,8 @@ $(function() {
    $('form').submit(function(event) {
       event.preventDefault();
 
+         var isFinish;
+
       checkName();
       checkMail();
       checkObject();
@@ -74,5 +76,20 @@ $(function() {
       $(this).find('#message').keyup(function() {
          checkMessage();
       });
+
+      $(this).find('.tooltip').each(function() {
+         if(!$(this).hasClass('hidden')) {
+            isFinish = false;
+         }
+      });
+
+      if(isFinish !== false) {
+         $('.tooltip-submit').removeClass('hidden');
+         setTimeout(function() {
+            $('.tooltip-submit').fadeOut(400, function() {
+               $('.tooltip-submit').addClass('hidden');
+            });
+         }, 5000);
+      }
    });
 });
