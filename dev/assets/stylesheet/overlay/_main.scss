@@ -17,6 +17,7 @@ main{
 		}
 	}
 	.social a {
+		box-shadow: 1px 1px 0.2rem $gray-dark;
 		@include transition(opacity .3s ease-in-out);
 
 		&:hover {
