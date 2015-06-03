@@ -174,7 +174,7 @@
 
 	<footer class="text-center font-xs">
 		<p>Agence Dimensions - Agence spécialisée dans l'identité visuelle, graphique, digitale et agencée.</p>
-		<div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+		<!--div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div-->
 		<!--div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div-->
 		<p>© Copyright 2015 - Agence Dimensions</p>
 	</footer>
