@@ -15,7 +15,7 @@ $(function() {
       }
    }
    function checkMail() {
-      if($.trim($('form').find('#email').val()).length >= 8) {
+		if(/^[\w-\._%\+]+@[\w-\._%\+]+\.[a-z]{2,6}$/g.test($.trim($('form').find('#email').val()))) {
          if(!$('form').find('#email').prev('.tooltip').hasClass('hidden'))
             $('form').find('#email').prev('.tooltip').addClass('hidden');
       }
