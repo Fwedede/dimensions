@@ -54,7 +54,8 @@ header{
 			@include transition(box-shadow .3s ease-in-out);
 
 			&:focus{
-				outline: 1px solid lightgrey;
+				outline: none;
+				color: $pink;
 			}
 		}
 		li.menu_query{
