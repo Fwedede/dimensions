@@ -237,7 +237,7 @@ main{
 				@include media($screen-tablet) {
 					@include omega(3n);
 				}
-				@include media($screen-phone) {
+				@include media(max-width $screen-tablet) {
 					@include omega(even);
 				}
 				&:hover{
