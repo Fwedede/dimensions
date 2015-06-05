@@ -164,9 +164,9 @@
 						<a href="clementfj@gmail.com">clementfj@gmail.com</a>
 					</div>
 					<div class="social row">
-						<a class="col-sm-2 col-xl-3 col-md-offset-6 col-sm-offset-6 col-xl-offset-3" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140"><img src="assets/img/socials/logo-facebook.png" alt="logo-facebook"></a>
-						<a class="col-sm-2 col-xl-3" href="https://www.linkedin.com/pub/frederique-clement/95/a06/434"><img src="assets/img/socials/logo-linkedin.png" alt="logo-linkedin"></a>
-						<a class="col-sm-2 col-xl-3" href="https://fr.pinterest.com/Fwedede/"><img src="assets/img/socials/logo-pinterest.png" alt="logo-pinterest"></a>
+						<a class="col-sm-2 col-xl-3 col-md-offset-6 col-sm-offset-6 col-xl-offset-3" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" target="_blank"><img src="assets/img/socials/logo-facebook.png" alt="logo-facebook"></a>
+						<a class="col-sm-2 col-xl-3" href="https://www.linkedin.com/pub/frederique-clement/95/a06/434" target="_blank"><img src="assets/img/socials/logo-linkedin.png" alt="logo-linkedin"></a>
+						<a class="col-sm-2 col-xl-3" href="https://fr.pinterest.com/Fwedede/" target="_blank"><img src="assets/img/socials/logo-pinterest.png" alt="logo-pinterest"></a>
 					</div>
 				</div>
 			</div>
