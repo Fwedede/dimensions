@@ -43,7 +43,7 @@
 				<article>
 					<h2>Agence</h2>
 					<p>Aujourd'hui plus que jamais, l'image est quelque chose de très importante. Le visuel est la première chose que l'on remarque  et qui nous donne notre première impression.<br>Le projet de l'agence se base sur cette constatation.</p>
-					<p>Dimensions est une agence spécialisée dans l'identité visuelle, graphique, digitale et agencée avec une décmarche d'éco-conception. Elle accompagne principalement les nouvelles entreprises (les TPE et les PME plus particulièrement) qui désirent définir l'image de leur entreprise, de leur produit ou de leur événement.</p>
+					<p>Dimensions est une agence spécialisée dans l'identité visuelle, graphique, digitale et agencée avec une démarche d'éco-conception. Elle accompagne principalement les nouvelles entreprises (les TPE et les PME plus particulièrement) qui désirent définir l'image de leur entreprise, de leur produit ou de leur événement.</p>
 					<p>L'agence désire aller beaucoup plus loin qu'une communication visuelle, en allant jusqu'à la décoration, ce qui permettra une cohérence globale et unique.</p>
 				</article>
 			</div>
