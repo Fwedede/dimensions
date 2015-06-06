@@ -247,11 +247,11 @@ main{
 				}
 				&:hover{
 					color: $pink;
-					cursor: pointer;
+					cursor: default;
 
 					p {
 						max-height: 30rem;
-						@include transition(max-height 1.8s ease-in-out);
+						@include transition(max-height 1.4s ease-in-out);
 					}
 				}
 			}
