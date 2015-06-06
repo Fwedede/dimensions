@@ -165,7 +165,7 @@ main{
 		}
 		
 		&.scrollbar{
-			max-height: 330px;
+			max-height: 400px;
 			overflow-y: auto;
 		}
 		&::-webkit-scrollbar-track{
@@ -191,7 +191,7 @@ main{
 		.img{
 			margin: auto;
 			width: auto;
-			height: 330px;
+			height: 400px;
 
 			@include media(max-width $screen-phone) {
 				height: 200px;
