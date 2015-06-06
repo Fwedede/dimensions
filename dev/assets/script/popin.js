@@ -248,7 +248,7 @@
 							var heightPopin = $('.popin').height();
 
 							$('.popin-bg').html(res);
-							$('.popin-bg').css('top', ((heightWindow - heightPopin) / 4 + $(window).scrollTop()));
+							$('.popin-bg').css('top', ((heightWindow - heightPopin) / 6 + $(window).scrollTop()));
 							$('.popin-bg').fadeIn(param.show);
 							$('.bg').fadeIn(param.show);
 							//$('body').css('overflow', 'hidden');
