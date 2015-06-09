@@ -99,11 +99,11 @@
 					return "first";
 				}
 			})();
-			return this.$(".previews .preview")[method]();
+			return this.$(".preview")[method]();
 		};
 
 		Carousel.prototype.$previews = function() {
-			return this.$(".previews .preview");
+			return this.$(".preview");
 		};
 
 		Carousel.prototype.$pages = function() {
@@ -111,7 +111,7 @@
 		};
 
 		Carousel.prototype.$active = function() {
-			return this.$(".previews .preview.active");
+			return this.$(".preview.active");
 		};
 
 		Carousel.prototype.cycle = function() {
