@@ -32,11 +32,11 @@ if($res = $req->fetch())
 					$active = 'active';
 				?>
 				<div class="preview <?php echo $active;?>">
-				<div class="desc font-xs scrollbar">
+				<div class="desc font-xs scrollbar col-md-4 col-sm-12">
 					<?php echo $res3['description'];?>
 					<div class="force-overflow"></div>
 				</div>
-				<div class="image">			
+				<div class="image col-md-8 col-sm-12">			
 					<img class="img" src="assets/img/projets/<?php echo $res3['image'];?>.png" alt="<?php echo $res3['infos'];?>">
 				</div>
 				</div>
@@ -46,9 +46,9 @@ if($res = $req->fetch())
 			}
 			?>
 		</div>
-		<div class='controls'>
-			<a class='next' data-action='next' href='#'>›</a>
-			<a class='prev' data-action='prev' href='#'>‹</a>
+		<div class="controls col-md-8 col-sm-12">
+			<a class="next" data-action="next" href="#">›</a>
+			<a class="prev" data-action="prev" href="#">‹</a>
 		</div>
 	</div>
 </div>
