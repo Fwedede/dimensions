@@ -63,7 +63,7 @@
 					}
 
 					$bdd->exec("SET CHARACTER SET utf8");
-					$req = $bdd->query("SELECT * FROM projet");
+					$req = $bdd->query("SELECT * FROM projet ORDER BY id DESC");
 
 					if($req->rowCount() > 0) {
 						$i = 0;
