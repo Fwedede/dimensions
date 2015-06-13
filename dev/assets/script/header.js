@@ -7,7 +7,7 @@ function animationScroll() {
 	else
 	$('nav').fadeOut(500);
 
-	var anchors = $('section[id]');
+	var anchors = $('section');
 
 	for(var i = 0; i < anchors.length; i++) {
 		if($(anchors[i]).offset().top - endIndex <= windowOffset) {
@@ -36,7 +36,40 @@ $(function() {
 		var target = $(e.currentTarget.hash).offset().top;
 		var menuHeight = $('nav').outerHeight() - 1;
 
-		$('html, body').animate({'scrollTop' : target-menuHeight}, 800);
+		$('body').animate({'scrollTop' : target-menuHeight}, 800);
+	});
+
+
+	$('body').keydown(function(e) {
+		if(e.keyCode == 32 || e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
+			e.preventDefault();
+
+			var anchors = $('section');
+			if(e.keyCode == 37 || e.keyCode == 38) {
+
+				if($(window).scrollTop() - $('nav').outerHeight() > 0) {
+
+
+					for (var i = anchors.length - 1; i >= 0; i--) {
+						if($(anchors[i]).offset().top < $(window).scrollTop()) {
+							$('body').animate({'scrollTop' : Math.round($(anchors[i]).offset().top) - $('nav').outerHeight()}, 800);
+
+							i = -1;
+						}
+					}
+				}
+			}
+			if(e.keyCode == 32 || e.keyCode == 39 || e.keyCode == 40) {
+
+				for (var j = 0; j < anchors.length; j++) {
+					if(Math.floor($(anchors[j]).offset().top - $('nav').outerHeight()) > $(window).scrollTop()) {
+						$('body').animate({'scrollTop' : Math.round($(anchors[j]).offset().top) - $('nav').outerHeight()}, 800);
+
+						j = anchors.length;
+					}
+				}
+			}
+		}
 	});
 
 	$(window).resize(function(){
