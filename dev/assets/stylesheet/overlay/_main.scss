@@ -172,19 +172,19 @@ main{
 				@include media(max-width $screen-tablet) {
 					@include omega(even);
 				}
-				p{
-					overflow-y: hidden;
-					max-height: 0;
-					@include transition(max-height 1.2s ease-in-out);
-				}
-				&:hover{
-					color: $pink;
-					cursor: default;
-					p {
-						max-height: 30rem;
-						@include transition(max-height 1.4s ease-in-out);
-					}
-				}
+				// p{
+				// 	overflow-y: hidden;
+				// 	max-height: 0;
+				// 	@include transition(max-height 1.2s ease-in-out);
+				// }
+				// &:hover{
+				// 	color: $pink;
+				// 	cursor: default;
+				// 	p {
+				// 		max-height: 30rem;
+				// 		@include transition(max-height 1.4s ease-in-out);
+				// 	}
+				// }
 			}
 		}
 		[class^="icon-"]::before, [class*=" icon-"]::before{
