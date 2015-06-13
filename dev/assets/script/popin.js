@@ -258,7 +258,6 @@
 							$('.popin').find('.close').click(function() {
 								$('.popin-bg').fadeOut(param.hide);
 								$('.bg').fadeOut(param.hide);
-								$('body').css('overflow', 'auto');
 							});
 						});
 					}
