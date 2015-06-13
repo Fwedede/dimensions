@@ -82,5 +82,13 @@ $(function() {
 		resizeHome();
 	}).scroll(function(){
 		animationScroll();
+	}).on('mousewheel', function(e) {
+		var anchors = $('section');
+		if(e.originalEvent.wheelDelta > 0) {
+			up();
+		}
+		if(e.originalEvent.wheelDelta <= 0) {
+			down();
+		}
 	});
 });
