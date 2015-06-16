@@ -70,13 +70,15 @@ $(function() {
 
 	$('body').keydown(function(e) {
 		if(e.keyCode == 32 || e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
-			e.preventDefault();
+			if(!$('textarea, input').is(':focus')) {
+				e.preventDefault();
 
-			if(e.keyCode == 37 || e.keyCode == 38) {
-				up();
-			}
-			if(e.keyCode == 32 || e.keyCode == 39 || e.keyCode == 40) {
-				down();
+				if(e.keyCode == 37 || e.keyCode == 38) {
+					up();
+				}
+				if(e.keyCode == 32 || e.keyCode == 39 || e.keyCode == 40) {
+					down();
+				}
 			}
 		}
 	});
