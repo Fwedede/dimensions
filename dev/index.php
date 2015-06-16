@@ -8,6 +8,18 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
 	<link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://apis.google.com/js/platform.js" async defer>
+	{lang: 'fr'}
+	</script>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=130169510352357";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 </head>
 
 <body>
@@ -175,31 +187,15 @@
 
 	<footer class="text-center font-xs">
 		<section>
-		<p>Agence Dimensions - Agence spécialisée dans l'identité visuelle, graphique, digitale et agencée.</p>
-		<!--div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div-->
-		<!--div class="g-plusone inline-flex" data-size="medium" data-annotation="inline" data-width="300"></div-->
-		<p>© Copyright 2015 - Agence Dimensions</p>
-	</section>
+			<p>Agence Dimensions - Agence spécialisée dans l'identité visuelle, graphique, digitale et agencée.</p>
+			<div class="fb-like inline-flex" data-href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+			<div class="g-plusone inline-flex" data-href="https://plus.google.com/u/0/+FrederiqueClement/posts" data-size="medium" data-width="300"></div>
+			<p>© Copyright 2015 - Agence Dimensions</p>
+		</section>
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/script/script.js"></script>
-	<script>
-	(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.3&appId=130169510352357";
-		fjs.parentNode.insertBefore(js, fjs);
-	}
-	(document, 'script', 'facebook-jssdk'));
-	</script>
-<!--script type="text/javascript">
-	 (function() {
-	 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-	 po.src = 'https://apis.google.com/js/plusone.js';
-	 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-	 })();
-	</script-->
+
 </body>
 </html>
