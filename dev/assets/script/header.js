@@ -24,6 +24,7 @@ function resizeHome() {
 	var heightHome = $('header section').outerHeight();
 
 	$('header').outerHeight(heightWindow);
+		$('main section').css('min-height', heightWindow - $('nav').outerHeight());
 	$('header section').css('padding-top', ((heightWindow - heightHome) / 2.5));
 }
 function up() {
