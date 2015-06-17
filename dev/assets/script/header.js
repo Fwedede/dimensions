@@ -20,7 +20,7 @@ function animationScroll() {
 	});
 }
 
-function resizeHome() {
+function resizeSection() {
 	var heightWindow = window.innerHeight;
 	var heightHome = $('header section').outerHeight();
 
@@ -94,7 +94,7 @@ $(function() {
 
 	$(window).resize(function(){
 		animationScroll();
-		resizeHome();
+		resizeSection();
 
 		if($(window).innerWidth() >= 768) {
 			$('.menu_query ul').fadeIn(0).removeAttr('style');
