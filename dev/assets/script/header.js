@@ -7,16 +7,17 @@ function animationScroll() {
 	else
 	$('nav').fadeOut(500);
 
-	var anchors = $('section');
-
-	for(var i = 0; i < anchors.length; i++) {
-		if($(anchors[i]).offset().top - endIndex <= windowOffset) {
-			if(i === 0)
-			$('a[href^="#"]').parent().removeClass('active');
-			else
-			$('a[href="#'+$(anchors[i]).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
+	$('section').each(function(i, lmt) {
+		if($(lmt).offset().top - endIndex <= windowOffset) {
+			if(i === 0) {
+				// Si on est dans la #home
+				$('a[href^="#"]').parent().removeClass('active');
+			}
+			else {
+				$('a[href="#'+$(lmt).attr('id')+'"]').parent().addClass('active').siblings().removeClass('active');
+			}
 		}
-	}
+	});
 }
 
 function resizeHome() {
