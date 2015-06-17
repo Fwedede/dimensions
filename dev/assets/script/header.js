@@ -12,7 +12,7 @@ function animationScroll() {
 
 	$('section').each(function(i, lmt) {
 		// Si le haut de la section n'est pas visible (par ce que trop haut dans l'écran)
-		if($(lmt).offset().top - endIndex <= windowOffset) {
+		if(Math.round($(lmt).offset().top) - endIndex <= windowOffset) {
 			// Si on est dans la #home
 			if(i === 0) {
 				$('a[href^="#"]').parent().removeClass('active');
@@ -42,16 +42,16 @@ function scrollEffect(event) {
 
 		$('section').each(function(i, lmt) {
 			// Si le haut de la section est plus haut de ce qu'on voit ET que le bas de la section est plus bas de ce qu'on voit
-			if(($(lmt).offset().top - $('nav').outerHeight() <= $(window).scrollTop()) && $(lmt).offset().top + $(lmt).outerHeight() - $('nav').outerHeight() > $(window).scrollTop()) {
+			if((Math.round($(lmt).offset().top) - $('nav').outerHeight() <= $(window).scrollTop()) && Math.round($(lmt).offset().top) + $(lmt).outerHeight() - $('nav').outerHeight() > $(window).scrollTop()) {
 
 				// Si la section n'est pas affiché entièrement
 				if($(lmt).outerHeight() > $(window).innerHeight()) {
 
 					// Si on n'est pas tout en haut ET qu'on scroll vers le haut ou qu'on appuie sur les flèches 'gauche' ou 'haut'
 					if(i !== 0 && ((event.keyCode == 37 || event.keyCode == 38)) || event.originalEvent.wheelDelta > 0) {
-						// Si on ne voit pas encore le bas de la section
-						if($(lmt).offset().top - $('nav').outerHeight() < $(window).scrollTop()) {
-							$('body').animate({'scrollTop' : $(lmt).offset().top - $('nav').outerHeight()}, 800);
+						// Si on ne voit pas encore le haut de la section
+						if(Math.round($(lmt).offset().top) - $('nav').outerHeight() < $(window).scrollTop()) {
+							$('body').animate({'scrollTop' : Math.round($(lmt).offset().top) - $('nav').outerHeight()}, 800);
 						}
 						// On est en bas de la section
 						else {
@@ -61,7 +61,7 @@ function scrollEffect(event) {
 					// Si on n'est pas tout en bas ET qu'on scroll vers le bas ou qu'on appuie sur la touche espce ou une des flèches 'droite' ou 'bas'
 					else if(($('section').length - 1 != i) && ((event.keyCode == 32 || event.keyCode == 39 || event.keyCode == 40)) || event.originalEvent.wheelDelta <= 0) {
 						// Si on ne voit pas encore le bas de la section
-						if(($(lmt).offset().top + $(lmt).outerHeight() - $('nav').outerHeight() - $(window).scrollTop()) > $(window).innerHeight()) {
+						if(Math.round(($(lmt).offset().top) + $(lmt).outerHeight() - $('nav').outerHeight() - $(window).scrollTop()) > $(window).innerHeight()) {
 							$('body').animate({'scrollTop' : $(window).innerHeight() + $(window).scrollTop() - $('nav').outerHeight()}, 800);
 						}
 						// On est en bas de la section
@@ -72,9 +72,16 @@ function scrollEffect(event) {
 				}
 				// La section fait la taille qu'on voit (pas plus grande)
 				else {
-					// Si on n'est pas tout en haut ET qu'on scroll vers le haut ou qu'on appuie sur les flèches 'gauche' ou 'haut'
-					if(i !== 0 && ((event.keyCode == 37 || event.keyCode == 38)) || event.originalEvent.wheelDelta > 0) {
-						$('body').animate({'scrollTop' : Math.round($('section').eq(i-1).offset().top) - $('nav').outerHeight()}, 800);
+					// Si on scroll vers le haut ou qu'on appuie sur les flèches 'gauche' ou 'haut'
+					if((event.keyCode == 37 || event.keyCode == 38) || event.originalEvent.wheelDelta > 0) {
+						// Si on est pas a la home
+						if(i !== 0) {
+							$('body').animate({'scrollTop' : Math.round($('section').eq(i-1).offset().top) - $('nav').outerHeight()}, 800);
+						}
+						// On est dans la home
+						else {
+							$('body').animate({'scrollTop' : Math.round($(lmt).offset().top) - $('nav').outerHeight()}, 800);
+						}
 					}
 					// Si on n'est pas tout en bas ET qu'on scroll vers le bas ou qu'on appuie sur la touche espce ou une des flèches 'droite' ou 'bas'
 					else if(($('section').length - 1 != i) && ((event.keyCode == 32 || event.keyCode == 39 || event.keyCode == 40)) || event.originalEvent.wheelDelta <= 0) {
