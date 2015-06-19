@@ -46,6 +46,11 @@
 
 		</section>
 		<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
+		<div class="img-navig">
+			<p class="font-xs">Pour naviguer</p>
+			<img src="assets/img/utilities/arrows.svg" alt="Flechages" class="img-utile1 animated infinite tada">
+			<img src="assets/img/utilities/scroll-mouse.svg" alt="Scroll mouse" class="img-utile2 animated infinite slide">
+		</div>
 	</header>
 
 	<main>
