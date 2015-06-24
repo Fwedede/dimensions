@@ -47,9 +47,15 @@
 		</section>
 		<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
 		<div class="img-navig">
-			<p class="font-xs">Pour naviguer</p>
-			<img src="assets/img/utilities/arrows.svg" alt="Flechages" class="img-utile1 animated infinite tada">
-			<img src="assets/img/utilities/scroll-mouse.svg" alt="Scroll mouse" class="img-utile2 animated infinite slide">
+			<!-- <p class="font-xs">Pour naviguer</p> -->
+			<div class="tooltip-item">
+				<img src="assets/img/utilities/arrows.png" alt="Flechages" class="img-utile1 animated infinite tada">
+				<div class="tooltip font-xxs">Pour naviguer avec les flèches du clavier, c'est pratique</div>
+			</div>
+			<div class="tooltip-item mouse">
+				<img src="assets/img/utilities/scroll-mouse.png" alt="Scroll mouse" class="img-utile2 animated infinite slide">
+				<div class="tooltip font-xxs">Ou alors avec le scroll de la souris</div>
+			</div>
 		</div>
 	</header>
 
@@ -112,37 +118,37 @@
 				<div class="cellule">
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-analyser"></div>
-						<h4>Analyser</h4>
+						<h4>Analyse</h4>
 						<p>Déterminer le profil de votre entreprise, vos besoins en terme d'image.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-proposer"></div>
-						<h4>Proposer</h4>
+						<h4>Proposition</h4>
 						<p>Trouver la solution ainsi que les services les plus adaptés à votre entreprise.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-concevoir"></div>
-						<h4>Concevoir</h4>
+						<h4>Conception</h4>
 						<p>Mettre en place les différents visuels qui déterminent le fil rouge de votre image.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-developper"></div>
-						<h4>Développer</h4>
+						<h4>Développement</h4>
 						<p>Créer, coder les éléments digitaux dont votre entreprise a besoin.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-agencer"></div>
-						<h4>Agencer</h4>
+						<h4>Agencement</h4>
 						<p>Disposer vos locaux en adéquation avec votre nouvelle charte graphique.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-cooperer"></div>
-						<h4>Coopérer</h4>
+						<h4>Coopération</h4>
 						<p>Pouvoir mettre la main à la pâte afin de contribuer à votre image.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-veiller"></div>
-						<h4>Veiller</h4>
+						<h4>Veille</h4>
 						<p>Suivre les envies et les évolutions de votre entreprise et de votre image.</p>
 					</div>
 				</div>
@@ -155,19 +161,19 @@
 				<p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
 				<form class="col-xl-8 col-sm-12" action="index.html" method="post">
 					<div class="row" style="position:relative;">
-						<div class="tooltip hidden font-xs">Il faut un minimum de 3 caractères</div>
+						<div class="tooltip hidden font-xxs">Il faut un minimum de 3 caractères</div>
 						<input type="text" placeholder="NOM Prénom" id="name" name="name" value="">
 					</div>
 					<div class="row" style="position:relative;">
-						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+						<div class="tooltip hidden font-xxs">Il faut un minimum de 8 caractères</div>
 						<input type="text" placeholder="E-mail" id="email" name="email" value="">
 					</div>
 					<div class="row" style="position:relative;">
-						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+						<div class="tooltip hidden font-xxs">Il faut un minimum de 8 caractères</div>
 						<input type="text" placeholder="Objet" id="object" name="object" value="">
 					</div>
 					<div class="row" style="position:relative;">
-						<div class="tooltip hidden font-xs">Il faut un minimum de 8 caractères</div>
+						<div class="tooltip hidden font-xxs">Il faut un minimum de 8 caractères</div>
 						<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
 					</div>
 					<button class="pull-right" type="submit">Valider</button>
