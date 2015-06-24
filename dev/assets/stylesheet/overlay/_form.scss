@@ -3,11 +3,11 @@ form{
       border: 1px solid $pink;
       color: $gray-dark;
       display: block;
-      margin: 2rem 0;
+      margin: 1.4rem 0;
       max-width: 100%;
       min-width: 100%;
       padding: .2rem .5rem;
-      max-height: 20rem;
+      max-height: 10rem;
       @include placeholder {
          color: $pink;
       }
@@ -38,27 +38,7 @@ form{
          outline: 0;
       }
    }
-   .tooltip{
-      background: $pink;
-      padding: .6rem;
-      top: -3.7rem;
-      position: absolute;
-      color: white;
-      box-shadow: 1px 1px 0.2rem $gray-dark;
 
-      &::before {
-         content: "";
-         height: 12px;
-         width: 12px;
-         position: absolute;
-         box-shadow: 1px 1px 0.2rem $gray-dark;
-         @include calc(top, "100% - 6px");
-         @include calc(left, "(100% - 12px)/2");
-         @include transform(rotate(45deg));
-         background: $pink;
-         line-height: 0;
-      }
-   }
    .tooltip-submit{
       background: $pink;
       padding: 2rem;
