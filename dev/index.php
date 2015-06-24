@@ -47,9 +47,15 @@
 		</section>
 		<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
 		<div class="img-navig">
-			<p class="font-xs">Pour naviguer</p>
-			<img src="assets/img/utilities/arrows.svg" alt="Flechages" class="img-utile1 animated infinite tada">
-			<img src="assets/img/utilities/scroll-mouse.svg" alt="Scroll mouse" class="img-utile2 animated infinite slide">
+			<!-- <p class="font-xs">Pour naviguer</p> -->
+			<div class="tooltip-item">
+				<img src="assets/img/utilities/arrows.png" alt="Flechages" class="img-utile1 animated infinite tada">
+				<div class="tooltip font-xxs">Pour naviguer avec les flèches du clavier, c'est pratique</div>
+			</div>
+			<div class="tooltip-item mouse">
+				<img src="assets/img/utilities/scroll-mouse.png" alt="Scroll mouse" class="img-utile2 animated infinite slide">
+				<div class="tooltip font-xxs">Ou alors avec le scroll de la souris</div>
+			</div>
 		</div>
 	</header>
 

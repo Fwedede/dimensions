@@ -141,26 +141,34 @@ header{
 		bottom: 1rem;
 		width: 13rem;
 		text-align: center;
-		margin: 1rem;
 		padding: .5rem;
 		right: 0;
 		@include media(max-width $screen-tablet) {
 			display: none;
 		}
-		p {
-			margin-top: 0;
-		}
-		img {
+		.tooltip-item {
 			float: left;
-			margin: 0;
 			position: relative;
-			&.img-utile1 {
-				left: 1.5rem;
-				width: 42%;
+			width: 100%;
+			padding-bottom: .7rem;
+			&.mouse {
+				background: url(../img/utilities/mouse.png) center center no-repeat;
+				height: 40px;
 			}
-			&.img-utile2 {
-				left: 3.5rem;
-				width: 15%;
+			.tooltip {
+				display: none;
+				top: -4rem;
+			}
+			&:hover .tooltip {
+				display: block;
+			}
+			img {
+				&.img-utile1 {
+					width: 42%;
+				}
+				&.img-utile2 {
+					width: 28%;
+				}
 			}
 		}
 	}
