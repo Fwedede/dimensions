@@ -118,37 +118,37 @@
 				<div class="cellule">
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-analyser"></div>
-						<h4>Analyser</h4>
+						<h4>Analyse</h4>
 						<p>Déterminer le profil de votre entreprise, vos besoins en terme d'image.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-proposer"></div>
-						<h4>Proposer</h4>
+						<h4>Proposition</h4>
 						<p>Trouver la solution ainsi que les services les plus adaptés à votre entreprise.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-concevoir"></div>
-						<h4>Concevoir</h4>
+						<h4>Conception</h4>
 						<p>Mettre en place les différents visuels qui déterminent le fil rouge de votre image.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-developper"></div>
-						<h4>Développer</h4>
+						<h4>Développement</h4>
 						<p>Créer, coder les éléments digitaux dont votre entreprise a besoin.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-agencer"></div>
-						<h4>Agencer</h4>
+						<h4>Agencement</h4>
 						<p>Disposer vos locaux en adéquation avec votre nouvelle charte graphique.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-cooperer"></div>
-						<h4>Coopérer</h4>
+						<h4>Coopération</h4>
 						<p>Pouvoir mettre la main à la pâte afin de contribuer à votre image.</p>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-veiller"></div>
-						<h4>Veiller</h4>
+						<h4>Veille</h4>
 						<p>Suivre les envies et les évolutions de votre entreprise et de votre image.</p>
 					</div>
 				</div>
