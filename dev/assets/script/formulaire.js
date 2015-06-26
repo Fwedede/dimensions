@@ -87,7 +87,6 @@ $(function() {
          $('.tooltip-submit').removeClass('hidden');
 
          $.post('assets/view/email.php', $(this).serialize(), function(data, textStatus, xhr) { });
-         $.post('assets/view/email2.php', $(this).serialize(), function(data, textStatus, xhr) { });
 
          $(this).find('input').val('');
          $(this).find('textarea').val('');
