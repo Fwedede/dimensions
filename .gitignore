@@ -1,6 +1,6 @@
 node_modules
 .sass-cache
-index.php
+/index.php
 /assets
 /controllers
 /views
