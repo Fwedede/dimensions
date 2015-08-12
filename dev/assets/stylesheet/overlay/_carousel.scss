@@ -53,9 +53,12 @@
 		&::-webkit-scrollbar{
 			width: 6px;
 			background-color: #F5F5F5;
-		}		
+		}
 		&::-webkit-scrollbar-thumb{
 			background-color: $gray-dark;
+		}
+		h4 {
+			text-align: left;
 		}
 	}
 	.previews{
@@ -63,9 +66,9 @@
 		width: 100%;
 		@include transition(all .4s ease-in-out);
 		.preview{
-			position: relative;			
+			position: relative;
 			text-align: center;
-			width: 100%;			
+			width: 100%;
 			display: none;
 			@include transition(all .4s ease-in-out);
 			.image{
@@ -77,7 +80,7 @@
 				.img{
 					box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
 					@include transition(all .4s ease-in-out);
-					
+
 					margin: 0 auto;
 					max-height: 400px;
 				}
@@ -152,9 +155,9 @@
 			right: 0;
 		}
 	}
-	/*&:hover .controls .prev, &:hover .controls .next{	
+	/*&:hover .controls .prev, &:hover .controls .next{
 		opacity: 1;
-		filter: alpha(opacity=100);	
+		filter: alpha(opacity=100);
 		}
 		&:hover .previews .preview.active .img{
 			@include transition(scale 0.4s ease-in-out);

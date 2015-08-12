@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fwedede/dimensions_demo.git"
+    "url": "git+https://github.com/Fwedede/dimensions.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Fwedede/dimensions_demo/issues"
+    "url": "https://github.com/Fwedede/dimensions/issues"
   },
-  "homepage": "https://github.com/Fwedede/dimensions_demo#readme",
+  "homepage": "https://github.com/Fwedede/dimensions#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-check-dependencies": "^0.10.1",
