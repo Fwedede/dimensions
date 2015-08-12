@@ -12,49 +12,65 @@ module.exports = function(grunt) {
       },
 
       prod : {
-         img : 'assets/img',
-         font : 'assets/fonts',
-         js : 'assets/script',
-         css : 'assets/stylesheet',
-         view : 'assets/view'
+         images : 'assets/images',
+         fonts : 'assets/fonts',
+         javascripts : 'assets/javascripts',
+         stylesheets : 'assets/stylesheets',
+         controllers : 'controllers',
+         views : 'views',
+         docs : 'docs'
       },
 
       dev : {
-         img : 'dev/assets/img',
-         font : 'dev/assets/fonts',
-         js : 'dev/assets/script',
-         css : 'dev/assets/stylesheet',
-         view : 'dev/assets/view'
+         images : '_dev/assets/images',
+         fonts : '_dev/assets/fonts',
+         javascripts : '_dev/assets/javascripts',
+         stylesheets : '_dev/assets/stylesheets',
+         controllers : '_dev/controllers',
+         views : '_dev/views',
+         docs : '_dev/docs'
       },
 
       // Clean files and folders
       clean : {
-         target : ['./assets' , 'index.php']
+         target : ['./assets', './controllers', './views', './docs', 'index.php']
       },
 
       // Copy files and folders
       copy : {
-         img : {
+         images : {
             expand : true,
-            cwd : '<%= dev.img %>/',
+            cwd : '<%= dev.images %>/',
             src : '**/*',
-            dest : '<%= prod.img %>/'
+            dest : '<%= prod.images %>/'
          },
-         view : {
+         fonts : {
             expand : true,
-            cwd : '<%= dev.view %>/',
-            src : '*',
-            dest : '<%= prod.view %>/'
+            cwd : '<%= dev.fonts %>/',
+            src : '**/*',
+            dest : '<%= prod.fonts %>/'
          },
-         font : {
+         controllers : {
             expand : true,
-            cwd : '<%= dev.font %>/',
-            src : '*',
-            dest : '<%= prod.font %>/'
+            cwd : '<%= dev.controllers %>/',
+            src : '**/*',
+            dest : '<%= prod.controllers %>/'
+         },
+         views : {
+            expand : true,
+            cwd : '<%= dev.views %>/',
+            src : '**/*',
+            dest : '<%= prod.views %>/'
+         },
+         docs : {
+            expand : true,
+            cwd : '<%= dev.docs %>/',
+            src : '**/*',
+            dest : '<%= prod.docs %>/'
          },
          index : {
             expand : true,
-            cwd : 'dev/',
+            cwd : '_dev/',
             src : 'index.php',
             dest : './'
          }
@@ -67,7 +83,7 @@ module.exports = function(grunt) {
                sourcemap : 'none'
             },
             files : {
-               '<%= prod.css %>/styles.css' : '<%= dev.css %>/styles.scss'
+               '<%= prod.stylesheets %>/styles.css' : '<%= dev.stylesheets %>/styles.scss'
             }
          }
       },
@@ -76,9 +92,9 @@ module.exports = function(grunt) {
       includereplace : {
          js : {
             expand : true,
-            cwd : '<%= dev.js %>/',
+            cwd : '<%= dev.javascripts %>/',
             src : 'script.js',
-            dest : '<%= prod.js %>/'
+            dest : '<%= prod.javascripts %>/'
          }
       },
 
@@ -86,48 +102,58 @@ module.exports = function(grunt) {
       csso : {
          target : {
             files : {
-               '<%= prod.css %>/styles.min.css' : '<%= prod.css %>/styles.css'
+               '<%= prod.stylesheets %>/styles.min.css' : '<%= prod.stylesheets %>/styles.css'
             }
          }
       },
 
-      // Minify files with UglifyJS @TODO
+      // Minify files with UglifyJS
       uglify : {
          js : {
             files : {
-               '<%= prod.js %>/script.min.js' : '<%= prod.js %>/script.js'
+               '<%= prod.javascripts %>/script.min.js' : '<%= prod.javascripts %>/script.js'
             }
          }
       },
 
       // Run predefined tasks whenever watched file patterns are added, changed or deleted
       watch : {
-         view : {
-            files : ['<%= dev.view %>/**/*', 'dev/index.php'],
-            tasks : 'view'
+         images : {
+            files : '<%= dev.images %>/**/*',
+            tasks : 'copy:images'
          },
-         css : {
-            files : '<%= dev.css %>/**/*',
-            tasks : 'css'
+         fonts : {
+            files : '<%= dev.fonts %>/**/*',
+            tasks : 'copy:fonts'
          },
-         img : {
-            files : '<%= dev.img %>/**/*',
-            tasks : 'copy:img'
+         javascripts : {
+            files : '<%= dev.javascripts %>/**/*',
+            tasks : 'javascripts'
          },
-         js : {
-            files : '<%= dev.js %>/**/*',
-            tasks : 'js'
+         stylesheets : {
+            files : '<%= dev.stylesheets %>/**/*',
+            tasks : 'stylesheets'
+         },
+         controllers : {
+            files : '<%= dev.controllers %>/**/*',
+            tasks : 'copy:controllers'
+         },
+         views : {
+            files : '<%= dev.views %>/**/*',
+            tasks : 'views'
+         },
+         index : {
+            files : '_dev/index.php',
+            tasks : 'copy:index'
          }
       }
    });
 
 
-   grunt.registerTask('css', ['sass', 'csso']);
-   grunt.registerTask('js', ['includereplace', 'uglify']);
-   grunt.registerTask('view', ['copy:index', 'copy:view']);
+   grunt.registerTask('stylesheets', ['sass', 'csso']);
+   grunt.registerTask('javascripts', ['includereplace', 'uglify']);
+   grunt.registerTask('views', ['copy:views']);
 
-   grunt.registerTask('build', ['checkDependencies', 'clean', 'copy', 'css', 'js']);
+   grunt.registerTask('build', ['checkDependencies', 'clean', 'copy', 'stylesheets', 'javascripts']);
    grunt.registerTask('serve', ['build', 'watch']);
-
-
 };

@@ -1,0 +1,46 @@
+.container{
+   @include row();
+}
+.row{
+   @include row();
+}
+
+$i: 1;
+@for $i from 1 through 12{
+   .col-xs-#{$i}{
+      @include span-columns($i);
+   }
+   .col-xs-offset-#{$i}{
+      @include shift($i);
+   }
+}
+@include media($screen-sm-min) {
+   @for $i from 1 through 12{
+      .col-sm-#{$i}{
+         @include span-columns($i);
+      }
+      .col-sm-offset-#{$i}{
+         @include shift($i);
+      }
+   }
+}
+@include media($screen-md-min) {
+   @for $i from 1 through 12{
+      .col-md-#{$i}{
+         @include span-columns($i);
+      }
+      .col-md-offset-#{$i}{
+         @include shift($i);
+      }
+   }
+}
+@include media($screen-xl-min) {
+   @for $i from 1 through 12{
+      .col-xl-#{$i}{
+         @include span-columns($i);
+      }
+      .col-xl-offset-#{$i}{
+         @include shift($i);
+      }
+   }
+}

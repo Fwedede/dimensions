@@ -1,6 +1,7 @@
 node_modules
 .sass-cache
-styles.css.map
-styles.css
 index.php
 /assets
+/controllers
+/views
+/docs
