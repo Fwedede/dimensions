@@ -1,6 +1,5 @@
 // Animation spéciale pour le scroll de la page (clavier et souris)
-function scrollEffect(event) {
-	
+function scrollEffects(event) {
 	// Si scroll la souris, ou qu'on appuie sur la barre espace ou une des fleches directionnelles
 	if (!$('textarea, input').is(':focus') && ((event.keyCode == 32 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40)) || (event.originalEvent.wheelDelta > 0 || event.originalEvent.wheelDelta <= 0)) {
 
@@ -89,14 +88,48 @@ function scrollEffect(event) {
 }
 
 
+function scrollEffect(event) {
+
+	if (!$('input, textarea').is(':focus')) {
+
+		// if (event.keyCode == 32 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+		//
+		// 	event.preventDefault();
+		//
+		// 	if (event.keyCode == 32 || event.keyCode == 39 || event.keyCode == 40) {
+		//
+		// 		for (var i = 0; i < sections.length; i++) {
+		//
+		// 			if ($(window).scrollTop() + menuHeight < sections[i]) {
+		//
+		// 				$('body').animate({
+		// 					'scrollTop' : sections[i]
+		// 				}, 800);
+		// 				console.log($(window).scrollTop() + ' / ' + sections[i]);
+		//
+		// 				return false;
+		//
+		// 			}
+		//
+		// 		}
+		//
+		// 	}
+		//
+		// }
+
+	}
+
+}
+
+
 $('body').keydown(function(event) {
 
 	scrollEffect(event);
 
 });
 
-$(window).on('mousewheel', function(event) {
-
-	scrollEffect(event);
-
-});
+// $(window).on('mousewheel', function(event) {
+//
+// 	scrollEffect(event);
+//
+// });
