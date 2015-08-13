@@ -1,9 +1,9 @@
-<div class="cell <?php echo $little; ?> col-sm-12" data-popin-projet="<?php echo $res['id'];?>">
-	<div class="img_package" style="background-image:url(assets/images/projets/<?php echo $res['image_projet'];?>.png)">
-		<img src="assets/images/packs/vignettes-pack<?php echo $res['nbr_package'];?>.png" alt="<?php echo $res['infos'];?>">
+<div class="cell <?= $little ?> col-sm-12" data-popin-projet="<?= $d['id'] ?>">
+	<div class="img_package" style="background-image:url(assets/images/projets/<?= $d['image_projet'] ?>.png)">
+		<img src="assets/images/packs/vignettes-pack<?= $d['nbr_package'] ?>.png" alt="<?= $d['infos'] ?>">
 	</div>
 	<div class="description">
-		<h3><?php echo ucfirst($res['titre']);?></h3>
-		<p class="font-xs"><?php echo $res['infos'];?></p>
+		<h3><?= ucfirst($d['titre']) ?></h3>
+		<p class="font-xs"><?= $d['infos'] ?></p>
 	</div>
 </div>

@@ -76,36 +76,7 @@
 			<div class="container">
 				<h2>Réalisations</h2>
 				<div class="tab">
-					<?php
-					try {
-						$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-						$bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
-					}
-					catch(Exception $e) {
-						die('Erreur : '.$e->getMessage());
-					}
-
-					$bdd->exec("SET CHARACTER SET utf8");
-					$req = $bdd->query("SELECT * FROM projet ORDER BY id DESC");
-
-					if($req->rowCount() > 0) {
-						$i = 0;
-						$petit = array(false, true, true, false, false, true, true, false, false, true, true, false);
-						while($res = $req->fetch()) {
-							if($petit[$i] === true)
-								$little = 'col-xl-5';
-							else
-								$little = 'col-xl-7';
-
-							if($i % 2 != 0)
-								$little .= ' last';
-
-							require('views/realisations.html');
-							$i++;
-						}
-					}
-					$req->closeCursor();
-					?>
+					<?php require('controllers/realisations.php'); ?>
 				</div>
 			</div>
 		</section>
