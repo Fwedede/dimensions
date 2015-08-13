@@ -13,6 +13,12 @@ function menuAnimation() {
 
 		}, 800);
 
+		if($(window).innerWidth() <= 768) {
+
+			$('.menu_query ul').fadeOut(200);
+
+		}
+
 	});
 
 
