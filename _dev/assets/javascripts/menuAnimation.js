@@ -1,5 +1,6 @@
 function menuAnimation() {
 
+	// Quand on clique sur un lien du menu
 	$('a[href^="#"]').click(function(event) {
 
 		event.preventDefault();
@@ -17,6 +18,7 @@ function menuAnimation() {
 
 	$(window).scroll(function() {
 
+		// Pour afficher le menu quand on scroll
 		if ($(window).scrollTop() >= screenHeight / 3 * 2 && !$('nav').is(':visible')) {
 
 			$('nav').fadeIn(400);
@@ -28,10 +30,10 @@ function menuAnimation() {
 
 		}
 
-
+		// Pour la colorisation du menu en fonction de la section ou l'on se trouve
 		$('section').each(function(i, lmt) {
 
-			if (Math.floor($(lmt).offset().top - menuHeight) <= $(window).scrollTop()) {
+			if ($('body').scrollTop() + (windowHeight / 1 / 3) > $(lmt).offset().top) {
 
 				$('nav a[href^="#"]').removeClass('active');
 				$('nav a[href="#'+$(lmt).attr('id')+'"]').addClass('active');
