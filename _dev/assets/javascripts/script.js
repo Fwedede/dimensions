@@ -7,31 +7,105 @@ $(function() {
    var sections     = [];
 
 
-   // Adapter la home a l'écran
-   if($('header section').outerHeight(true) < windowHeight) {
+   // Redimensionnage des sections trop petites
+   function sectionResize() {
 
-      $('header section').outerHeight(windowHeight);
+      $('section').each(function(i, lmt) {
+
+         if (i === 0) {
+
+            if ($(lmt).outerHeight(true) < windowHeight) {
+
+               $(lmt).outerHeight(windowHeight);
+
+            }
+
+         }
+         else {
+
+            if ($(lmt).outerHeight(true) < screenHeight) {
+
+               $(lmt).outerHeight(screenHeight);
+
+            }
+
+         }
+
+      });
 
    }
 
-   // Adapter chaques sections a l'écran
-   $('main section').each(function(i, lmt) {
 
-      if ($(lmt).outerHeight(true) < screenHeight) {
+   // Fonction permettant de calculer et determiner le positionnement de chaque étapes des scrolls
+   function sectionSteps() {
 
-         $(lmt).outerHeight(screenHeight);
+      $('section').each(function(i, lmt) {
 
-      }
+         var sectionTop  = Math.round($(lmt).offset().top - menuHeight);
+         var sectionSize = Math.round($(lmt).outerHeight(true));
+         var wia			 = sectionTop;
 
-   });
+
+         if (i === 0) {
+
+            // Ajout du haut de la section #home dans l'array
+            sections.push(0);
+
+         }
+         else {
+
+            // Ajout du haut de la section (pas #home) dans l'array
+            sections.push(Math.floor(sectionTop));
+
+         }
+
+         // Si la section plus grande que l'écran
+         if (sectionSize > screenHeight) {
+
+            var restant = sectionSize % screenHeight;
+
+            // Si la section est au moins x2 plus grande que l'écran
+            if (sectionSize / screenHeight > 2) {
+
+               wia = sectionTop + screenHeight;
+
+               // Ajout du 'page' de la section dans l'array
+               sections.push(Math.floor(wia));
+
+            }
+
+            // Si on n'est pas dans #home
+            if (i !== 0) {
+
+               // Ajout du bas de la section
+               sections.push(Math.floor(restant + wia));
+
+            }
+
+         }
+
+      });
+
+   }
 
 
    @@include('menuAnimation.js')
+   @@include('popin.js')
+   @@include('formulaire.js')
+
+
+   sectionResize();
 
 
    $(window).load(function() {
 
+      sectionSteps();
       @@include('scrollEffect.js')
+
+   }).resize(function() {
+
+      sections = [];
+      sectionSteps();
 
    });
 
