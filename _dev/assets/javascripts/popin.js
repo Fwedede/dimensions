@@ -243,7 +243,7 @@
 					var projet = $(this).attr('data-popin-projet');
 
 					if(projet !== undefined && projet !== '') {
-						$.post('assets/view/carousel.php', {'projet': projet}).done(function(res) {
+						$.post('controllers/carousel.php', {'projet': projet}).done(function(res) {
 							var heightWindow = window.innerHeight;
 							var heightPopin = $('.popin').height();
 
