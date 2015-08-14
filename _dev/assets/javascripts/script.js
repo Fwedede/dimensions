@@ -27,7 +27,6 @@ $(function() {
 
 
    @@include('menuAnimation.js')
-   menuAnimation();
 
 
    $(window).load(function() {

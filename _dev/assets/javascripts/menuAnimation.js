@@ -1,4 +1,4 @@
-function menuAnimation() {
+var menuAnimation = function() {
 
 	// Quand on clique sur un lien du menu
 	$('a[href^="#"]').click(function(event) {
@@ -49,4 +49,4 @@ function menuAnimation() {
 		});
 
 	});
-}
+}.call(this);
