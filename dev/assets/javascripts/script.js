@@ -1,3 +1,7 @@
+var test = '<p class="fuckyou" style="position:fixed;text-align:center;top:0;bottom:0;font-size:5rem;width:100%;text-shadow:0 0 2px #666;background:#ccc;">IL FAUT ATTENDRE</p>';
+$('body').append(test);
+
+
 $(function() {
 
    var windowHeight = window.innerHeight;
@@ -99,6 +103,7 @@ $(function() {
 
    $(window).load(function() {
 
+      $('.fuckyou').remove();
       sectionSteps();
       @@include('scrollEffect.js')
 
