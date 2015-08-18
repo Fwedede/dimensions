@@ -14,7 +14,7 @@ $(function() {
    // Redimensionnage des sections trop petites
    function sectionResize() {
 
-      $('section').each(function(i, lmt) {
+      $('section[id]').each(function(i, lmt) {
 
          if (i === 0) {
 
