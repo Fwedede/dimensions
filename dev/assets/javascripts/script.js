@@ -110,6 +110,7 @@ $(function() {
    }).resize(function() {
 
       sections = [];
+      sectionResize();
       sectionSteps();
 
    });
