@@ -22,13 +22,13 @@ module.exports = function(grunt) {
       },
 
       dev : {
-         images : '_dev/assets/images',
-         fonts : '_dev/assets/fonts',
-         javascripts : '_dev/assets/javascripts',
-         stylesheets : '_dev/assets/stylesheets',
-         controllers : '_dev/controllers',
-         views : '_dev/views',
-         docs : '_dev/docs'
+         images : 'dev/assets/images',
+         fonts : 'dev/assets/fonts',
+         javascripts : 'dev/assets/javascripts',
+         stylesheets : 'dev/assets/stylesheets',
+         controllers : 'dev/controllers',
+         views : 'dev/views',
+         docs : 'dev/docs'
       },
 
       // Clean files and folders
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
          },
          index : {
             expand : true,
-            cwd : '_dev/',
+            cwd : 'dev/',
             src : 'index.php',
             dest : './'
          }
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
             tasks : 'views'
          },
          index : {
-            files : '_dev/index.php',
+            files : 'dev/index.php',
             tasks : 'copy:index'
          }
       }

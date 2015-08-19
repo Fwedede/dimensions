@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<title>Agence Dimensions - Local - Donnez une autre dimension à votre image</title>
 	<link rel="canonical" href="http://localhost/dimensions_demo" />
-	<link rel="icon" type="image/png" href="assets/img/logos/favicon.png">
+	<link rel="icon" type="image/png" href="assets/images/logos/favicon.png">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo">
-	<link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://apis.google.com/js/platform.js" async defer>
 	{lang: 'fr'}
@@ -28,9 +28,9 @@
 	<header>
 		<nav class="sticky">
 			<ul class="container list-unstyled list-inline text-right font-xl">
-				<li class="pull-left"><a href="#home"><img src="assets/img/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
+				<li class="pull-left"><a href="#home"><img src="assets/images/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
 				<li class="menu_query">
-					<img src="assets/img/utilities/Base_03.png" alt="L'image burger du menu">
+					<img src="assets/images/utilities/Base_03.png" alt="L'image burger du menu">
 					<ul>
 						<li><a class="link" href="#agence">Agence</a></li>
 						<li><a class="link" href="#realisations">Réalisations</a></li>
@@ -41,7 +41,7 @@
 			</ul>
 		</nav>
 		<section class="container main-body-wrap" id="home">
-			<h1 class="title"><img src="assets/img/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
+			<h1 class="title"><img src="assets/images/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
 			<p>Donnez une autre dimension à votre image</p>
 
 		</section>
@@ -49,11 +49,11 @@
 		<div class="img-navig">
 			<!-- <p class="font-xs">Pour naviguer</p> -->
 			<div class="tooltip-item">
-				<img src="assets/img/utilities/arrows.png" alt="Flechages" class="img-utile1 animated infinite tada">
+				<img src="assets/images/utilities/arrows.png" alt="Flechages" class="img-utile1 animated infinite tada">
 				<div class="tooltip font-xxs">Pour naviguer avec les flèches du clavier, c'est pratique</div>
 			</div>
 			<div class="tooltip-item mouse">
-				<img src="assets/img/utilities/scroll-mouse.png" alt="Scroll mouse" class="img-utile2 animated infinite slide">
+				<img src="assets/images/utilities/scroll-mouse.png" alt="Scroll mouse" class="img-utile2 animated infinite slide">
 				<div class="tooltip font-xxs">Ou alors avec le scroll de la souris</div>
 			</div>
 		</div>
@@ -76,36 +76,7 @@
 			<div class="container">
 				<h2>Réalisations</h2>
 				<div class="tab">
-					<?php
-					try {
-						$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-						$bdd = new PDO('mysql:host=localhost;dbname=dimensions', 'root', '', $pdo_options);
-					}
-					catch(Exception $e) {
-						die('Erreur : '.$e->getMessage());
-					}
-
-					$bdd->exec("SET CHARACTER SET utf8");
-					$req = $bdd->query("SELECT * FROM projet ORDER BY id DESC");
-
-					if($req->rowCount() > 0) {
-						$i = 0;
-						$petit = array(false, true, true, false, false, true, true, false, false, true, true, false);
-						while($res = $req->fetch()) {
-							if($petit[$i] === true)
-								$little = 'col-xl-5';
-							else
-								$little = 'col-xl-7';
-
-							if($i % 2 != 0)
-								$little .= ' last';
-
-							require('assets/view/realisations.html');
-							$i++;
-						}
-					}
-					$req->closeCursor();
-					?>
+					<?php require('controllers/realisations.php'); ?>
 				</div>
 			</div>
 		</section>
@@ -187,9 +158,9 @@
 						<a href="clementfj@gmail.com">clementfj@gmail.com</a>
 					</div>
 					<div class="social row">
-						<a class="col-sm-2 col-xl-3 col-md-offset-6 col-sm-offset-6 col-xl-offset-3" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" target="_blank"><img src="assets/img/socials/logo-facebook.png" alt="logo-facebook"></a>
-						<a class="col-sm-2 col-xl-3" href="https://www.linkedin.com/pub/frederique-clement/95/a06/434" target="_blank"><img src="assets/img/socials/logo-linkedin.png" alt="logo-linkedin"></a>
-						<a class="col-sm-2 col-xl-3" href="https://fr.pinterest.com/Fwedede/" target="_blank"><img src="assets/img/socials/logo-pinterest.png" alt="logo-pinterest"></a>
+						<a class="col-sm-2 col-xl-3 col-md-offset-6 col-sm-offset-6 col-xl-offset-3" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" target="_blank"><img src="assets/images/socials/logo-facebook.png" alt="logo-facebook"></a>
+						<a class="col-sm-2 col-xl-3" href="https://www.linkedin.com/pub/frederique-clement/95/a06/434" target="_blank"><img src="assets/images/socials/logo-linkedin.png" alt="logo-linkedin"></a>
+						<a class="col-sm-2 col-xl-3" href="https://fr.pinterest.com/Fwedede/" target="_blank"><img src="assets/images/socials/logo-pinterest.png" alt="logo-pinterest"></a>
 					</div>
 				</div>
 			</div>
@@ -206,7 +177,7 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/script/script.js"></script>
+	<script src="assets/javascripts/script.js"></script>
 
 </body>
 </html>
