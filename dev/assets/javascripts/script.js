@@ -1,5 +1,5 @@
-var test = '<p class="fuckyou" style="position:fixed;text-align:center;top:0;bottom:0;font-size:5rem;width:100%;text-shadow:0 0 2px #666;background:#ccc;">IL FAUT ATTENDRE</p>';
-$('body').append(test);
+// var test = '<p class="fuckyou" style="position:fixed;text-align:center;top:0;bottom:0;font-size:5rem;width:100%;text-shadow:0 0 2px #666;background:#ccc;">IL FAUT ATTENDRE</p>';
+// $('body').append(test);
 
 
 $(function() {
@@ -92,6 +92,32 @@ $(function() {
 
    }
 
+   function alignHome() {
+
+      var trueHeight = 0;
+      var total      = $('#home > *').length - 1;
+      $('#home > *').each(function(i, lmt) {
+
+         trueHeight += $(this).outerHeight();
+         if (i !== 0) trueHeight += parseFloat($(this).css('margin-top'));
+         if (i !== total) trueHeight += parseFloat($(this).css('margin-bottom'));
+
+      });
+
+      trueHeight = Math.round(trueHeight);
+
+      if (windowHeight > trueHeight) {
+
+         var ok = (windowHeight - trueHeight) / 2;
+
+         $('#home >*:first-child').animate({
+            'margin-top': ok
+         }, 800);
+
+      }
+
+   }
+
 
    @@include('menuAnimation.js')
    @@include('popin.js')
@@ -99,12 +125,14 @@ $(function() {
 
 
    sectionResize();
+   alignHome();
 
 
    $(window).load(function() {
 
       $('.fuckyou').remove();
       sectionSteps();
+      alignHome();
       @@include('scrollEffect.js')
 
    }).resize(function() {
