@@ -1,4 +1,4 @@
-var test = '<p class="fuckyou" style="position:fixed;text-align:center;top:0;bottom:0;font-size:5rem;width:100%;text-shadow:0 0 2px #666;background:#ccc;">IL FAUT ATTENDRE</p>';
+var test = '<div class="spinner"> <div class="dot1"></div> <div class="dot2"></div> </div>';
 $('body').append(test);
 
 
@@ -103,7 +103,7 @@ $(function() {
 
    $(window).load(function() {
 
-      $('.fuckyou').remove();
+      $('.spinner').remove();
       sectionSteps();
       @@include('scrollEffect.js')
 
