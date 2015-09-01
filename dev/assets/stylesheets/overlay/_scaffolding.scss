@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .container{
 	position: relative;
-	padding: 1rem 15% 5rem;
+	padding: 5rem 15%;
 
 	// @TODOs
 	@include media(max-width $screen-phone) {

@@ -104,7 +104,7 @@ $(function() {
 
       if (windowHeight > trueHeight) {
 
-         var ok = (windowHeight - trueHeight) / 2;
+         var ok = (windowHeight - trueHeight) / 3;
 
          $('#home >*:first-child').animate({
             'margin-top': ok
@@ -128,8 +128,8 @@ $(function() {
 
       $('.spinner').remove();
       sectionSteps();
-      alignHome();
       @@include('scrollEffect.js')
+      alignHome();
 
    }).resize(function() {
 
