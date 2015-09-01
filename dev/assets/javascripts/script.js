@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-// var test = '<p class="fuckyou" style="position:fixed;text-align:center;top:0;bottom:0;font-size:5rem;width:100%;text-shadow:0 0 2px #666;background:#ccc;">IL FAUT ATTENDRE</p>';
-// $('body').append(test);
-
-
->>>>>>> 21d87d7b81657aef07325f788b8e07cf9195335c
 $(function() {
 
    var windowHeight = window.innerHeight;
