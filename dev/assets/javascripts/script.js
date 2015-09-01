@@ -127,6 +127,7 @@ $(function() {
    $(window).load(function() {
 
       $('.spinner').remove();
+      $('.bg').fadeOut();
       sectionSteps();
       @@include('scrollEffect.js')
       alignHome();
