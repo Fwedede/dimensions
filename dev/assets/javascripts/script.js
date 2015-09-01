@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+// var test = '<p class="fuckyou" style="position:fixed;text-align:center;top:0;bottom:0;font-size:5rem;width:100%;text-shadow:0 0 2px #666;background:#ccc;">IL FAUT ATTENDRE</p>';
+// $('body').append(test);
+
+
+>>>>>>> 21d87d7b81657aef07325f788b8e07cf9195335c
 $(function() {
 
    var windowHeight = window.innerHeight;
@@ -88,6 +95,32 @@ $(function() {
 
    }
 
+   function alignHome() {
+
+      var trueHeight = 0;
+      var total      = $('#home > *').length - 1;
+      $('#home > *').each(function(i, lmt) {
+
+         trueHeight += $(this).outerHeight();
+         if (i !== 0) trueHeight += parseFloat($(this).css('margin-top'));
+         if (i !== total) trueHeight += parseFloat($(this).css('margin-bottom'));
+
+      });
+
+      trueHeight = Math.round(trueHeight);
+
+      if (windowHeight > trueHeight) {
+
+         var ok = (windowHeight - trueHeight) / 2;
+
+         $('#home >*:first-child').animate({
+            'margin-top': ok
+         }, 800);
+
+      }
+
+   }
+
 
    @@include('menuAnimation.js')
    @@include('popin.js')
@@ -95,12 +128,14 @@ $(function() {
 
 
    sectionResize();
+   alignHome();
 
 
    $(window).load(function() {
 
       $('.spinner').remove();
       sectionSteps();
+      alignHome();
       @@include('scrollEffect.js')
 
    }).resize(function() {
