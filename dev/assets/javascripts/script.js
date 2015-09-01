@@ -92,9 +92,11 @@ $(function() {
 
       var trueHeight = 0;
       var total      = $('#home > *').length - 1;
+
       $('#home > *').each(function(i, lmt) {
 
          trueHeight += $(this).outerHeight();
+         if (i === 0) trueHeight += parseFloat($(this).css('padding-top')) * 4; // fois 4 parce qu'il y a le bottom aussi et qu'il faut que ce soit ce chiffre exacte et non le diviser par 2 (ligne 109)
          if (i !== 0) trueHeight += parseFloat($(this).css('margin-top'));
          if (i !== total) trueHeight += parseFloat($(this).css('margin-bottom'));
 
@@ -104,11 +106,9 @@ $(function() {
 
       if (windowHeight > trueHeight) {
 
-         var ok = (windowHeight - trueHeight) / 3;
+         var margeTop = (windowHeight - trueHeight) / 2;
 
-         $('#home >*:first-child').animate({
-            'margin-top': ok
-         }, 800);
+         $('#home >*:first-child').css('margin-top', margeTop);
 
       }
 
@@ -129,13 +129,13 @@ $(function() {
       $('.spinner').remove();
       sectionSteps();
       @@include('scrollEffect.js')
-      alignHome();
 
    }).resize(function() {
 
       sections = [];
       sectionResize();
       sectionSteps();
+      alignHome();
 
    });
 
