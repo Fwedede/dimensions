@@ -60,6 +60,8 @@
 //
 // });
 
+@@include('jquery.mousewheel.js')
+
 function scrollEffect(event) {
 
 	if (!$('input, textarea').is(':focus')) {
