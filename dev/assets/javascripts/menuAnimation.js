@@ -7,7 +7,7 @@ var menuAnimation = function() {
 
 		var target = $(event.currentTarget.hash).offset().top;
 
-		$('body').animate({
+		$('html, body').animate({
 
 			'scrollTop' : target - menuHeight
 

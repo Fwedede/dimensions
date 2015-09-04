@@ -13,7 +13,7 @@ function scrollEffect(event) {
 
 					if ($(window).scrollTop() + menuHeight < sections[i]) {
 
-						$('body').animate({
+						$('html, body').animate({
 							'scrollTop' : sections[i]
 						}, 800);
 
@@ -31,7 +31,7 @@ function scrollEffect(event) {
 
 					if ($(window).scrollTop() + menuHeight > sections[j]) {
 
-						$('body').animate({
+						$('html, body').animate({
 							'scrollTop' : sections[j-1]
 						}, 800);
 
