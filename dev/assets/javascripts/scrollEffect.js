@@ -60,26 +60,13 @@
 //
 // });
 
-function scrollEffect(event, delta) {
+function scrollEffect(event) {
 
 	if (!$('input, textarea').is(':focus')) {
 
 		if (event.keyCode == 32 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40 || event.deltaY > 0 || event.deltaY <= 0) {
 
 			event.preventDefault();
-
-			var o = '', id = event.currentTarget.id || event.currentTarget.nodeName;
-			o = '#' + id + ':';
-			if (delta > 0)
-			o += ' up (' + delta + ')';
-			else if (delta < 0)
-			o += ' down (' + delta + ')';
-			if (event.deltaY > 0)
-			o += ' north (' + event.deltaY + ')';
-			else if (event.deltaY < 0)
-			o += ' south (' + event.deltaY + ')';
-
-			o += ' deltaFactor (' + event.deltaFactor + ')';
 
 
 			// Si on veut descendre
@@ -125,8 +112,8 @@ $(window).keydown(function(event) {
 
 	scrollEffect(event);
 
-}).on('mousewheel', function(event, delta) {
+}).on('mousewheel', function(event) {
 
-	scrollEffect(event, delta);
+	scrollEffect(event);
 
 });
