@@ -183,6 +183,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/javascripts/script.js"></script>
+	<script src="node_modules/jquery-mousewheel/jquery.mousewheel.js"></script>
 
 </body>
 </html>
