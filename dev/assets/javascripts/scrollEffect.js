@@ -54,8 +54,9 @@ $(window).keydown(function(event) {
 
 	scrollEffect(event);
 
-}).on('mousewheel', function(event) {
-
-	scrollEffect(event);
-
 });
+// $(window).on('mousewheel', function(event) {
+//
+// 	scrollEffect(event);
+//
+// });

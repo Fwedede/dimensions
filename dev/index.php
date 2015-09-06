@@ -52,10 +52,10 @@
 				<img src="assets/images/utilities/arrows.png" alt="Flechages" class="img-utile1 animated infinite tada">
 				<div class="tooltip font-xxs">Pour naviguer avec les flèches du clavier, c'est pratique</div>
 			</div>
-			<div class="tooltip-item mouse">
+			<!-- <div class="tooltip-item mouse">
 				<img src="assets/images/utilities/scroll-mouse.png" alt="Scroll mouse" class="img-utile2 animated infinite slide">
 				<div class="tooltip font-xxs">Ou alors avec le scroll de la souris</div>
-			</div>
+			</div> -->
 		</div>
 	</header>
 
