@@ -1,4 +1,4 @@
-header{
+header {
 	box-shadow: 0 .1rem .1rem 0 $gray-dark;
 	background: url(../images/logos/grand-d.png) no-repeat center fixed;
 	-webkit-background-size: cover;/* pour anciens Chrome et Safari */
@@ -11,15 +11,15 @@ header{
 	// min-height: 550px;
 	color: #fff;
 
-	h1{
+	h1 {
 		border-bottom: 3px solid;
 		padding: 2rem;
 
-		img{
+		img {
 			width: 100%;
 		}
 	}
-	nav{
+	nav {
 		width: 100%;
 		background: $gray;
 		z-index: 100;
@@ -28,25 +28,27 @@ header{
 		box-shadow: 1px 1px .2rem $gray-dark;
 		@include pad(0 default);
 
-		@include media(max-width $screen-tablet) {
+		> ul {
 			height: 5rem;
+		}
 
-			> ul{
-				height: 5rem;
+		@include media($screen-tablet) {
+			> ul {
+				height: inherit;
 			}
 
 		}
-		.pull-left{
+		.pull-left {
 			opacity: .15;
 			@include transition(opacity .3s ease-in-out);
-			&:hover{
+			&:hover {
 				opacity: 1;
 			}
-			img{
+			img {
 				max-height: 2.5rem;
 			}
 		}
-		a{
+		a {
 			color: $gray-dark;
 			display: inline-block;
 			width: 100%;
@@ -54,69 +56,82 @@ header{
 			padding: 0 1rem;
 			@include transition(box-shadow .3s ease-in-out);
 
-			&:focus{
+			&:focus {
 				outline: none;
 				color: $pink;
 			}
 		}
-		li.menu_query{
-			img{
+		li.menu_query {
+			img {
 				display: none;
 			}
 
-			@include media(max-width $screen-tablet) {
-				ul{
-					display: none;
-					padding: 0;
-					background: $gray;
-					margin-top: 5rem;
-				}
-				img{
-					max-height: 2.5rem;
-					position: absolute;
-					top: 1rem;
-					right: 2rem;
-					cursor: pointer;
-					display: block;
-				}
-				&:hover ul{
-					display: block;
-				}
-				li{
-					display: block;
-				}
-			}
-			li{
-				a{
-					@include media(max-width $screen-phone) {
-						line-height: 3rem;
-						display: block;
+			li {
+				a {
+					line-height: 3rem;
+					@include media($screen-phone) {
+						line-height: 5rem;
 					}
-					&.active{
+					&.active {
 						color: $pink;
-						box-shadow: 0 -.3rem 0 0 $pink inset;
+						box-shadow: .3rem 0 0 0 $pink inset;
+						width: 100%;
 
-						@include media(max-width $screen-phone) {
-							box-shadow: .3rem 0 0 0 $pink inset;
-							width: 100%;
+						@include media($screen-tablet) {
+							box-shadow: 0 -.3rem 0 0 $pink inset;
+						}
+					}
+				}
+				&:hover {
+					a {
+						box-shadow: .3rem 0 0 0 $pink inset;
+					}
+
+					@include media($screen-tablet) {
+						a {
+							box-shadow: 0 -.3rem 0 0 $pink inset;
 						}
 					}
 				}
 			}
-			li:hover{
-				a{
-					box-shadow: 0 -.3rem 0 0 $pink inset;
+			ul {
+				display: none;
+				padding: 0;
+				background: $gray;
+				margin-top: 5rem;
+			}
+			img {
+				max-height: 2.5rem;
+				position: absolute;
+				top: 1rem;
+				right: 2rem;
+				cursor: pointer;
+				display: block;
+			}
+			&:hover ul {
+				display: block;
+			}
+			li {
+				display: block;
+			}
+			@include media($screen-tablet) {
+				ul {
+					display: inherit;
+					margin-top: 0;
 				}
-
-				@include media(max-width $screen-phone) {
-					a{
-						box-shadow: .3rem 0 0 0 $pink inset;
-					}
+				img {
+					display: none;
+				}
+				&:hover ul {
+					display: inherit;
+				}
+				li {
+					display: inherit;
 				}
 			}
 		}
 	}
-	.scroll-down{
+	.scroll-down {
 		display: block;
 		position: absolute;
 		bottom: 5%;
@@ -130,11 +145,10 @@ header{
 		color: white;
 		outline: none;
 	}
-	p{
-		font-size: 5rem;
-
-		@include media(max-width $screen-phone) {
-			font-size: 2rem;
+	p {
+		font-size: 2rem;
+		@include media($screen-phone) {
+			font-size: 5rem;
 		}
 	}
 	.img-navig {
@@ -144,8 +158,9 @@ header{
 		text-align: center;
 		padding: .5rem;
 		right: 0;
-		@include media(max-width $screen-tablet) {
-			display: none;
+		display: none;
+		@include media($screen-tablet) {
+			display: inherit;
 		}
 		.tooltip-item {
 			float: left;

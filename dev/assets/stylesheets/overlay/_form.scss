@@ -1,5 +1,5 @@
-form{
-   input, textarea{
+form {
+   input, textarea {
       border: 1px solid $pink;
       color: $gray-dark;
       display: block;
@@ -12,17 +12,17 @@ form{
          color: $pink;
       }
 
-      &:focus{
+      &:focus {
          outline: 2px solid $pink;
       }
    }
-   input{
+   input {
       height: 4rem;
    }
-   input:first-child{
+   input:first-child {
       margin-top: 0;
    }
-   button{
+   button {
       background-image: url(../images/utilities/btn_valider.png);
       border: 1px solid $pink;
       color: #fff;
@@ -31,15 +31,15 @@ form{
       box-shadow: 1px 1px 0.2rem $gray-dark;
       @include transition(opacity .3s ease-in-out);
 
-      &:hover{
+      &:hover {
          opacity: .65;
       }
-      &:focus{
+      &:focus {
          outline: 0;
       }
    }
 
-   .tooltip-submit{
+   .tooltip-submit {
       background: $pink;
       padding: 2rem;
       top: 50%;

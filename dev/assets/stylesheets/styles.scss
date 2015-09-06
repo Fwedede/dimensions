@@ -1,30 +1,25 @@
-/* Boubon
- * A simple and lightweight mixin library for Sass.
- */
+// Boubon - A simple and lightweight mixin library for Sass.
 @import "bourbon/bourbon";
 
 
-/* Neat
- * A lightweight semantic grid framework for Sass and Bourbon.
- */
+// Neat - A lightweight semantic grid framework for Sass and Bourbon.
 @import "neat/neat";
 
 
-/* Core CSS
- * Simples libraries for this project
- */
+// Core CSS - Simples libraries for this project
 @import "overlay/normalize";
 @import "overlay/variables";
 @import "overlay/grid";
+@import "overlay/fonts";
 @import "overlay/scaffolding";
 @import "overlay/type";
 @import "overlay/form";
 @import "overlay/carousel";
 
 
-/* Overlay CSS
- * Specific modifications of the elements
- */
+// Overlay CSS - Specific modifications of the elements
 @import "overlay/header";
-@import "overlay/main";
+@import "overlay/-main";
+// @import "overlay/main";
 @import "overlay/footer";
+@import "overlay/animations";

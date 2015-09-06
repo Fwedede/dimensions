@@ -255,7 +255,7 @@
 
 							var imgMaxHeight = ($('.popin').height() - parseInt($('.popin').css('padding-top')) - $('.popin .title').height() - parseInt($('.popin .title').css('padding-bottom')) - parseInt($('.popin .title').css('margin-top')) - parseInt($('.popin .title').css('margin-bottom')));
 							$('.carousel .img').css('max-height', imgMaxHeight);
-							$('.popin').find('.close').click(function() {
+							$('.popin').find('.icon-close').click(function() {
 								$('.popin-bg').fadeOut(param.hide);
 								$('.bg').fadeOut(param.hide);
 							});
