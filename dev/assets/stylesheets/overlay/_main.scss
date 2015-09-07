@@ -1,13 +1,12 @@
 main {
-	h2	{
-		border-bottom: 3px solid;
-		padding: 2rem;
-		margin-bottom: 4rem;
-	}
-	a {
-		color: inherit;
-
-	}
+	// h2	{
+	// 	border-bottom: 3px solid;
+	// 	padding: 2rem;
+	// 	margin-bottom: 4rem;
+	// }
+	// a {
+	// 	color: inherit;
+	// }
 	.address {
 		margin-bottom: 2rem;
 
@@ -104,43 +103,6 @@ main {
 			}
 		}
 	}
-	.popin-bg {
-		bottom: 0;
-		color: #333;
-		display: none;
-		left: 0;
-		right: 0;
-		top: 0;
-		z-index: 102;
-		position: absolute;
-		width: 100%;
-	}
-	.popin {
-		background: white;
-		bottom: 0;
-		position: relative;
-		width: 100%;
-		padding: 2rem;
-		box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
-
-		.icon-close::before {
-			position: absolute;
-			right: 1.5rem;
-			top: 1.5rem;
-			cursor: pointer;
-			font-size: 1.8rem;
-			color: $gray-dark;
-
-			.img {
-				margin-left: .2rem;
-				vertical-align: bottom;
-			}
-		}
-	}
-	.popin .carousel:hover .carousel-caption {
-		background: rgba(255,255,255,.6);
-		display: block;
-	}
 	#contact {
 		.col-xl-4 {
 			margin-top: 1.5rem;
@@ -151,8 +113,8 @@ main {
 	}
 	#services {
 		.cellule {
-			[class^="col-"], [class*="col-"] {
-				text-align: center;
+			[class*="col-"] {
+				// text-align: center;
 				// min-height: 30rem;
 				@include media(max-width $screen-tablet) {
 					@include omega(even);

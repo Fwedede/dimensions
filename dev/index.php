@@ -25,28 +25,28 @@
 <body>
 	<div id="fb-root"></div>
 
-	<header>
+	<header class="text-center">
 		<nav class="sticky">
 			<ul class="container list-unstyled list-inline text-right font-xl">
 				<li class="pull-left"><a href="#home"><img src="assets/images/logos/logo-dimensions-menu.png" alt="logo-dimensions-petit"></a></li>
 				<li class="menu_query">
 					<img src="assets/images/utilities/Base_03.png" alt="L'image burger du menu">
 					<ul>
-						<li><a class="link" href="#agence">Agence</a></li>
-						<li><a class="link" href="#realisations">Réalisations</a></li>
-						<li><a class="link" href="#services">Services</a></li>
-						<li><a class="link" href="#contact">Contact</a></li>
+						<li><a href="#agence">Agence</a></li>
+						<li><a href="#realisations">Réalisations</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</li>
 			</ul>
 		</nav>
 		<section class="container main-body-wrap" id="home">
-			<h1 class="title"><img src="assets/images/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
+			<h1><img src="assets/images/logos/logo-dimensions.png" alt="Dimensions_logo"></h1>
 			<p>Donnez une autre dimension à votre image</p>
 
 		</section>
 		<a href="#agence" class="animated infinite bounce scroll-down icon-arrow-down2"></a>
-		<div class="img-navig">
+		<div class="img-navig text-center">
 			<!-- <p class="font-xs">Pour naviguer</p> -->
 			<div class="tooltip-item">
 				<img src="assets/images/utilities/arrows.png" alt="Flechages" class="img-utile1 animated infinite tada">
@@ -64,7 +64,7 @@
 			<div class="container">
 				<h2 class="hidden">Agence</h2>
 				<article>
-					<h2>Agence</h2>
+					<h2 class="text-center">Agence</h2>
 					<p>Aujourd'hui plus que jamais, l'image est quelque chose de très importante. Le visuel est la première chose que l'on remarque  et qui nous donne notre première impression.<br>Le projet de l'agence se base sur cette constatation.</p>
 					<p>Dimensions est une agence spécialisée dans l'identité visuelle, graphique, digitale et agencée avec une démarche d'éco-conception. Elle accompagne principalement les nouvelles entreprises (les TPE et les PME plus particulièrement) qui désirent définir l'image de leur entreprise, de leur produit ou de leur événement.</p>
 					<p>L'agence désire aller beaucoup plus loin qu'une communication visuelle, en allant jusqu'à la décoration, ce qui permettra une cohérence globale et unique.</p>
@@ -74,7 +74,7 @@
 
 		<section class="main-body-wrap" id="realisations">
 			<div class="container">
-				<h2>Réalisations</h2>
+				<h2 class="text-center">Réalisations</h2>
 				<div class="tab">
 					<?php require('controllers/realisations.php'); ?>
 				</div>
@@ -84,9 +84,9 @@
 		<div class="popin-bg"></div>
 
 		<section class="main-body-wrap" id="services">
-			<div class="container">
+			<div class="container text-center">
 				<h2>Services</h2>
-				<div class="cellule">
+				<div class="cellule row">
 					<div class="col-md-4 col-sm-6">
 						<div class="icon-analyser"></div>
 						<h4>Analyse</h4>
@@ -127,9 +127,9 @@
 		</section>
 
 		<section class="main-body-wrap" id="contact">
-			<div class="container">
+			<div class="container text-center">
 				<h2>Contactez-moi</h2>
-				<p class="text-center">Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
+				<p>Besoin de me contacter sur mes services, mon agence ou tout autre chose, c'est ici</p>
 				<form class="col-xl-8 col-sm-12" action="index.html" method="post">
 					<div class="row" style="position:relative;">
 						<div class="tooltip hidden font-xxs">Il faut un minimum de 3 caractères</div>
@@ -148,14 +148,14 @@
 						<textarea id="message" placeholder="Message" name="message" rows="6"></textarea>
 					</div>
 					<button class="pull-right" type="submit">Valider</button>
-					<div class="tooltip-submit hidden font-xs">Votre prise de contact a bien été envoyée.</div>
+					<div class="tooltip-submit text-center hidden font-xs">Votre prise de contact a bien été envoyée.</div>
 				</form>
 				<div class="col-xl-4 col-sm-12 text-right">
 					<div class="address">
 						Agence Dimensions<br>
 						<a href="tel:0642351092">06.42.35.10.92</a><br>
 						<br>
-						<a href="clementfj@gmail.com">clementfj@gmail.com</a>
+						<a href="mailto:clementfj@gmail.com">clementfj@gmail.com</a>
 					</div>
 					<div class="social row">
 						<a class="col-sm-2 col-xl-3 col-md-offset-6 col-sm-offset-6 col-xl-offset-3" href="https://www.facebook.com/pages/Agence-Dimensions/965360680158140" target="_blank"><img src="assets/images/socials/logo-facebook.png" alt="logo-facebook"></a>
@@ -176,7 +176,7 @@
 		</section>
 	</footer>
 
-	<div class="spinner">
+	<div class="spinner text-center">
 		<div class="dot1"></div>
 		<div class="dot2"></div>
 	</div>

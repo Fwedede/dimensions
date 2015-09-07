@@ -1,8 +1,8 @@
 header {
 	box-shadow: 0 .1rem .1rem 0 $gray-dark;
 	background: url(../images/logos/grand-d.png) no-repeat center fixed;
-	-webkit-background-size: cover;/* pour anciens Chrome et Safari */
-	background-size: cover;/* version standardisée */
+	-webkit-background-size: cover; // pour anciens Chrome et Safari
+	background-size: cover; // version standardisée
 	background-position: 50% 50%;
 	margin: 0;
 	padding: 0;
@@ -56,10 +56,10 @@ header {
 			padding: 0 1rem;
 			@include transition(box-shadow .3s ease-in-out);
 
-			&:focus {
-				outline: none;
-				color: $pink;
-			}
+			// &:focus {
+			// 	outline: none;
+			// 	color: $pink;
+			// }
 		}
 		li.menu_query {
 			img {
@@ -158,7 +158,7 @@ header {
 		position: absolute;
 		bottom: 1rem;
 		width: 13rem;
-		text-align: center;
+		// text-align: center;
 		padding: .5rem;
 		right: 0;
 		display: none;

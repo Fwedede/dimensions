@@ -1,7 +1,7 @@
 .list-unstyled {
+	list-style: none;
 	margin: 0 auto;
 	padding: 0;
-	list-style: none;
 }
 .list-inline {
 	li {
@@ -23,6 +23,7 @@
 }
 .font-xl {
 	font-size: 90%;
+
 	@include media($screen-phone) {
 		font-size: 120%;
 	}
@@ -39,39 +40,45 @@
 .text-justify {
 	text-align: justify;
 }
-div.inline-flex {
+.inline-flex {
 	display: inline-flex;
 	position: inherit;
 }
 .hidden {
+	display: none;
 	text-indent: -9999px;
 	visibility: hidden;
-	display: none;
 }
 
 .tooltip {
-	background: $pink;
-	padding: .5rem;
-	top: -2.5rem;
-	position: absolute;
+	// background: $pink;
+	// box-shadow: 1px 1px 2px $gray-dark;
 	color: white;
-	box-shadow: 1px 1px 0.2rem $gray-dark;
+	padding: .5rem;
+	// position: absolute;
+	top: -2.5rem;
 
+	&, &::before {
+		background: $pink;
+		box-shadow: 1px 1px 2px $gray-dark;
+		position: absolute;
+
+	}
 	&::before {
+		// background: $pink;
+		// box-shadow: 1px 1px 2px $gray-dark;
 		content: "";
 		height: 12px;
-		width: 12px;
-		position: absolute;
-		box-shadow: 1px 1px 0.2rem $gray-dark;
-		@include calc(top, "100% - 6px");
-		@include calc(left, "(100% - 12px)/2");
-		@include transform(rotate(45deg));
-		background: $pink;
 		line-height: 0;
+		// position: absolute;
+		width: 12px;
+		@include calc(top, "100% - 6px");
+		@include calc(left, "(100% - 12px) / 2");
+		@include transform(rotate(45deg));
 	}
 }
 
 
 .last {
-	margin-right:0;
+	margin-right: 0;
 }
