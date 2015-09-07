@@ -35,7 +35,7 @@
 						<li><a class="link" href="#agence">Agence</a></li>
 						<li><a class="link" href="#realisations">Réalisations</a></li>
 						<li><a class="link" href="#services">Services</a></li>
-						<li class="last"><a class="link" href="#contact">Contact</a></li>
+						<li><a class="link" href="#contact">Contact</a></li>
 					</ul>
 				</li>
 			</ul>

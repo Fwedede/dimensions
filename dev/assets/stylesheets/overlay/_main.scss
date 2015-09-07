@@ -1,6 +1,5 @@
 main {
-	h2
-	{
+	h2	{
 		border-bottom: 3px solid;
 		padding: 2rem;
 		margin-bottom: 4rem;
@@ -11,31 +10,28 @@ main {
 	}
 	.address {
 		margin-bottom: 2rem;
+
 		a:hover {
-			text-decoration: none;
 			border-bottom: 2px solid;
 		}
 	}
-	.social a {
+	.social a img {
 		box-shadow: 1px 1px 0.2rem $gray-dark;
+		width: 15%;
 		@include transition(opacity .3s ease-in-out);
 
 		&:hover {
 			opacity: .65;
-			border-bottom: none;
 		}
-		img {
-			@include media(max-width $screen-phone) {
-				width: 15%;
-			}
+
+		@include media($screen-phone) {
+			width: initial;
 		}
 	}
 	section {
 		position: relative;
+		background-color: #fff;
 
-		&:nth-child(odd) {
-			background-color: #fff;
-		}
 		&:nth-child(even) {
 			background-color: $pink-light;
 		}
@@ -43,17 +39,19 @@ main {
 	#realisations {
 		.tab {
 			@include outer-container;
+
 			.cell {
 				position: relative;
 				z-index: 5;
 				box-shadow: 0 0.2rem 0.3rem $gray-dark;
 				cursor: pointer;
 				margin-top: 2rem;
-				height: 355px;
+				height: auto;
 				background-color: #ffffff;
 				@include transition(all .2s ease-in-out);
-				@include media(max-width $screen-phone) {
-					height: auto;
+
+				@include media($screen-phone) {
+					height: 355px;
 				}
 
 				&:hover {
@@ -75,12 +73,9 @@ main {
 					background-repeat: no-repeat;
 					background-position: center center;
 					overflow: hidden;
+
 					img {
-						/*max-width: inherit;*/
 						opacity: .45;
-						@include media(max-width $screen-phone) {
-							max-width: 100%;
-						}
 					}
 				}
 
@@ -94,6 +89,7 @@ main {
 					width: 100%;
 					opacity: 0;
 					@include transition(opacity .3s ease-in-out);
+
 					h3 {
 						margin: 0;
 					}
@@ -126,28 +122,20 @@ main {
 		width: 100%;
 		padding: 2rem;
 		box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
-		.close::before {
+
+		.icon-close::before {
 			position: absolute;
 			right: 1.5rem;
 			top: 1.5rem;
 			cursor: pointer;
-			content: "\ea0f";
-			font-family: "icomoon";
 			font-size: 1.8rem;
 			color: $gray-dark;
 
-			@include media(max-width $screen-phone) {
-				width: 14px;
-			}
 			.img {
 				margin-left: .2rem;
 				vertical-align: bottom;
 			}
 		}
-		h1 {
-			text-align: left;
-		}
-
 	}
 	.popin .carousel:hover .carousel-caption {
 		background: rgba(255,255,255,.6);
@@ -165,12 +153,13 @@ main {
 		.cellule {
 			[class^="col-"], [class*="col-"] {
 				text-align: center;
-				/*min-height: 30rem;*/
-				@include media($screen-tablet) {
-					@include omega(3n);
-				}
+				// min-height: 30rem;
 				@include media(max-width $screen-tablet) {
 					@include omega(even);
+				}
+
+				@include media($screen-tablet) {
+					@include omega(3n);
 				}
 				// p {
 				// 	overflow-y: hidden;
@@ -187,38 +176,6 @@ main {
 				// }
 			}
 		}
-		[class^="icon-"]::before, [class*=" icon-"]::before {
-			font-size: 5rem;
-
-		}
-		.icon-analyser::before {
-			content: "\e604";
-			font-family: "icomoon";
-		}
-		.icon-proposer::before {
-			content: "\e605";
-			font-family: "icomoon";
-		}
-		.icon-concevoir::before {
-			content: "\e603";
-			font-family: "icomoon";
-		}
-		.icon-developper::before {
-			content: "\e602";
-			font-family: "icomoon";
-		}
-		.icon-agencer::before {
-			content: "\e601";
-			font-family: "icomoon";
-		}
-		.icon-cooperer::before {
-			content: "\e600";
-			font-family: "icomoon";
-		}
-		.icon-veiller::before {
-			content: "\e606";
-			font-family: "icomoon";
-		}
 	}
 }
 .bg {
@@ -229,46 +186,4 @@ main {
 	height: 100%;
 	top: 0;
 	left: 0;
-}
-.spinner {
-	margin: 0 auto;
-	width: 40px;
-	height: 40px;
-	position: fixed;
-	text-align: center;
-	-webkit-animation:
-	sk-rotate 2.0s infinite linear;
-	animation: sk-rotate 2.0s infinite linear;
-	top:50%;
-	left: 50%;
-	z-index: 102;
-}
-.dot1, .dot2 {
-	width: 60%;
-	height: 60%;
-	display: inline-block;
-	position: absolute; top: 0;
-	background-color: $pink;
-	border-radius: 100%;
-	-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
-	animation: sk-bounce 2.0s infinite ease-in-out;
-}
-.dot2 {
-	top: auto;
-	bottom: 0;
-	-webkit-animation-delay: -1.0s;
-	animation-delay: -1.0s;
-}
-@keyframes sk-rotate {
-	100% {
-		@include transform(rotate(360deg));
-	}
-}
-@keyframes sk-bounce {
-	0%, 100% {
-		@include transform(scale(0.0));
-	}
-	50% {
-		@include transform(scale(1.0));
-	}
 }
