@@ -91,9 +91,9 @@ $(function() {
    function alignHome() {
 
       var trueHeight = 0;
-      var total      = $('#home > *').length - 1;
+      var total      = $('#home >*').length - 1;
 
-      $('#home > *').each(function(i, lmt) {
+      $('#home >*').each(function(i, lmt) {
 
          trueHeight += $(this).outerHeight();
          if (i === 0) trueHeight += parseFloat($(this).css('padding-top')) * 4; // fois 4 parce qu'il y a le bottom aussi et qu'il faut que ce soit ce chiffre exacte et non le diviser par 2 (ligne 109)
@@ -129,7 +129,8 @@ $(function() {
       $('.spinner').remove();
       $('.bg').fadeOut();
       sectionSteps();
-      @@include('scrollEffect.js')
+      @@include('scrollEffect.js');
+
 
    }).resize(function() {
 
