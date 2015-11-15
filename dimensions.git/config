@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "origin"]
+	url = https://github.com/Fwedede/dimensions.git
+	fetch = +refs/*:refs/*
+	mirror = true
+	pushurl = https://TokaLazy@bitbucket.org/TokaLazy/dimensions.git
