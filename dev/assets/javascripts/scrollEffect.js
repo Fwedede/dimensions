@@ -49,14 +49,57 @@ function scrollEffect(event) {
 
 }
 
-
+var moveTo = 0;
 $(window).keydown(function(event) {
 
 	scrollEffect(event);
 
+}).on('mousewheel', function(event) {
+
+	moveTo++;
+
+	if (moveTo === 1) {
+
+		setTimeout(function() {
+
+			if (event.originalEvent.wheelDelta < 0) {
+
+				for (var i = 0; i < sections.length; i++) {
+
+					if ($(window).scrollTop() + menuHeight < sections[i] && moveTo !== 0) {
+
+						$('html, body').animate({
+							'scrollTop' : sections[i]
+						}, 800);
+
+						moveTo = 0;
+
+					}
+
+				}
+
+			}
+			else {
+
+				for (var j = sections.length - 1; j > 0; j--) {
+
+					if ($(window).scrollTop() + menuHeight > sections[j] && moveTo !== 0) {
+
+						$('html, body').animate({
+							'scrollTop' : sections[j-1]
+						}, 800);
+
+						moveTo = 0;
+
+					}
+
+				}
+
+			}
+			moveTo = 0;
+
+		}, 500);
+
+	}
+
 });
-// $(window).on('mousewheel', function(event) {
-//
-// 	scrollEffect(event);
-//
-// });
